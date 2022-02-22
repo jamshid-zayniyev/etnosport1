@@ -11,7 +11,7 @@ import "./assets/css/style.css";
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
         {/* <!--[if lt IE 8]> */}
         <p className="browserupgrade">
           You are using an <strong>outdated</strong> browser. Please{" "}
