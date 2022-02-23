@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import xalq from "../img/xalq.png";
 import style from "../css/Head.module.css";
+import { Dropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 export default class Header extends Component {
@@ -48,6 +49,52 @@ export default class Header extends Component {
                   to="/fotolavhalar"
                 >
                   Rasmlar
+                </NavLink>
+                <NavLink
+                  exact
+                  activeStyle={{ color: "orangered" }}
+                  className="navbar"
+                  to="/login"
+                >
+                  <Dropdown>
+                    <Dropdown.Toggle
+                      className="navbar"
+                      variant="success"
+                      id="dropdown-basic"
+                    >
+                      Hujjatlar
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item className="navbar">
+                        <NavLink
+                          className="navbar"
+                          activeStyle={{ color: "orangered" }}
+                          to="/talim"
+                        >
+                          Ta'limga oid qonunlar
+                        </NavLink>
+                      </Dropdown.Item>
+                      <Dropdown.Item className="navbar">
+                        <NavLink
+                          className="navbar"
+                          activeStyle={{ color: "orangered" }}
+                          to="/farmon"
+                        >
+                          Prezident farmonlari, farmoyishlari va qarorlari
+                        </NavLink>
+                      </Dropdown.Item>
+                      <Dropdown.Item className="navbar">
+                        <NavLink
+                          className="navbar"
+                          activeStyle={{ color: "orangered" }}
+                          to="/oquvchi"
+                        >
+                          O`quvchilar uchun qonunlar
+                        </NavLink>
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </NavLink>
                 <NavLink
                   exact
