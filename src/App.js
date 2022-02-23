@@ -4,7 +4,7 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/font-awesome.min.css";
 import "./assets/css/instagram.css";
 import "./assets/css/magnific-popup.css";
-// import "./assets/css/plugins.css";
+import "./assets/css/plugins.css";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 import logo from "./assets/images/logo.png"
@@ -39,11 +39,7 @@ export default class App extends Component {
       <>
       <div className="body">
         {/* <!--[if lt IE 8]> */}
-        <p className="browserupgrade">
-          You are using an <strong>outdated</strong> browser. Please{" "}
-          <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-          your experience.
-        </p>
+       
         {/* <![endif]--> */}
         {/* <div className="preloader">
           <div className="loaded">&nbsp;</div>
