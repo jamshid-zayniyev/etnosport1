@@ -8,6 +8,8 @@ import head1 from '../img/head1.jpg'
 import head2 from '../img/head2.jpg'
 import head3 from '../img/head3.jpg'
 import head4 from '../img/head4.jpg'
+import back2 from '../videos/b.mp4'
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const responsive = {
@@ -30,6 +32,30 @@ const responsive = {
     },
   };
 export default class Dashboard extends Component {
+    state={
+        muted2:true,
+        muted3:true,
+        loader:true,
+      }  
+      componentDidMount(){
+        setTimeout(()=>{
+    this.setState({
+      loader:false
+    })
+        },3000)
+      }
+      muted2=()=>{
+    
+        this.setState({
+          muted2:!this.state.muted2
+        })
+      }
+      muted3=()=>{
+    
+        this.setState({
+          muted3:!this.state.muted3
+        })
+      }
     render() {
         return (
             <div>
@@ -74,6 +100,11 @@ export default class Dashboard extends Component {
 
                   </Col>
               </Row>
+              <video className={style.back2} src={back2} autoPlay loop muted={this.state.muted2}></video>
+             
+             <div className={style.blue}>
+               <div className={style.logo1} onClick={this.muted2}>{this.state.muted2?<i className="fa fa-volume-off"></i>:<i className="fa fa-volume-up"></i>}</div>
+             </div>
           </div><br/><br/><br/><br/><br/>
                 <Footer/>
             </div>
