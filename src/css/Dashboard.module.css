@@ -1,0 +1,27 @@
+.head{width:100%; padding-top:100px; background-color: rgba(238, 243, 237, 0.857);}
+.head img{width:100%;}
+.head h2{color:rgb(8, 187, 8); padding-left:40px; line-height:70px; font-size:48px; margin-top: 50px;}
+.head h2 span{color:orangered}
+.head a {
+    padding: 10px;
+    margin-top: 60px;
+    margin-left: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: orangered;
+    transition: 0.3s;
+    border: 1px solid orangered;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+  }
+  .head a:hover {
+    background-color:rgba(238, 243, 237, 0.857);;
+    color:orangered;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
