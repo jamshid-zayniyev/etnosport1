@@ -7,6 +7,7 @@ import head from '../img/head.jpg'
 import head1 from '../img/head1.jpg'
 import head2 from '../img/head2.jpg'
 import head3 from '../img/head3.jpg'
+import head5 from '../img/head5.jpg'
 import head4 from '../img/head4.jpg'
 import back2 from '../videos/b.mp4'
 
@@ -75,12 +76,17 @@ export default class Dashboard extends Component {
                     autoPlaySpeed={2000}
                     autoPlay={this.props.deviceType !== "mobile" ? true : false}
                   >
-                  <div>
-                    <img src={head} alt="..." />
                     
-                </div>
                 <div>
                     <img src={head1} alt="..." />
+                    
+                </div>
+                    <div>
+                    <img src={head5} alt="..." />
+                    
+                </div>
+                  <div>
+                    <img src={head} alt="..." />
                     
                 </div>
                 <div>
@@ -100,11 +106,12 @@ export default class Dashboard extends Component {
 
                   </Col>
               </Row>
+             
               <video className={style.back2} src={back2} autoPlay loop muted={this.state.muted2}></video>
              
-             <div className={style.blue}>
+             {/* <div className={style.blue}>
                <div className={style.logo1} onClick={this.muted2}>{this.state.muted2?<i className="fa fa-volume-off"></i>:<i className="fa fa-volume-up"></i>}</div>
-             </div>
+             </div> */}
           </div><br/><br/><br/><br/><br/>
                 <Footer/>
             </div>
