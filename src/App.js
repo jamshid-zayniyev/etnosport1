@@ -4,13 +4,39 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/font-awesome.min.css";
 import "./assets/css/instagram.css";
 import "./assets/css/magnific-popup.css";
-import "./assets/css/plugins.css";
+// import "./assets/css/plugins.css";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
+import logo from "./assets/images/logo.png"
+import stab1 from "./assets/images/stab1.png"
+import featureslid1 from "./assets/images/featureslid1.jpg"
+import play from "./assets/images/play.png"
+import abright from "./assets/images/abright.png"
+import team1 from "./assets/images/team1.jpg"
+import team2 from "./assets/images/team2.jpg"
+import team3 from "./assets/images/team3.jpg"
+import team4 from "./assets/images/team4.jpg"
+import choose from "./assets/images/choose.png"
+import pf1 from "./assets/images/pf1.jpg"
+import pf2 from "./assets/images/pf2.jpg"
+import pf3 from "./assets/images/pf3.jpg"
+import pf4 from "./assets/images/pf4.jpg"
+import pf8 from "./assets/images/pf8.jpg"
+import pf9 from "./assets/images/pf9.jpg"
+import pf5 from "./assets/images/pf5.jpg"
+import pf6 from "./assets/images/pf6.jpg"
+import pf7 from "./assets/images/pf7.jpg"
 
+import clogo1 from "./assets/images/clogo1.png"
+import clogo2 from "./assets/images/clogo2.png"
+import clogo3 from "./assets/images/clogo3.png"
+import clogo4 from "./assets/images/clogo4.png"
+import clogo5 from "./assets/images/clogo5.png"
+import clogo9 from "./assets/images/clogo9.png"
 export default class App extends Component {
   render() {
     return (
+      <>
       <div className="body">
         {/* <!--[if lt IE 8]> */}
         <p className="browserupgrade">
@@ -19,9 +45,9 @@ export default class App extends Component {
           your experience.
         </p>
         {/* <![endif]--> */}
-        <div className="preloader">
+        {/* <div className="preloader">
           <div className="loaded">&nbsp;</div>
-        </div>
+        </div> */}
 
         <div className="culmn">
           <header id="main_menu" className="header navbar-fixed-top">
@@ -46,7 +72,7 @@ export default class App extends Component {
                             <span className="icon-bar"></span>
                           </button>
                           <a className="navbar-brand" href="#home">
-                            <img src="assets/images/logo.png" />
+                            <img src={logo} />
                           </a>
                         </div>
 
@@ -271,7 +297,7 @@ export default class App extends Component {
 
                                 <div className="col-sm-6">
                                   <div className="single_tab_img">
-                                    <img src="assets/images/stab1.png" alt="" />
+                                    <img src={stab1} alt="" />
                                   </div>
                                 </div>
                               </div>
@@ -313,8 +339,7 @@ export default class App extends Component {
 
                                 <div className="col-sm-6">
                                   <div className="single_tab_img">
-                                    <img
-                                      src="assets/images/featureslid1.jpg"
+                                    <img src={featureslid1}
                                       alt=""
                                     />
                                   </div>
@@ -358,7 +383,7 @@ export default class App extends Component {
 
                                 <div className="col-sm-6">
                                   <div className="single_tab_img">
-                                    <img src="assets/images/stab1.png" alt="" />
+                                    <img src={stab1} alt="" />
                                   </div>
                                 </div>
                               </div>
@@ -400,8 +425,7 @@ export default class App extends Component {
 
                                 <div className="col-sm-6">
                                   <div className="single_tab_img">
-                                    <img
-                                      src="assets/images/featureslid1.jpg"
+                                    <img src={featureslid1}
                                       alt=""
                                     />
                                   </div>
@@ -504,7 +528,7 @@ export default class App extends Component {
                           href="https://www.youtube.com/embed/_l6CQRHIGyg"
                           className="youtube-media"
                         >
-                          <img src="assets/images/play.png" alt="play-icon" />
+                          <img src={play} alt="play-icon" />
                         </a>
                         <h3>WATCH OUR INTRO</h3>
                       </div>
@@ -580,7 +604,7 @@ export default class App extends Component {
                             className="single_about_left_img margin-top-40 text-center wow fadeInLeft"
                             data-wow-duration=".6s"
                           >
-                            <img src="assets/images/abright.png" alt="" />
+                            <img src={abright} alt="" />
                           </div>
                         </div>
                       </div>
@@ -1008,7 +1032,7 @@ export default class App extends Component {
                       <div className="col-sm-3 col-xs-12">
                         <div className="single_team_content">
                           <div className="single_team_img">
-                            <img src="assets/images/team1.jpg" alt="" />
+                            <img src={team1} alt="" />
                           </div>
                           <div className="single_team_text_overlay">
                             <h4>SEMF UCUK</h4>
@@ -1034,7 +1058,7 @@ export default class App extends Component {
                       <div className="col-sm-3 col-xs-12">
                         <div className="single_team_content">
                           <div className="single_team_img">
-                            <img src="assets/images/team2.jpg" alt="" />
+                            <img src={team2} alt="" />
                           </div>
                           <div className="single_team_text_overlay">
                             <h4>DIK ADALIN</h4>
@@ -1060,7 +1084,7 @@ export default class App extends Component {
                       <div className="col-sm-3 col-xs-12">
                         <div className="single_team_content">
                           <div className="single_team_img">
-                            <img src="assets/images/team3.jpg" alt="" />
+                            <img src={team3} alt="" />
                           </div>
                           <div className="single_team_text_overlay">
                             <h4>JENG KOL</h4>
@@ -1086,7 +1110,7 @@ export default class App extends Component {
                       <div className="col-sm-3 col-xs-12">
                         <div className="single_team_content">
                           <div className="single_team_img">
-                            <img src="assets/images/team4.jpg" alt="" />
+                            <img src={team4} alt="" />
                           </div>
                           <div className="single_team_text_overlay">
                             <h4>PET ROMAK</h4>
@@ -1162,7 +1186,7 @@ export default class App extends Component {
                               role="tabpanel"
                               aria-labelledby="headingOne"
                               aria-expanded="false"
-                              style="height: auto;"
+                              style={{height: "auto"}}
                             >
                               <div className="panel-body">
                                 Lorem ipsum dolor sit amet, consectetur
@@ -1354,7 +1378,7 @@ export default class App extends Component {
                   <div className="col-sm-6">
                     <div className="single_choose">
                       <div className="single_choose_img">
-                        <img src="assets/images/choose.png" alt="" />
+                        <img src={choose} alt="" />
                       </div>
                     </div>
                   </div>
@@ -1407,10 +1431,10 @@ export default class App extends Component {
                     </div>
                   </div>
 
-                  <div style="clear:both;"></div>
+                  <div style={{clear:"both"}}></div>
                   <div id="portfoliowork">
                     <div className="single_portfolio tile scale-anm web grid-item-width2">
-                      <img src="assets/images/pf1.jpg" alt="" />
+                      <img src={pf1} alt="" />
                       <div className="grid_item_overlay g_overlay_1">
                         <a
                           href="assets/images/pf1.jpg"
@@ -1426,7 +1450,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm bcards">
-                      <img src="assets/images/pf2.jpg" alt="" />
+                      <img src={pf2} alt="" />
                       <div className="grid_item_overlay">
                         <a
                           href="assets/images/pf2.jpg"
@@ -1442,7 +1466,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm web ">
-                      <img src="assets/images/pf3.jpg" alt="" />
+                      <img src={pf3} alt="" />
                       <div className="grid_item_overlay">
                         <a
                           href="assets/images/pf3.jpg"
@@ -1458,7 +1482,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm web">
-                      <img src="assets/images/pf4.jpg" alt="" />
+                      <img src={pf4} alt="" />
                       <div className="grid_item_overlay">
                         <a
                           href="assets/images/pf4.jpg"
@@ -1474,7 +1498,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm bcards">
-                      <img src="assets/images/pf8.jpg" alt="" />
+                      <img src={pf8} alt="" />
                       <div className="grid_item_overlay">
                         <a
                           href="assets/images/pf8.jpg"
@@ -1490,7 +1514,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm web">
-                      <img src="assets/images/pf9.jpg" alt="" />
+                      <img src={pf9} alt="" />
                       <div className="grid_item_overlay">
                         <a
                           href="assets/images/pf9.jpg"
@@ -1504,7 +1528,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm flyers">
-                      <img src="assets/images/pf5.jpg" alt="" />
+                      <img src={pf5} alt="" />
                       <div className="grid_item_overlay g_overlay_2">
                         <a
                           href="assets/images/pf5.jpg"
@@ -1520,7 +1544,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm flyers">
-                      <img src="assets/images/pf6.jpg" alt="" />
+                      <img src={pf6} alt="" />
                       <div className="grid_item_overlay g_overlay_1">
                         <a
                           href="assets/images/pf6.jpg"
@@ -1537,7 +1561,7 @@ export default class App extends Component {
                     </div>
 
                     <div className="single_portfolio tile scale-anm bcards">
-                      <img src="assets/images/pf7.jpg" alt="" />
+                      <img src={pf7} alt="" />
                       <div className="grid_item_overlay">
                         <a
                           href="assets/images/pf7.jpg"
@@ -1553,7 +1577,7 @@ export default class App extends Component {
                       </div>
                     </div>
                     <div className="single_portfolio tile scale-anm flyers">
-                      <img src="assets/images/pf6.jpg" alt="" />
+                      <img src={pf6} alt="" />
                       <div className="grid_item_overlay g_overlay_1">
                         <a
                           href="assets/images/pf6.jpg"
@@ -1570,7 +1594,7 @@ export default class App extends Component {
                     </div>
 
                     <div className="single_portfolio tile scale-anm bcards">
-                      <img src="assets/images/pf7.jpg" alt="" />
+                      <img src={pf7} alt="" />
                       <div className="grid_item_overlay">
                         <a
                           href="assets/images/pf7.jpg"
@@ -1587,7 +1611,7 @@ export default class App extends Component {
                     </div>
                   </div>
 
-                  <div style="clear:both;"></div>
+                  <div style={{clear:"both"}}></div>
                 </div>
               </div>
             </div>
@@ -1619,55 +1643,55 @@ export default class App extends Component {
                                         <div className="main_portfolio_content text-center">
                                             <div className="grid">
                                                 <div className="grid-item grid-item--width2">
-                                                    <img src="assets/images/pf1.jpg" alt="" />
+                                                    <img src={pf1} alt="" />
                                                     <div className="grid_item_overlay all_overlay">
                                                         <a href="assets/images/pf1.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item ">
-                                                    <img src="assets/images/pf2.jpg" alt="" />
+                                                    <img src={pf2} alt="" />
                                                     <div className="grid_item_overlay all_overlay">
                                                         <a href="assets/images/pf2.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item ">
-                                                    <img src="assets/images/pf3.jpg" alt="" />
+                                                    <img src={pf3} alt="" />
                                                     <div className="grid_item_overlay">
                                                         <a href="assets/images/pf1.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item ">
-                                                    <img src="assets/images/pf4.jpg" alt="" />
+                                                    <img src={pf4} alt="" />
                                                     <div className="grid_item_overlay">
                                                         <a href="assets/images/pf4.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item ">
-                                                    <img src="assets/images/pf5.jpg" alt="" />
+                                                    <img src={pf5} alt="" />
                                                     <div className="grid_item_overlay">
                                                         <a href="assets/images/pf5.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item grid-item--width2">
-                                                    <img src="assets/images/pf6.jpg" alt="" />
+                                                    <img src={pf6} alt="" />
                                                     <div className="grid_item_overlay">
                                                         <a href="assets/images/pf6.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item ">
-                                                    <img src="assets/images/pf7.jpg" alt="" />
+                                                    <img src={pf7} alt="" />
                                                     <div className="grid_item_overlay">
                                                         <a href="assets/images/pf7.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item ">
-                                                    <img src="assets/images/pf8.jpg" alt="" />
+                                                    <img src={pf8} alt="" />
                                                     <div className="grid_item_overlay">
                                                         <a href="assets/images/pf6.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>
                                                 <div className="grid-item ">
-                                                    <img src="assets/images/pf9.jpg" alt="" />
+                                                    <img src={pf9} alt="" />
                                                     <div className="grid_item_overlay">
                                                         <a href="assets/images/pf7.jpg" className="portfolio-img"> <i className="fa fa-picture-o"></i></a>
                                                     </div>
@@ -1767,32 +1791,32 @@ export default class App extends Component {
                 <div className="main_clogo sections text-center">
                   <div className="col-sm-2 col-xs-6">
                     <a href="">
-                      <img src="assets/images/clogo1.png" alt="" />
+                      <img src={clogo1} alt="" />
                     </a>
                   </div>
                   <div className="col-sm-2 col-xs-6">
                     <a href="">
-                      <img src="assets/images/clogo2.png" alt="" />
+                      <img src={clogo2} alt="" />
                     </a>
                   </div>
                   <div className="col-sm-2 col-xs-6">
                     <a href="">
-                      <img src="assets/images/clogo3.png" alt="" />
+                      <img src={clogo3} alt="" />
                     </a>
                   </div>
                   <div className="col-sm-2 col-xs-6">
                     <a href="">
-                      <img src="assets/images/clogo4.png" alt="" />
+                      <img src={clogo4} alt="" />
                     </a>
                   </div>
                   <div className="col-sm-2 col-xs-6">
                     <a href="">
-                      <img src="assets/images/clogo5.png" alt="" />
+                      <img src={clogo5} alt="" />
                     </a>
                   </div>
                   <div className="col-sm-2 col-xs-6">
                     <a href="">
-                      <img src="assets/images/clogo9.png" alt="" />
+                      <img src={clogo9} alt="" />
                     </a>
                   </div>
                 </div>
@@ -1984,7 +2008,7 @@ export default class App extends Component {
                             data-wow-duration="800ms"
                           >
                             <div className="footer_logo">
-                              <img src="assets/images/logo.png" alt="" />
+                              <img src={logo} alt="" />
                             </div>
                             <p>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -2149,35 +2173,9 @@ export default class App extends Component {
           </a>
         </div>
 
-        {/* <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
-
-        <script src="assets/js/jquery.magnific-popup.js"></script>
-        <script src="assets/js/jquery.mixitup.min.js"></script>
-        <script src="assets/js/jquery.easing.1.3.js"></script>
-        <script src="assets/js/jquery.masonry.min.js"></script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-        <script src="http://maps.google.com/maps/api/js"></script>
-        <script src="assets/js/gmaps.min.js"></script>
-
-
-        <script>
-
-                                            function showmap() {
-                                                var mapOptions = {
-                                                    zoom: 8,
-                                                    scrollwheel: false,
-                                                    center: new google.maps.LatLng(-34.397, 150.644),
-                                                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                                                };
-                                                var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-                                            }
-        </script>
-
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script> */}
+       
       </div>
+      </>
     );
   }
 }
