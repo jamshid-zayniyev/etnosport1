@@ -18,16 +18,7 @@ export default class Yangiliklar extends Component {
         <Header />
 
         <div>
-          {/* <div className={style.video}>
-            <video loop={true} autoPlay={true} muted={true}>
-              <source
-                src={this.state.school !== null ? this.state.school.video1 : ""}
-                type="video/mp4"
-              />
-            </video>
-          </div> */}
-
-          <div className={style.binaf}></div>
+        
           <div className={styles.newsY}>
             <Collapse defaultActiveKey={["1"]}>
               <Panel header="Mahallalarda_Etnosportni_rivojlantirish 1" key="1">
