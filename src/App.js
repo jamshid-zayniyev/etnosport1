@@ -11,11 +11,11 @@ export default class App extends Component {
         <BrowserRouter>
          
           <Routes>
-            <Route to={<Dashboard />} exact path="/"/>
+            <Route element={<Dashboard />} exact path="/"/>
               
-            <Route to={<Yangiliklar />} path="/yangiliklar"/>
+            <Route element={<Yangiliklar />} exact path="/yangiliklar"/>
               
-            <Route to={<Videolar />} path="/videolavhalar"/>
+            <Route element={<Videolar />} exact path="/videolavhalar"/>
               
           </Routes>
         </BrowserRouter>

@@ -38,24 +38,19 @@ export default class Header extends Component {
                   exact
                   activeStyle={{ color: "orangered" }}
                   className="navbar"
-                  to="/yutuqlar"
+                  to="/sportchilar"
                 >
-                  Yutuqlar
+                  Sportchilar
                 </NavLink>
                 <NavLink
                   exact
                   activeStyle={{ color: "orangered" }}
                   className="navbar"
-                  to="/fotolavhalar"
+                  to="/tadbirlar"
                 >
-                  Rasmlar
+                  Tadbirlar
                 </NavLink>
-                <NavLink
-                  exact
-                  activeStyle={{ color: "orangered" }}
-                  className="navbar"
-                  to="/login"
-                >
+              
                   <Dropdown>
                     <Dropdown.Toggle
                       className="navbar"
@@ -95,16 +90,8 @@ export default class Header extends Component {
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                </NavLink>
-                <NavLink
-                  exact
-                  activeStyle={{ color: "orangered" }}
-                  className="navbar"
-                  to="/kitoblar"
-                >
-                  Kitoblar
-                </NavLink>
-
+                
+               
                 <NavLink
                   exact
                   activeStyle={{ color: "orangered" }}
@@ -113,14 +100,7 @@ export default class Header extends Component {
                 >
                   Videolar
                 </NavLink>
-                <NavLink
-                  exact
-                  activeStyle={{ color: "orangered" }}
-                  className="navbar"
-                  to="/login"
-                >
-                  Test
-                </NavLink>
+               
               </Nav>
             </Navbar.Collapse>
           </Container>
