@@ -4,6 +4,8 @@ import Dashboard from "./pages/Dashboard";
 import "./App.css";
 import Yangiliklar from "./pages/Yangiliklar";
 import Videolar from "./pages/Videolar";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css';
 export default class App extends Component {
   render() {
     return (

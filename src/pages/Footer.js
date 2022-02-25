@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { BsTelegram } from "react-icons/bs";
-import xalq from "../img/xalq.png";
+import xalq from "../img/logo.png";
 import style from "../css/Footer.module.css";
 export default class Footer extends Component {
   render() {

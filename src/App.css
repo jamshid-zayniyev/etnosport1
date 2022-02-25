@@ -9,15 +9,18 @@ body{ background-color: rgba(238, 243, 237, 0.857); width:100%; overflow-x: hidd
   50%{margin-left:calc(100% - 200px);}
   100%{margin-left:0px;}
 } 
-.navbar:hover{color:orangered}
-.navbar{
-  color: rgb(8, 187, 8);
-                    margin-left: 28px;
-                    font-size:20px;
-                    text-decoration:none;
-                    font-weight: 400;
-                  
+.dropD{
+  background-color: rgba(238, 243, 237, 0.857) !important; border:none !important;  color: rgb(8, 187, 8) !important; padding:0px !important; outline: none !important; font-size:16px !important ;
+  box-shadow: 0px 0px 0px transparent  !important;
 }
+.grt{
+  display: none;
+}
+.fr{display: inline-block;}
+
+.dropD:hover{background-color: rgba(238, 243, 237, 0.857);color:orangered; border:none; outline: none; padding:0px; box-shadow: 0px 0px 0px transparent !important;}
+.dropD:focus{background-color: rgba(238, 243, 237, 0.857) !important;color:orangered !important; border:none; outline: none; padding:0px; box-shadow: 0px 0px 0px transparent !important;}
+
 
 ::-webkit-scrollbar-track
 {
@@ -54,3 +57,46 @@ body{ background-color: rgba(238, 243, 237, 0.857); width:100%; overflow-x: hidd
 .mur_you{padding:10px; background-color: rgb(8, 187, 8);box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; display:flex; align-items: center; justify-content:space-around}
 .you_btn{display:flex; width:100%; justify-content: space-between;}
 .mur_you h4{ position: relative; top:5px;}
+
+@media (min-width:1650px){
+  .sliderHomiy p {
+  font-size: 23px;
+  }
+}
+.messa{
+  z-index:10575 !important
+}
+@media (max-width:1050px){
+.dropD{
+  font-size: 22px !important;
+}
+.fr{display:none !important;}
+.grt{display: block !important;}
+}
+.eslatma{
+  width:360px;
+  padding-top: 20px;
+  height:60px;
+  background:linear-gradient(rgb(193, 18, 152), rgb(94, 6, 72), rgb(52, 3, 40));
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+  font-size: 20px;
+  color:rgba(238, 243, 237, 0.857);
+  position: fixed;
+  bottom:0px;
+  right:0px;
+  border-radius:20px 0 0 0;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+
+@media (min-width:1650px){
+  
+  .dropD{font-size: 25px !important;} 
+  }
+  
+  @media (max-width:704px){
+  #navb{height:calc(100% - 100px); overflow-y: auto;}
+  
+ }
+ 
