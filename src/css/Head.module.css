@@ -1,7 +1,7 @@
 .navbar{width:100%; height:100px; 
   z-index: 3335;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: rgba(238, 243, 237); position: fixed; top:0px;
+  background-color: white; position: fixed; top:0px;
 display: flex; align-items: center;  padding-left: 0; padding-right:10%;}
 .brand{flex:20%; height:100px; display: flex; padding-left:30px; align-items: center; justify-content:center;}
 .nav{flex:80%; display: flex;padding-left:30px; }

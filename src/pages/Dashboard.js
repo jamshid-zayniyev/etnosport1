@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import style from '../css/Dashboard.module.css'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap'
 import head from '../img/head.jpg'
 import head1 from '../img/head1.jpg'
 import head2 from '../img/head2.jpg'
@@ -300,52 +300,11 @@ modalB:false,
             </Carousel>
                  </Col>
               </Row>
-              <div className={style.new}>
-              <div className={style.back}></div>
-              {this.state.news !== null && this.state.news.length !== 0 ? (
-                <Carousel
-                  swipeable={false}
-                  draggable={false}
-                  showDots={true}
-                  responsive={responsive2}
-                  ssr={true} // means to render carousel on server-side.
-                  infinite={true}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                  autoPlaySpeed={3000}
-                  keyBoardControl={true}
-                  customTransition="all .5"
-                  transitionDuration={100}
-                  containerClass="carousel-container"
-                  removeArrowOnDeviceType={["tablet", "mobile"]}
-                  deviceType={this.props.deviceType}
-                  dotListClass="custom-dot-list-style"
-                  itemClass="carousel-item-padding-40-px"
-                >
-                  {this.state.news.map((item, key) => {
-                    return (
-                      <div>
-                      <Link to={`/yangiliklar/${key}`}>
-                        <div className={style.new_item}>
-                          <div>
-                            <img src={item.image} />
-                            <h4>{item.name}</h4>
-                            <p className={style.date}>
-                              <i className="fa fa-calendar">
-                                {item.date_added}
-                              </i>
-                            </p>
-                          </div>
-                        </div>
-                        </Link>
-                      </div>
-                    );
-                  })}
-                </Carousel>
-              ) : (
-                ""
-              )}<br />{" "}</div>
+            
          <div className={style.sports}>
          <h1 className={style.sarlavha}>Etnosport turlari</h1>
+         <div className={style.chiziq}></div>
+         
          <Carousel
                     responsive={responsive1}
                     infinite={true}
@@ -424,6 +383,8 @@ modalB:false,
          </div>
          <div className={style.sports}>
          <h1 className={style.sarlavha}>Sportchilar</h1>
+         <div className={style.chiziq}></div>
+        
 
          <Carousel
                     responsive={responsive3}
@@ -511,11 +472,89 @@ modalB:false,
 
          </div>
          
-              {/* <video className={style.back2} src={back2} autoPlay loop muted={this.state.muted2}></video> */}
-             
-             {/* <div className={style.blue}>
-               <div className={style.logo1} onClick={this.muted2}>{this.state.muted2?<i className="fa fa-volume-off"></i>:<i className="fa fa-volume-up"></i>}</div>
-             </div> */}
+          <div></div>
+          <div className={style.news}>
+          <h1 className={style.sarlavha}>Yangiliklar</h1>
+         <div className={style.chiziq}></div>
+        
+            <Container>
+              <Row>
+              <Col lg={6} md={6} sm={12} className={style.new}>
+<Link to="/yangiliklar">
+  <Row className={style.n}>
+    <Col lg={4}>
+      <img src={head5} alt="..."/>
+    </Col>
+    <Col lg={8}>
+      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
+    </Col>
+    </Row>
+</Link>
+                </Col>
+                <Col lg={6} md={6} sm={12} className={style.new}>
+<Link to="/yangiliklar">
+  <Row className={style.n}>
+    <Col lg={4}>
+      <img src={head5} alt="..."/>
+    </Col>
+    <Col lg={8}>
+      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
+    </Col>
+    </Row>
+</Link>
+                </Col>
+                <Col lg={6} md={6} sm={12} className={style.new}>
+<Link to="/yangiliklar">
+  <Row className={style.n}>
+    <Col lg={4}>
+      <img src={head5} alt="..."/>
+    </Col>
+    <Col lg={8}>
+      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
+    </Col>
+    </Row>
+</Link>
+                </Col>
+                <Col lg={6} md={6} sm={12} className={style.new}>
+<Link to="/yangiliklar">
+  <Row className={style.n}>
+    <Col lg={4}>
+      <img src={head5} alt="..."/>
+    </Col>
+    <Col lg={8}>
+      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
+    </Col>
+    </Row>
+</Link>
+                </Col>
+                <Col lg={6} md={6} sm={12} className={style.new}>
+<Link to="/yangiliklar">
+  <Row className={style.n}>
+    <Col lg={4}>
+      <img src={head5} alt="..."/>
+    </Col>
+    <Col lg={8}>
+      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
+    </Col>
+    </Row>
+</Link>
+                </Col>
+                <Col lg={6} md={6} sm={12} className={style.new}>
+<Link to="/yangiliklar">
+  <Row className={style.n}>
+    <Col lg={4}>
+      <img src={head5} alt="..."/>
+    </Col>
+    <Col lg={8}>
+      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
+    </Col>
+    </Row>
+</Link>
+                </Col>
+              </Row>
+              <Link className={style.but} to="/yangiliklar"> Barchasini ko'rish</Link>
+            </Container>
+          </div>
           </div><br/><br/><br/><br/><br/>
                 <Footer/>
             </div>

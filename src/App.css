@@ -1,8 +1,8 @@
 .sarlavha{color:orangered; margin-top:40px; padding:10px; text-align: center; margin-bottom:20px}
 .sarlavha a{color:orangered; text-decoration:none;}
 .sarlavha:hover a{color:white;}
-body{ background-color: rgba(238, 243, 237, 0.857); width:100%; overflow-x: hidden;}
-.chiziq{width:200px; height:8px; background-color: rgba(238, 243, 237, 0.857); margin-top:-20px;margin-bottom:20px; animation-name: chiziq; animation-duration:3s; animation-iteration-count: infinite;}
+body{ background-color: white; width:100%; overflow-x: hidden;}
+.chiziq{width:200px; height:8px; background-color: white; margin-top:-20px;margin-bottom:20px; animation-name: chiziq; animation-duration:3s; animation-iteration-count: infinite;}
 .chiziqoq{width:200px; height:8px; background-color: rgb(8, 187, 8); margin-top:-20px;margin-bottom:20px; animation-name: chiziq; animation-duration:3s; animation-iteration-count: infinite;}
 @keyframes chiziq{
   0%{margin-left:0px;}
@@ -10,7 +10,7 @@ body{ background-color: rgba(238, 243, 237, 0.857); width:100%; overflow-x: hidd
   100%{margin-left:0px;}
 } 
 .dropD{
-  background-color: rgba(238, 243, 237, 0.857) !important; border:none !important;  color: rgb(8, 187, 8) !important; padding:0px !important; outline: none !important; font-size:16px !important ;
+  background-color: white !important; border:none !important;  color: rgb(8, 187, 8) !important; padding:0px !important; outline: none !important; font-size:16px !important ;
   box-shadow: 0px 0px 0px transparent  !important;
 }
 .grt{
@@ -18,8 +18,8 @@ body{ background-color: rgba(238, 243, 237, 0.857); width:100%; overflow-x: hidd
 }
 .fr{display: inline-block;}
 
-.dropD:hover{background-color: rgba(238, 243, 237, 0.857);color:orangered; border:none; outline: none; padding:0px; box-shadow: 0px 0px 0px transparent !important;}
-.dropD:focus{background-color: rgba(238, 243, 237, 0.857) !important;color:orangered !important; border:none; outline: none; padding:0px; box-shadow: 0px 0px 0px transparent !important;}
+.dropD:hover{background-color: white;color:orangered; border:none; outline: none; padding:0px; box-shadow: 0px 0px 0px transparent !important;}
+.dropD:focus{background-color: white !important;color:orangered !important; border:none; outline: none; padding:0px; box-shadow: 0px 0px 0px transparent !important;}
 
 
 ::-webkit-scrollbar-track
@@ -80,7 +80,7 @@ body{ background-color: rgba(238, 243, 237, 0.857); width:100%; overflow-x: hidd
   background:linear-gradient(rgb(193, 18, 152), rgb(94, 6, 72), rgb(52, 3, 40));
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
   font-size: 20px;
-  color:rgba(238, 243, 237, 0.857);
+  color:white;
   position: fixed;
   bottom:0px;
   right:0px;

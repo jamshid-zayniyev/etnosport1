@@ -9,7 +9,7 @@ import 'antd/dist/antd.css';
 export default class App extends Component {
   render() {
     return (
-      <div style={{ backgroundColor: "rgba(238, 243, 237, 0.857)" }}>
+      <div style={{ backgroundColor: "white" }}>
         <BrowserRouter>
          
           <Routes>
