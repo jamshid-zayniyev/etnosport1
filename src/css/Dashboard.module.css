@@ -384,7 +384,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: none;
   padding: 10px 40px;
-  background-color: rgb(53, 15, 89);
+  background-color: rgb(8, 187, 8);
   font-size: 22px;
   color: white;
   margin-top: 40px;
@@ -393,7 +393,7 @@
   color: white;
 }
 .but:hover {
-  color: rgb(53, 15, 89);
+  color: rgb(8, 187, 8);
   background-color: rgba(238, 243, 237, 0.857);
 }
 .but:active {
@@ -869,8 +869,16 @@
 }
 
   
-.sports{width:100%;}
-.sport{padding:10px; cursor: pointer; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
+.sports{width:90%; margin-left: 5%;}
+.sport{padding:10px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
 .sport img{width: 100%; }
 .sport p{text-align: center; font-size: 18px; color:rgb(8, 187, 8);}
 .sport:hover{background-color: white;}
+.kurash img{width:100%;}
+.kurash p{font-size: 16px;}
+.sportchi{padding:10px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+
+.sportchi img{width:100%; transition: 1s;}
+.sportchi:hover img{transform: scale(1.1, 1.1);}
+.sportchi h5{text-align: center; color:orangered; margin-top: 20px;}
+.sportchi p{text-align: center; font-size: 18px; color:orangered;}
