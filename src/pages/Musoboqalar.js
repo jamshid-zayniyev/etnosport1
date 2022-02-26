@@ -19,7 +19,7 @@ import Footer from "./Footer";
 
 const { Panel } = Collapse;
 
-export default class Loyihalar extends Component {
+export default class Musoboqalar extends Component {
   state = {
     loader: true,
     news: null,
@@ -37,10 +37,9 @@ export default class Loyihalar extends Component {
       showComment: false,
     });
   };
-  openModal = (id) => {
+  openModal = () => {
     this.setState({
       showComment: true,
-      comments: this.numberComment(id),
     });
   };
   handleCloseT = () => {
@@ -48,10 +47,9 @@ export default class Loyihalar extends Component {
       showCommentT: false,
     });
   };
-  openModalT = (id) => {
+  openModalT = () => {
     this.setState({
       showCommentT: true,
-      id: id,
     });
   };
 
@@ -60,25 +58,15 @@ export default class Loyihalar extends Component {
       <>
         <Header />
         <div className="loyiha">
-          <div className={style.video}>
-            <video loop={true} autoPlay={true} muted={true}>
-              <source
-                src={this.state.school !== null ? this.state.school.video1 : ""}
-                type="video/mp4"
-              />
-            </video>
-          </div>
-
           <div className={style.binaf}></div>
           <div className={styles.newsY}>
             <h1 className={style.sarlavha}>
-              Namangan viloyati xalq ta’limi tizimini 2022 yilda rivojlantirish
-              dasturi
+              Etnosportni 2022 yilda rivojlantirish dasturi
             </h1>
             <br />
             <br />
-            <Collapse accordion defaultActiveKey={[this.state.raqam]}>
-              <Panel className={styled.panel} header="Namangan viloyati">
+            <Collapse accordion defaultActiveKey={1}>
+              <Panel className={styled.panel} header={"Etnosport haqida"}>
                 <div>
                   <Container>
                     <Row>
@@ -96,7 +84,7 @@ export default class Loyihalar extends Component {
                               this.openModal();
                             }}
                           >
-                            <i className="fa fa-comments"></i> 666
+                            <i className="fa fa-comments"></i> 0
                           </div>
                           <div className={styled.bag}>
                             <i className="fa fa-download"></i> Download
@@ -169,8 +157,7 @@ export default class Loyihalar extends Component {
                               this.openModal();
                             }}
                           >
-                            <i className="fa fa-comments"></i>{" "}
-                            {this.numberComment().length}
+                            <i className="fa fa-comments"></i>0
                           </div>
 
                           <div className={styled.bag}>
@@ -227,11 +214,7 @@ export default class Loyihalar extends Component {
               </Panel>
             </Collapse>
           </div>
-          <Modal
-            style={{ zIndex: "4789" }}
-            show={this.state.showComment}
-            onHide={this.handleClose}
-          >
+          <Modal style={{ zIndex: "4789" }} onHide={this.handleClose}>
             <Modal.Header closeButton>
               <Modal.Title className={style.sarlavha}>
                 Foydalanuvchilarning fikrlari
@@ -240,7 +223,6 @@ export default class Loyihalar extends Component {
             <Modal.Body>
               <div className="comments">
                 <div className="comment mt-4 text-justify float-left">
-                  {" "}
                   <img
                     src="https://i.imgur.com/yTFUilP.jpg"
                     alt=""
@@ -256,11 +238,7 @@ export default class Loyihalar extends Component {
               </div>
             </Modal.Body>
           </Modal>
-          <Modal
-            style={{ zIndex: "4789" }}
-            show={this.state.showCommentT}
-            onHide={this.handleCloseT}
-          >
+          <Modal style={{ zIndex: "4789" }} onHide={this.handleCloseT}>
             <Modal.Header closeButton>
               <Modal.Title className={style.sarlavha}>
                 Fikringiz biz uchun muhim
@@ -304,12 +282,7 @@ export default class Loyihalar extends Component {
                   </div>
                   <div className="form-group">
                     {" "}
-                    <button
-                      type="button"
-                      id="post"
-                      onClick={this.addComment}
-                      className="btn"
-                    >
+                    <button type="button" id="post" className="btn">
                       Yuborish
                     </button>{" "}
                   </div>

@@ -71,14 +71,14 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 .fikr {
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   font-size: 20px;
   margin-top: 30px;
 }
 .ism {
   font-size: 16px;
   text-align: right;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
 }
 .second_item img {
   width: 100%;
@@ -103,7 +103,7 @@
 }
 .items_item p {
   font-size: 18px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   margin-top: 20px;
   text-align: center;
 }
@@ -131,16 +131,16 @@
   color: rgb(243, 207, 2);
 }
 .items_item1 i {
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
 }
 .items_item1 p {
   font-size: 23px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   margin-top: 20px;
   text-align: center;
 }
 .items_item1 h1 {
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
 
   text-align: center;
 }
@@ -175,11 +175,11 @@
   font-size: 26px;
   margin-top: 20px;
   text-align: center;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
 }
 .ustoz_item p {
   font-size: 16px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .gal {
@@ -187,7 +187,7 @@
   background-color: white;
 }
 .sarlavha {
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   font-size: 32px;
   text-align: center;
 }
@@ -247,7 +247,7 @@
   font-size: 17px;
   margin-top: 20px;
   text-align: center;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
 }
 .tad_item img {
   width: 100%;
@@ -268,12 +268,12 @@
   font-size: 22px;
   margin-top: 20px;
   text-align: center;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
 }
 
 .new_item .text {
   font-size: 18px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .new_item .date {
@@ -282,18 +282,18 @@
   bottom: 0px;
   left: 0px;
   width: 100%;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .new_item .date i {
   font-size: 18px;
   margin-right: 10px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .tad_item .text {
   font-size: 18px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .tad_item .date {
@@ -302,13 +302,13 @@
   bottom: 30px;
   left: 0px;
   width: 100%;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .tad_item .date i {
   font-size: 18px;
   margin-right: 10px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .tad_item .mar {
@@ -317,13 +317,13 @@
   bottom: 60px;
   left: 0px;
   width: 100%;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .tad_item .mar i {
   font-size: 18px;
   margin-right: 10px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 
@@ -333,13 +333,13 @@
   bottom: 0px;
   left: 0px;
   width: 100%;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .tad_item .time i {
   font-size: 18px;
   margin-right: 10px;
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   text-align: center;
 }
 .videos {

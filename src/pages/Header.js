@@ -107,17 +107,17 @@ export default class NavbarA extends Component {
                   <Dropdown.Menu>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/ishlanma">
-                        Dars ishlanmalar
+                        Sportchilar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/kutubxona">
-                        Elektron kutubxona
+                        Sport haqida manbalar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/loyihalar">
-                        Loyihalar
+                        Musoboqalar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
@@ -146,17 +146,17 @@ export default class NavbarA extends Component {
               </li>
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/ishlanma">
-                  Dars ishlanmalar
+                  Sportchilar
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/kutubxona">
-                  Elektron kutubxona
+                  Sport haqida manbalar
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/loyihalar">
-                  Loyihalar
+                  Musoboqalar
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>

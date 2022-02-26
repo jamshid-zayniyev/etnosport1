@@ -86,7 +86,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: none;
   padding: 10px 20px;
-  background-color: rgb(53, 15, 89);
+  background-color: rgb(8, 187, 8);
   font-size: 16px;
   color: white;
   text-align: center;
@@ -99,7 +99,7 @@
   color: white !important;
 }
 .but:hover {
-  color: rgb(53, 15, 89) !important;
+  color: rgb(8, 187, 8) !important;
   background-color: white;
 }
 .but:active {
@@ -117,7 +117,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: none;
   padding: 10px 20px;
-  background-color: rgb(53, 15, 89);
+  background-color: rgb(8, 187, 8);
   font-size: 16px;
 
   color: white;
@@ -131,7 +131,7 @@
   color: white !important;
 }
 .but1:hover {
-  color: rgb(53, 15, 89) !important;
+  color: rgb(8, 187, 8) !important;
   background-color: white;
 }
 .but1:active {
@@ -143,7 +143,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: none;
   padding: 10px 20px;
-  background-color: rgb(53, 15, 89);
+  background-color: rgb(8, 187, 8);
   font-size: 16px;
 
   color: white;
@@ -156,7 +156,7 @@
   color: white !important;
 }
 .but2:hover {
-  color: rgb(53, 15, 89) !important;
+  color: rgb(8, 187, 8) !important;
   background-color: white;
 }
 .but2:active {
