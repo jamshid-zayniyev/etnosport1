@@ -1,194 +1,520 @@
+// import React, { Component } from "react";
+// import style from "../css/Yangiliklar.module.css";
+// import styles from "../css/Yangiliklartwo.module.css";
+// import Header from "./Header";
+// import Footer from "./Footer";
+// import img1 from "../img/head1.jpg";
+// import img2 from "../img/head2.jpg";
+// import img3 from "../img/head3.jpg";
+// import { Col, Container, Row } from "react-bootstrap";
+// import "react-multi-carousel/lib/styles.css";
+// // import GridLoader from "react-spinners/GridLoader";
+// import { Collapse } from "antd";
+// const { Panel } = Collapse;
+// export default class Yangiliklar extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Header />
+
+//         <div>
+
+//           <div className={styles.newsY}>
+//             <Collapse defaultActiveKey={["1"]}>
+//               <Panel header="Mahallalarda_Etnosportni_rivojlantirish 1" key="1">
+//                 <div>
+//                   <Container>
+//                     <div className={styles.imag}>
+//                       <img src={img1} />
+//                     </div>
+//                     <div className={styles.yozuv}>
+//                       <h1>Etnosport</h1>
+//                       <p>
+//                         <i className="fa fa-calendar"></i>
+//                         24.02.2022
+//                       </p>
+//                       <p>
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                       </p>
+//                     </div>
+//                   </Container>
+//                 </div>
+//               </Panel>
+//               <Panel header="Mahallalarda_Etnosportni_rivojlantirish 2" key="2">
+//                 <div>
+//                   <Container>
+//                     <div className={styles.imag}>
+//                       <img src={img2} />
+//                     </div>
+//                     <div className={styles.yozuv}>
+//                       <h1>Etnosport</h1>
+//                       <p>
+//                         <i className="fa fa-calendar"></i>
+//                         24.02.2022
+//                       </p>
+//                       <p>
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                       </p>
+//                     </div>
+//                   </Container>
+//                 </div>
+//               </Panel>
+//               <Panel
+//                 header="Mahallalarda_Etnosportni_rivojlantirish 3 "
+//                 key="3"
+//               >
+//                 <div>
+//                   <Container>
+//                     <div className={styles.imag}>
+//                       <img src={img3} />
+//                     </div>
+//                     <div className={styles.yozuv}>
+//                       <h1>Etnosport</h1>
+//                       <p>
+//                         <i className="fa fa-calendar"></i>
+//                         24.02.2022
+//                       </p>
+//                       <p>
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                         #Mahallalarda_Etnosportni_rivojlantirish
+//                       </p>
+//                     </div>
+//                   </Container>
+//                 </div>
+//               </Panel>
+//             </Collapse>
+//           </div>
+//         </div>
+
+//         <Footer />
+//       </div>
+//     );
+//   }
+// }
+
 import React, { Component } from "react";
+import { message, Collapse } from "antd";
+
 import style from "../css/Yangiliklar.module.css";
+import styled from "../css/Musoboqalar.module.css";
 import styles from "../css/Yangiliklartwo.module.css";
-import Header from "./Header";
-import Footer from "./Footer";
-import img1 from "../img/head1.jpg";
-import img2 from "../img/head2.jpg";
-import img3 from "../img/head3.jpg";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Modal, Row } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
-// import GridLoader from "react-spinners/GridLoader";
-import { Collapse } from "antd";
+
+import word from "../img/kurash4.jpg";
+import excel from "../img/kurash4.jpg";
+import power from "../img/kurash4.jpg";
+import pdf from "../img/kurash4.jpg";
+import file from "../img/kurash4.jpg";
+import kurash6 from "../img/kurash6.jpg";
+import Header from "./Header";
+
+import Footer from "./Footer";
+
 const { Panel } = Collapse;
+
 export default class Yangiliklar extends Component {
+  // state = {
+  //   loader: true,
+  //   news: null,
+  //   school: null,
+  //   tumanlar: null,
+  //   showComment: false,
+  //   showCommentT: false,
+  //   raqam: "0",
+  //   comments: [],
+  //   id: null,
+  // };
+
+  // handleClose = () => {
+  //   this.setState({
+  //     showComment: false,
+  //   });
+  // };
+  // openModal = (id) => {
+  //   this.setState({
+  //     showComment: true,
+  //     comments: this.numberComment(id),
+  //   });
+  // };
+  // handleCloseT = () => {
+  //   this.setState({
+  //     showCommentT: false,
+  //   });
+  // };
+  // openModalT = (id) => {
+  //   this.setState({
+  //     showCommentT: true,
+  //     id: id,
+  //   });
+  // };
+
   render() {
     return (
-      <div>
+      <>
         <Header />
+        {/* <div className="loyiha">
+          <div className={style.video}>
+            <video loop={true} autoPlay={true} muted={true}>
+              <source
+                src={this.state.school !== null ? this.state.school.video1 : ""}
+                type="video/mp4"
+              />
+            </video>
+          </div>
 
-        <div>
-        
+          <div className={style.binaf}></div>
           <div className={styles.newsY}>
-            <Collapse defaultActiveKey={["1"]}>
-              <Panel header="Mahallalarda_Etnosportni_rivojlantirish 1" key="1">
+            <h1 className={style.sarlavha}>
+              Namangan viloyati xalq ta’limi tizimini 2022 yilda rivojlantirish
+              dasturi
+            </h1>
+            <br />
+            <br />
+            <Collapse accordion defaultActiveKey={[this.state.raqam]}>
+              <Panel className={styled.panel} header="Namangan viloyati">
                 <div>
                   <Container>
-                    <div className={styles.imag}>
-                      <img src={img1} />
-                    </div>
-                    <div className={styles.yozuv}>
-                      <h1>Etnosport</h1>
-                      <p>
-                        <i className="fa fa-calendar"></i>
-                        24.02.2022
-                      </p>
-                      <p>
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                      </p>
-                    </div>
+                    <Row>
+                      <Col
+                        lg={6}
+                        md={12}
+                        className={styled.colT}
+                        style={{ marginTop: "20px" }}
+                        sm={12}
+                      >
+                        <div className={styled.ss}>
+                          <div
+                            className={styled.bag1}
+                            onClick={() => {
+                              this.openModal();
+                            }}
+                          >
+                            <i className="fa fa-comments"></i> 666
+                          </div>
+                          <div className={styled.bag}>
+                            <i className="fa fa-download"></i> Download
+                          </div>
+                          <Row>
+                            <Col lg={3}>
+                              <img src={kurash6} />
+                            </Col>
+                            <Col
+                              lg={9}
+                              style={{
+                                display: "flex",
+                                position: "relative",
+                                justifyContent: "center",
+                                flexDirection: "column",
+                              }}
+                            >
+                              <h1 style={{ textAlign: "left" }}>Jamshid</h1>
+                            </Col>
+                          </Row>
+                          <br />
+
+                          <div className={styled.butlar}>
+                            <buttun
+                              onClick={() => {
+                                this.openModalT();
+                              }}
+                              className={styled.but1}
+                            >
+                              Izoh qoldirish
+                            </buttun>
+
+                            <a
+                              className={styled.but}
+                              onClick={() => {
+                                this.download();
+                              }}
+                              href="#"
+                              target="_blank"
+                            >
+                              Yuklab olish
+                            </a>
+                          </div>
+                        </div>
+                      </Col>
+                      <h1 className={styled.HT}>
+                        <i className="fa fa-folder-open"></i> Loyiha mavjud
+                        emas!!!
+                      </h1>
+                    </Row>
                   </Container>
                 </div>
               </Panel>
-              <Panel header="Mahallalarda_Etnosportni_rivojlantirish 2" key="2">
+
+              <Panel className={styled.panel} header={"Jamshid"}>
                 <div>
                   <Container>
-                    <div className={styles.imag}>
-                      <img src={img2} />
-                    </div>
-                    <div className={styles.yozuv}>
-                      <h1>Etnosport</h1>
-                      <p>
-                        <i className="fa fa-calendar"></i>
-                        24.02.2022
-                      </p>
-                      <p>
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                      </p>
-                    </div>
-                  </Container>
-                </div>
-              </Panel>
-              <Panel
-                header="Mahallalarda_Etnosportni_rivojlantirish 3 "
-                key="3"
-              >
-                <div>
-                  <Container>
-                    <div className={styles.imag}>
-                      <img src={img3} />
-                    </div>
-                    <div className={styles.yozuv}>
-                      <h1>Etnosport</h1>
-                      <p>
-                        <i className="fa fa-calendar"></i>
-                        24.02.2022
-                      </p>
-                      <p>
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                      </p>
-                    </div>
+                    <Row>
+                      <Col
+                        lg={6}
+                        md={12}
+                        className={styled.colT}
+                        style={{ marginTop: "20px" }}
+                        sm={12}
+                      >
+                        <div className={styled.ss}>
+                          <div
+                            className={styled.bag1}
+                            onClick={() => {
+                              this.openModal();
+                            }}
+                          >
+                            <i className="fa fa-comments"></i>{" "}
+                            {this.numberComment().length}
+                          </div>
+
+                          <div className={styled.bag}>
+                            <i className="fa fa-download"></i> Download2
+                          </div>
+                          <Row>
+                            <Col lg={3}>
+                              <img src={kurash6} />
+                            </Col>
+                            <Col
+                              lg={9}
+                              style={{
+                                display: "flex",
+                                position: "relative",
+                                justifyContent: "center",
+                                flexDirection: "column",
+                              }}
+                            >
+                              <h1 style={{ textAlign: "left" }}>Jamshid</h1>
+                            </Col>
+                          </Row>
+                          <br />
+
+                          <div className={styled.butlar}>
+                            <buttun
+                              onClick={() => {
+                                this.openModalT();
+                              }}
+                              className={styled.but1}
+                            >
+                              Izoh qoldirish
+                            </buttun>
+
+                            <a
+                              className={styled.but}
+                              onClick={() => {
+                                this.download();
+                              }}
+                              href={"#"}
+                              target="_blank"
+                            >
+                              Yuklab olish
+                            </a>
+                          </div>
+                        </div>
+                      </Col>
+                      <h1 className={styled.HT}>
+                        <i className="fa fa-folder-open"></i> Loyiha mavjud
+                        emas!!!
+                      </h1>
+                    </Row>
                   </Container>
                 </div>
               </Panel>
             </Collapse>
           </div>
-        </div>
-
+          <Modal
+            style={{ zIndex: "4789" }}
+            show={this.state.showComment}
+            onHide={this.handleClose}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title className={style.sarlavha}>
+                Foydalanuvchilarning fikrlari
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <div className="comments">
+                <div className="comment mt-4 text-justify float-left">
+                  {" "}
+                  <img
+                    src="https://i.imgur.com/yTFUilP.jpg"
+                    alt=""
+                    className="rounded-circle"
+                    width="40"
+                    height="40"
+                  />
+                  <h4>Jamashid</h4> <br />
+                  <span>19.08.2001</span> <br />
+                  <p>Gaday reshala</p>
+                </div>
+                <h6 style={{ textAlign: "center" }}>Izoh mavjud emas!!!</h6>
+              </div>
+            </Modal.Body>
+          </Modal>
+          <Modal
+            style={{ zIndex: "4789" }}
+            show={this.state.showCommentT}
+            onHide={this.handleCloseT}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title className={style.sarlavha}>
+                Fikringiz biz uchun muhim
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <div className="comments">
+                <form id="algin-form">
+                  <div className="form-group">
+                    <label for="message">Izohni yozing</label>{" "}
+                    <textarea
+                      name="msg"
+                      id="comment"
+                      msg
+                      cols="30"
+                      rows="5"
+                      className="form-control"
+                    ></textarea>
+                  </div>
+                  <div className="form-group">
+                    {" "}
+                    <label for="name">Ism familiyani yozing</label>{" "}
+                    <input
+                      required
+                      type="text"
+                      name="name"
+                      id="name"
+                      className="form-control"
+                    />{" "}
+                  </div>
+                  <div className="form-group">
+                    {" "}
+                    <label for="email">Emailni yozing</label>{" "}
+                    <input
+                      required
+                      type="text"
+                      name="email"
+                      id="email"
+                      className="form-control"
+                    />{" "}
+                  </div>
+                  <div className="form-group">
+                    {" "}
+                    <button
+                      type="button"
+                      id="post"
+                      onClick={this.addComment}
+                      className="btn"
+                    >
+                      Yuborish
+                    </button>{" "}
+                  </div>
+                </form>
+              </div>
+            </Modal.Body>
+          </Modal>
+        </div> */}
         <Footer />
-      </div>
+      </>
     );
   }
 }

@@ -12,7 +12,7 @@
 }
 .ss h1 {
   font-size: 18px;
-  color: blueviolet;
+  color: rgb(8, 187, 8);
 }
 .ss h1:hover {
   color: rgb(46, 12, 79);
@@ -62,7 +62,7 @@
 }
 
 .sarlavha {
-  color: rebeccapurple;
+  color: rgb(8, 187, 8);
   font-size: 32px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.713);
@@ -75,7 +75,7 @@
   width: 100%;
   height: 100vh;
   background-size: 100% 100%;
-  background-image: url(../images/h.jpg);
+  background-image: url(../img/kurash6.jpg);
   padding-top: 100px;
   background-attachment: fixed;
   background-repeat: no-repeat;
