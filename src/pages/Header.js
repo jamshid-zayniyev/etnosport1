@@ -131,7 +131,7 @@ export default class NavbarA extends Component {
                   <Dropdown.Menu>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/ishlanma">
-                        Etnosport turlari
+                        Videolavhalar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
