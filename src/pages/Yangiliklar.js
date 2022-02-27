@@ -1,193 +1,102 @@
 import React, { Component } from "react";
-import style from "../css/Yangiliklar.module.css";
-import styles from "../css/Yangiliklartwo.module.css";
-import Header from "./Header";
-import Footer from "./Footer";
-import img1 from "../img/head1.jpg";
-import img2 from "../img/head2.jpg";
-import img3 from "../img/head3.jpg";
+import style from "../css/Dashboard.module.css";
+import styles from "../css/Gallery.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
-// import GridLoader from "react-spinners/GridLoader";
+import GridLoader from "react-spinners/GridLoader";
+import axios from "axios";
+import { url } from "../host/Host";
+import Header from "./Header";
 import { Collapse } from "antd";
+import Footer from "./Footer";
+import rasm from "../img/news.jpg"
+
 const { Panel } = Collapse;
+
 export default class Yangiliklar extends Component {
+  state = {
+    loader: true,
+    news: null,
+    school: null,
+    raqam:"0",
+  };
+
+  componentDidMount() {
+    this.getNews();
+    var link=window.location.href
+    
+    this.setState({raqam:link.slice(link.lastIndexOf('/')+1, link.length)})
+
+  }
+  getNews = () => {
+    axios.get(`${url}/boshqarma`).then(res=>{
+      this.setState({
+        school:res.data[0]
+      })
+      axios.get(`${url}/news/`).then((res) => {
+        var a=res.data.reverse()
+        a.splice(0,1)
+        a.splice(1,1)
+        a.splice(4,1)
+        this.setState({
+          news: a
+          
+        });
+        setTimeout(()=>{
+          this.setState({loader:false})
+        },1000)
+      });  
+      
+    })
+   
+  };
   render() {
     return (
-      <div>
-        <Header />
-
-        <div>
-          <div className={styles.newsY}>
-            <Collapse defaultActiveKey={["1"]}>
-              <Panel header="Mahallalarda_Etnosportni_rivojlantirish 1" key="1">
-                <div>
-                  <Container>
-                    <div className={styles.imag}>
-                      <img src={img1} />
-                    </div>
-                    <div className={styles.yozuv}>
-                      <h1>Etnosport</h1>
-                      <p>
-                        <i className="fa fa-calendar"></i>
-                        24.02.2022
-                      </p>
-                      <p>
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                      </p>
-                    </div>
-                  </Container>
-                </div>
-              </Panel>
-              <Panel header="Mahallalarda_Etnosportni_rivojlantirish 2" key="2">
-                <div>
-                  <Container>
-                    <div className={styles.imag}>
-                      <img src={img2} />
-                    </div>
-                    <div className={styles.yozuv}>
-                      <h1>Etnosport</h1>
-                      <p>
-                        <i className="fa fa-calendar"></i>
-                        24.02.2022
-                      </p>
-                      <p>
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                      </p>
-                    </div>
-                  </Container>
-                </div>
-              </Panel>
-              <Panel
-                header="Mahallalarda_Etnosportni_rivojlantirish 3 "
-                key="3"
-              >
-                <div>
-                  <Container>
-                    <div className={styles.imag}>
-                      <img src={img3} />
-                    </div>
-                    <div className={styles.yozuv}>
-                      <h1>Etnosport</h1>
-                      <p>
-                        <i className="fa fa-calendar"></i>
-                        24.02.2022
-                      </p>
-                      <p>
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                        #Mahallalarda_Etnosportni_rivojlantirish
-                      </p>
-                    </div>
-                  </Container>
-                </div>
-              </Panel>
-            </Collapse>
+      <>
+        
+          <div>
+            <Header />
+          <div className={styles.headR}>
+<img alt="..." src={rasm}/>
+<div className={styles.oran}>Yangiliklar</div>
           </div>
-        </div>
 
-        <Footer />
-      </div>
+            <div className={styles.newsY}>
+              <Collapse accordion defaultActiveKey={[this.state.raqam]}>
+                {this.state.news !== null
+                  ? this.state.news.map((item) => {
+                      return (
+                        <Panel className={styles.panel}  header={<p style={{color:'white'}}>{item.name}</p>}>
+                          <div>
+                            <Container>
+                            <div style={{display:'flex'}}> 
+                              <div className={styles.imag}>
+                                <img src={item.image} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>{item.name}</h1>
+                                <p  className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  {item.date_added}
+                                </p>
+                                </div>  
+                                </div>
+                                 <div  className={styles.yozuv}>
+                              
+                                <p  className={styles.text}>{item.description}</p>
+                                </div>
+                            </Container>
+                          </div>
+                        </Panel>
+                      );
+                    })
+                  : ""}
+              </Collapse>
+            </div>
+            <Footer />
+          </div>
+     
+      </>
     );
   }
 }

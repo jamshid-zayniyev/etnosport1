@@ -30,7 +30,7 @@ export default class Footer extends Component {
                 textAlign: "center",
               }}
             >
-              Elektr tarmoqlari va tizimlari <br /> elektron platformasi
+             "Mahallarda Etnosportni rivojlantirish"<br/> elektron platformasi
             </p>
           </Col>
           <Col lg={4} xs={12} md={6}>

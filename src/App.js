@@ -9,6 +9,7 @@ import HujjatlarO from "./pages/HujjatlarO";
 import Musoboqalar from "./pages/Musoboqalar";
 import HujjatlarT from "./pages/HujjatlarT";
 import ElektronK from "./pages/Sporthm";
+import Boglanish from "./pages/Boglanish";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "antd/dist/antd.css";
 export default class App extends Component {
@@ -27,6 +28,7 @@ export default class App extends Component {
             <Route element={<HujjatlarT />} exact path="/talim" />
             <Route element={<Musoboqalar />} exact path="/musoboqalar" />
             <Route element={<ElektronK />} exact path="/kutubxona" />
+            <Route element={<Boglanish />} exact path="/boglanish" />
           </Routes>
         </BrowserRouter>
       </div>
