@@ -6,16 +6,17 @@ import Footer from "./Footer";
 import uzb from "../img/kurash5.jfif";
 import otchop from "../img/Otchoptirish.jfif";
 import eskietno from "../img/kurash7.jpg";
-
+import etnosport7 from "../img/etnoimg7.jpg";
 export default class HujjatlarT extends Component {
   render() {
     return (
       <>
         <Header />
         <div className={style.head}>
-          <h1 className={style.sarlavha}>
-            Butun jahon etnosportga oid qonunlar
-          </h1>
+          <img src={etnosport7}></img>
+          <div className={style.headsarlavha}>
+            Butun jahon etnosport oid qonunlar
+          </div>
         </div>
         <br />
         <br />
