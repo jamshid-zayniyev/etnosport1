@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
-import style from "../css/Hujjatlar.module.css";
+import style from "../css/Hujjatlarf.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import uzb from "../img/head2.jpg";

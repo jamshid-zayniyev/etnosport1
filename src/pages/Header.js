@@ -49,7 +49,6 @@ export default class NavbarA extends Component {
               {/* <li onClick={this.closeNav}>
                     <NavLink className={style.lik} to="/">Bosh sahifa</NavLink>
                             </li> */}
-             
               <li onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/yangiliklar">
                   Yangiliklar
@@ -103,16 +102,16 @@ export default class NavbarA extends Component {
                   <Dropdown.Menu>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/ishlanma">
-                        Sportchilar
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/kutubxona">
                         Etnosport turlari
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/loyihalar">
+                      <NavLink className={style.lik} to="/kutubxona">
+                        Elektron kutubxona
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/musoboqalar">
                         Musoboqalar
                       </NavLink>
                     </Dropdown.Item>
@@ -142,16 +141,16 @@ export default class NavbarA extends Component {
               </li>
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/ishlanma">
-                  Sportchilar
+                  Etnosport turlari
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/kutubxona">
-                  Etnosport haqida manbalar
+                  Elektron kutubxona
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
-                <NavLink className={style.lik} to="/loyihalar">
+                <NavLink className={style.lik} to="/musoboqalar">
                   Musoboqalar
                 </NavLink>
               </li>

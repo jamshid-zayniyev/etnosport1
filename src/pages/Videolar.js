@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import style from "../css/Videolar.module.css";
 import YouTube from "@u-wave/react-youtube";
 import Carousel from "react-multi-carousel";
+import etnosport9 from "../img/etnoimg9.jpg";
 export default class Videolar extends Component {
   onEndY = (e) => {
     console.log(e);
@@ -38,6 +39,7 @@ export default class Videolar extends Component {
               ? this.state.boshqarma.video3_text
               : ""}
           </h1> */}
+          <img src={etnosport9}></img>
         </div>
         <div className={style.videos}>
           <div id="video"></div>

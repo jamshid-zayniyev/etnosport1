@@ -6,7 +6,7 @@ import styled from "../css/Musoboqalar.module.css";
 import styles from "../css/Yangiliklartwo.module.css";
 import { Button, Col, Container, Modal, Row } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
-
+import etnomuso from "../img/etnoimg1.jpg";
 import word from "../img/kurash4.jpg";
 import excel from "../img/kurash4.jpg";
 import power from "../img/kurash4.jpg";
@@ -58,7 +58,9 @@ export default class Musoboqalar extends Component {
       <>
         <Header />
         <div className="loyiha">
-          <div className={style.binaf}></div>
+          <div className={style.binaf}>
+            <img src={etnomuso}></img>
+          </div>
           <div className={styles.newsY}>
             <h1 className={style.sarlavha}>
               Etnosportni 2022 yilda rivojlantirish dasturi
