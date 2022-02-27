@@ -8,6 +8,14 @@ import head1 from '../img/head1.jpg'
 import head2 from '../img/head2.jpg'
 import head3 from '../img/head3.jpg'
 import head5 from '../img/head5.jpg'
+import school from "../img/gerb.png";
+import her2 from "../img/h2.jpg";
+import her3 from "../img/h3.jpg";
+import { Clusterer, Map, Placemark, YMaps } from "react-yandex-maps";
+import "./form.css"
+import her4 from "../img/h4.jpg";
+import her5 from "../img/h5.png";
+import her6 from "../img/h6.png";
 import head4 from '../img/head4.jpg'
 import kurash from '../img/kurash.PNG'
 import back2 from '../videos/b.mp4'
@@ -20,11 +28,13 @@ import shaxram2 from "../img/shaxram2.jpg"
 import shaxram3 from "../img/shaxram3.jpg"
 import shaxram4 from "../img/shaxram4.jpg"
 import axios from 'axios'
+import Dashnews from './Dashnews'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { url } from '../host/Host'
 import { Link } from 'react-router-dom'
 import { Modal } from 'antd'
+import Dashreyting from './Dashreyting'
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -140,6 +150,25 @@ modalB:false,
         mobile: {
           breakpoint: { max: 464, min: 0 },
           items: 1,
+        },
+      };
+      const responsive5 = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 6,
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 5,
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 3,
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 2,
         },
       };
       const responsive3 = {
@@ -300,7 +329,9 @@ modalB:false,
             </Carousel>
                  </Col>
               </Row>
-            
+               <h1 className={style.sarlavha}>Mahallalar reytengi</h1>
+         <div className={style.chiziq}></div>
+          <Dashreyting/>
          <div className={style.sports}>
          <h1 className={style.sarlavha}>Etnosport turlari</h1>
          <div className={style.chiziq}></div>
@@ -555,7 +586,222 @@ modalB:false,
               <Link className={style.but} to="/yangiliklar"> Barchasini ko'rish</Link>
             </Container>
           </div>
-          </div><br/><br/><br/><br/><br/>
+          <h1 className={style.sarlavha}>Tadbirlar</h1>
+         <div className={style.chiziq}></div>
+        
+          <Dashnews/>
+       <>
+       
+       <div
+              style={{
+                backgroundColor: "white",
+                marginTop: "-30px",
+                textAlign: "center",
+              }}
+              className={style.homiy}
+            ><br/>
+            <br/>
+              <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
+              <div className={style.chiziq}></div>
+              <br />
+
+              <div className="sliderHomiy" style={{ backgroundColor: "white" }}>
+                <Carousel
+                  responsive={responsive5}
+                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  autoPlaySpeed={2000}
+                  infinite={true}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
+                    <div
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
+                    >
+                      <a href="https://president.uz/oz" target="_blank">
+                        <img src={school} />
+                      </a>
+                    </div>
+                    <p>
+                      O'zbekiston Respublikasi Prezidentining rasmiy veb-sayti
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
+                    <div
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
+                    >
+                      <a href="https://www.gov.uz/uz" target="_blank">
+                        <img src={her2} />
+                      </a>
+                    </div>
+                    <p>O'zbekiston Respublikasining Hukumat portali</p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
+                    <div
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
+                    >
+                      <a href="https://lex.uz/" target="_blank">
+                        <img src={her3} />
+                      </a>
+                    </div>
+                    <p>
+                      O'zbekiston Respublikasi qonun hujjatlari milliy bazasi
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
+                    <div
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
+                    >
+                      <a href="https://my.gov.uz/oz" target="_blank">
+                        <img src={her4} />
+                      </a>
+                    </div>
+                    <p>Interaktiv davlat xizmatlarining Yagona portali</p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
+                    <div
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
+                    >
+                      <a href="https://www.uzedu.uz/" target="_blank">
+                        <img src={her5} />
+                      </a>
+                    </div>
+                    <p>O'zbekiston Respublikasi xalq ta'limi vazirligi</p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
+                    <div
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
+                    >
+                      <a href="https://ittower.uz/" target="_blank">
+                        <img src={her6} />
+                      </a>
+                    </div>
+                    <p>IT Tower firmasi </p>
+                  </div>
+                </Carousel>
+              </div>
+              <div id="bog'lanish"></div>
+            </div>
+            <div className={style.xarita}>
+              <Row>
+                <Col lg={6} md={12} sm={12}>
+                  <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
+                  <br />
+
+                  <YMaps>
+                    <div className={style.xarita_item}>
+                      <Map
+                        style={{ width: "100%", height: "550px" }}
+                        defaultState={{
+                          center: [41.00063, 71.669404],
+                          zoom: 12,
+                        }}
+                      >
+                        <Clusterer
+                          options={{
+                            groupByCoordinates: false,
+                          }}
+                        >
+                          <Placemark
+                            key={-1}
+                            geometry={ [41.00063, 71.669404]}
+                            options={{
+                              iconLayout: "default#image",
+                            }}
+                            properties={{
+                              hintContent: `<i><b className="personStyle">Namangan viloyati VXTB</b></i>`,
+                            }}
+                            modules={["geoObject.addon.hint"]}
+                          />
+                        </Clusterer>
+                      </Map>
+                    </div>
+                  </YMaps>
+                </Col>
+
+                <Col lg={6} md={12} sm={12}>
+                  <h1 className={style.sarlavha}>Biz bilan bo'glaning</h1>
+
+                  <div className="formFER">
+                    <div className="container">
+                      <div className="brand-logo"></div>
+                      <div className="inputs">
+                        <form>
+                          <label>F.I.O.</label>
+                          <input
+                            type="text"
+                            id="name"
+                            placeholder="Ism Familiya Sharifi"
+                          />
+                          <label>Telefon raqam</label>
+                          <input
+                            type="text"
+                            id="phone"
+                            placeholder="+998 99 999 99 99"
+                          />
+                          <label>Murojaat</label>
+                          <textarea
+                            id="text"
+                            placeholder="Murojaat matni..."
+                          ></textarea>
+                          <button type="button" onClick={this.sendMurojat}>
+                            Yuborish
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+       </>
+          </div>
                 <Footer/>
             </div>
         )

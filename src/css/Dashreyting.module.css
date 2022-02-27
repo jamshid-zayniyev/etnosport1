@@ -1,0 +1,28 @@
+.rey{list-style-type: none; position:relative; top:-40px}
+.reyh1{color:white; text-align:center; }
+.rey li{padding:10px 10px 0px 10px; border-radius:30px;
+    background-color:orangered;
+    color:white; font-size:20px; 
+    margin-top:20px;
+    display:flex; align-items:center;
+    
+    position: relative;
+    height:60px;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.rey li p{margin-top: 10px;}
+.p1{position: absolute; left:20px; width:20%;}
+.p2{position: absolute; left:calc(20% + 20px); width:60%;}
+.p3{position: absolute; right:20px; width:20%;}
+.rey li:hover{background-color:rgb(255, 255, 255);color:orangered; font-weight: bold;} 
+.hamma{border:none;padding:10px 40px; border-radius:30px;
+    color:white; font-size:20px;
+    display:block; width:300px; margin:auto;
+    margin-bottom:50px;
+    margin-top:50px;
+     background-color: rgb(8, 187, 8);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.hamma:hover{background-color:rgb(255, 255, 255);color:rgb(8, 187, 8); font-weight: bold;} 
