@@ -4,16 +4,17 @@ import style from "../css/Hujjatlarf.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import uzb from "../img/head2.jpg";
-
+import etnosport5 from "../img/etnoimg5.jpg";
 export default class HujjatlarF extends Component {
   render() {
     return (
       <>
         <Header />
         <div className={style.head}>
-          <h1 className={style.sarlavha}>
+          <img src={etnosport5}></img>
+          <div className={style.headsarlavha}>
             Etnosportga oid Prezident farmonlari, farmoyishlari va qarorlari
-          </h1>
+          </div>
         </div>
         <br />
         <br />

@@ -4,14 +4,15 @@ import style from "../css/Hujjatlaro.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import uzb from "../img/head2.jpg";
-
+import etnosport3 from "../img/etnoimg3.jpg";
 export default class HujjatlarO extends Component {
   render() {
     return (
       <>
         <Header />
         <div className={style.head}>
-          <h1 className={style.sarlavha}>Sportchilar uchun qonunlar</h1>
+          <img src={etnosport3}></img>
+          <div className={style.headsarlavha}>Sportchilar uchun qonunlar</div>
         </div>
         <br />
         <br />
