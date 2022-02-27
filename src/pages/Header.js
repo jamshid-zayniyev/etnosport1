@@ -50,13 +50,42 @@ export default class NavbarA extends Component {
                     <NavLink className={style.lik} to="/">Bosh sahifa</NavLink>
                             </li> */}
               <li onClick={this.closeNav}>
-                <NavLink className={style.lik} to="/yangiliklar">
-                  Yangiliklar
-                </NavLink>
+              <Dropdown>
+                  <Dropdown.Toggle
+                    className="dropD"
+                    variant="light"
+                    id="dropdown-basic"
+                  >
+                    Mahallalar
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/">
+                        Mahallalar reytengi
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/">
+                       Tadbirlar
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/">
+                        Tanlovlar
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/maktablar">
+                        Xarita
+                      </NavLink>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </li>
               <li onClick={this.closeNav}>
-                <NavLink className={style.lik} to="/tumanlar">
-                  Tumanlar
+                <NavLink className={style.lik} to="/yangiliklar">
+                  Yangiliklar
                 </NavLink>
               </li>
               <li onClick={this.closeNav} className="fr">
@@ -115,11 +144,7 @@ export default class NavbarA extends Component {
                         Musoboqalar
                       </NavLink>
                     </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/maktablar">
-                        Xarita
-                      </NavLink>
-                    </Dropdown.Item>
+                   
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
