@@ -49,11 +49,7 @@ export default class NavbarA extends Component {
               {/* <li onClick={this.closeNav}>
                     <NavLink className={style.lik} to="/">Bosh sahifa</NavLink>
                             </li> */}
-              <li onClick={this.closeNav}>
-                <NavLink className={style.lik} to="/rahbariyat">
-                  Rahbariyat
-                </NavLink>
-              </li>
+             
               <li onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/yangiliklar">
                   Yangiliklar
@@ -101,7 +97,7 @@ export default class NavbarA extends Component {
                     variant="light"
                     id="dropdown-basic"
                   >
-                    Maktablar
+                    Etnosport
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -112,7 +108,7 @@ export default class NavbarA extends Component {
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/kutubxona">
-                        Etnosport haqida manbalar
+                        Etnosport turlari
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
