@@ -16,6 +16,7 @@ import sinf8 from "../img/kurash6.jpg";
 import sinf9 from "../img/kurash7.jpg";
 import sinf10 from "../img/Otchoptirish.jfif";
 import sinf11 from "../img/kurash6.jpg";
+import etnosport5 from "../img/etnoimg5.jpg";
 export default class Sporthm extends Component {
   state = {
     loader: true,
@@ -27,12 +28,12 @@ export default class Sporthm extends Component {
         <Header />
 
         <div className={style.head}>
-          <h1 className={style.sarlavha}>Elektron kitoblar to'plami</h1>
+          <img src={etnosport5}></img>
+          <div className={style.headsarlavha}>
+            Etnosportga oid Prezident farmonlari, farmoyishlari va qarorlari
+          </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
+
         <div className={style.sinflar}>
           <Container>
             <Row style={{ justifyContent: "center" }}>

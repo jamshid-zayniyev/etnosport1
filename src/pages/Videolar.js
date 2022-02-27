@@ -5,6 +5,7 @@ import style from "../css/Videolar.module.css";
 import YouTube from "@u-wave/react-youtube";
 import Carousel from "react-multi-carousel";
 import etnosport9 from "../img/etnoimg9.jpg";
+import etnosport7 from "../img/etnoimg7.jpg";
 export default class Videolar extends Component {
   onEndY = (e) => {
     console.log(e);
@@ -33,18 +34,13 @@ export default class Videolar extends Component {
     return (
       <div>
         <Header />
-        <div className={style.binaf1}>
-          {/* <h1>
-            {this.state.boshqarma !== null
-              ? this.state.boshqarma.video3_text
-              : ""}
-          </h1> */}
-          <img src={etnosport9}></img>
+        <div className={style.head}>
+          <img src={etnosport7}></img>
+          <div className={style.headsarlavha}>Videolavhalar</div>
         </div>
         <div className={style.videos}>
           <div id="video"></div>
 
-          <h1 className={style.sarlavha}> Videolavhalar</h1>
           <br />
 
           <Carousel

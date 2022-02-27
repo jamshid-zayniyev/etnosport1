@@ -20,6 +20,20 @@
   color: white;
   margin-top: 20px;
 }
+.headsarlavha {
+  border-top: 2px solid white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(20, 194, 185);
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.head img {
+  width: 100%;
+  /* height: 80%; */
+}
 .but {
   color: white !important;
 }
@@ -42,15 +56,16 @@
 .head {
   margin-top: 50px;
   width: 100%;
-  height: 100vh;
+  /* height: vh; */
+  margin-bottom: 20px;
   background-size: 100% 100%;
-  background-image: url(../img/etnoimg2.jpg);
-  background-color: rgb(53, 15, 89);
-  padding-top: 100px;
+  /* background-image: url(../img/etnoimg2.jpg); */
+  /* background-color: rgb(53, 15, 89); */
+  padding-top: 50px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center 25px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 

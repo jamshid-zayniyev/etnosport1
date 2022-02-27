@@ -14,7 +14,7 @@ import pdf from "../img/kurash4.jpg";
 import file from "../img/kurash4.jpg";
 import kurash6 from "../img/kurash6.jpg";
 import Header from "./Header";
-
+import etnosport7 from "../img/etnoimg7.jpg";
 import Footer from "./Footer";
 
 const { Panel } = Collapse;
@@ -57,14 +57,14 @@ export default class Musoboqalar extends Component {
     return (
       <>
         <Header />
-        <div className="loyiha">
-          <div className={style.binaf}>
-            <img src={etnomuso}></img>
+        <div className={styled.head}>
+          <img src={etnosport7}></img>
+          <div className={styled.headsarlavha}>
+            Etnosportni 2022 yilda rivojlantirish dasturi
           </div>
+        </div>
+        <div className="loyiha">
           <div className={styles.newsY}>
-            <h1 className={style.sarlavha}>
-              Etnosportni 2022 yilda rivojlantirish dasturi
-            </h1>
             <br />
             <br />
             <Collapse accordion defaultActiveKey={1}>
@@ -73,7 +73,7 @@ export default class Musoboqalar extends Component {
                   <Container>
                     <Row>
                       <Col
-                        lg={6}
+                        lg={12}
                         md={12}
                         className={styled.colT}
                         style={{ marginTop: "20px" }}
@@ -146,7 +146,7 @@ export default class Musoboqalar extends Component {
                   <Container>
                     <Row>
                       <Col
-                        lg={6}
+                        lg={12}
                         md={12}
                         className={styled.colT}
                         style={{ marginTop: "20px" }}
