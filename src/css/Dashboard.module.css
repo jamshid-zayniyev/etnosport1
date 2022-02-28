@@ -1,6 +1,6 @@
 .head{width:100%; padding-top:100px; background-color: white;}
 .head img{width:100%;}
-.head h2{color:orangered; padding-left:40px; line-height:70px; font-size:48px; margin-top: 50px;}
+.head h2{color:orangered; padding-left:40px; line-height:70px; font-size:40px; margin-top: 50px;}
 .head h2 span{color:rgb(8, 6, 112)}
 .head .but {
     padding: 10px;

@@ -73,7 +73,7 @@ export default class Boglanish extends Component {
                       boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
                       height: "550px",
                     }}
-                    defaultState={{ center: [41.00063, 71.669404], zoom: 12 }}
+                    defaultState={{ center: [41.318973, 69.303470], zoom: 12 }}
                   >
                     <Clusterer
                       options={{
@@ -82,7 +82,7 @@ export default class Boglanish extends Component {
                     >
                       <Placemark
                         key={-1}
-                        geometry={[41.00063, 71.669404]}
+                        geometry={[41.318973, 69.303470]}
                         options={{
                           iconLayout: "default#image",
                         }}

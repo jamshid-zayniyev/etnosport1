@@ -309,7 +309,7 @@ modalB:false,
               <Row>
                   <Col lg={6} md={12}>
                       <h2>
-                      "Mahallarda <span>Etnosportni</span> rivojlantirish"<br/> elektron platformasi
+                      <span>“Mahalla va oila”</span> ilmiy-tadqiqot institutining  <span>"Mahallalarda etnosportni rivojlantirishning nazariy-metodologik asoslari”</span> loyihasi
                       </h2>
                       <a className={style.but} href="tel: +998930820372">Biz bilan bog'laning</a>
                   </Col>
@@ -824,7 +824,7 @@ modalB:false,
                       <Map
                         style={{ width: "100%", height: "550px" }}
                         defaultState={{
-                          center: [41.00063, 71.669404],
+                          center: [41.318973, 69.303470],
                           zoom: 12,
                         }}
                       >
@@ -835,7 +835,7 @@ modalB:false,
                         >
                           <Placemark
                             key={-1}
-                            geometry={ [41.00063, 71.669404]}
+                            geometry={ [41.318973, 69.303470]}
                             options={{
                               iconLayout: "default#image",
                             }}

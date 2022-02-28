@@ -30,7 +30,7 @@ export default class Footer extends Component {
                 textAlign: "center",
               }}
             >
-             "Mahallarda Etnosportni rivojlantirish"<br/> elektron platformasi
+             “Mahalla va oila” ilmiy-tadqiqot institutining  "Mahallalarda etnosportni rivojlantirishning nazariy-metodologik asoslari” loyihasi
             </p>
           </Col>
           <Col lg={4} xs={12} md={6}>

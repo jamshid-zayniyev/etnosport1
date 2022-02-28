@@ -46,47 +46,61 @@ export default class NavbarA extends Component {
           </div>
           <div className={style.nav}>
             <ul id="navb">
-              {/* <li onClick={this.closeNav}>
-                    <NavLink className={style.lik} to="/">Bosh sahifa</NavLink>
-                            </li> */}
               <li onClick={this.closeNav}>
-              <Dropdown>
+                    <NavLink className={style.lik} to="/">Bosh sahifa</NavLink>
+                            </li>
+                            <li onClick={this.closeNav}>
+                <NavLink className={style.lik} to="/yangiliklar">
+                  Yangiliklar
+                </NavLink>
+              </li>
+                            <li onClick={this.closeNav} className="fr">
+                <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
                     variant="light"
                     id="dropdown-basic"
                   >
-                    Mahallalar
+                    Etnosport
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
+                 
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/">
-                        Mahallalar reytengi
+                      <NavLink className={style.lik} to="/musoboqalar">
+                        Musoboqalar
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/ishlanma">
+                        Videolavhalar
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/gallery">
+                        Fotolavhalar
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/kutubxona">
+                        O'quv qo'llanmalar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
-                       Tadbirlar
+                        Sportchilar
                       </NavLink>
                     </Dropdown.Item>
+                    
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
-                        Tanlovlar
+                        Loyiha haqida
                       </NavLink>
                     </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/maktablar">
-                        Xarita
-                      </NavLink>
-                    </Dropdown.Item>
+                   
+                   
                   </Dropdown.Menu>
                 </Dropdown>
-              </li>
-              <li onClick={this.closeNav}>
-                <NavLink className={style.lik} to="/yangiliklar">
-                  Yangiliklar
-                </NavLink>
               </li>
               <li onClick={this.closeNav} className="fr">
                 <Dropdown>
@@ -118,36 +132,43 @@ export default class NavbarA extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
-              <li onClick={this.closeNav} className="fr">
-                <Dropdown>
+              <li onClick={this.closeNav}>
+              <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
                     variant="light"
                     id="dropdown-basic"
                   >
-                    Etnosport
+                    Mahallalar
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/ishlanma">
-                        Videolavhalar
+                      <NavLink className={style.lik} to="/">
+                        Mahallalar reytengi
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/kutubxona">
-                        Elektron kutubxona
+                      <NavLink className={style.lik} to="/">
+                       Tadbirlar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/musoboqalar">
-                        Musoboqalar
+                      <NavLink className={style.lik} to="/">
+                        Tanlovlar
                       </NavLink>
                     </Dropdown.Item>
-                   
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/mahallalar">
+                        Xarita
+                      </NavLink>
+                    </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
+            
+            
+             
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/talim">
                   Butun jahon etnosportga oid qonunlar

@@ -1,6 +1,6 @@
 .rasmlar {
   padding: 50px 10%;
-  margin-top: 100vh;
+  margin-top: 20px;
   background-color: white;
 }
 .rasmlar img {
@@ -116,4 +116,21 @@
 .panel {
   font-size: 20px;
   background-color: rgb(8, 6, 112);
+}
+
+.headsarlavha {
+  border-top: 2px solid white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(20, 194, 185);
+  color: white;
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+.head img {
+  width: 100%;
+  height: 80%;
+  margin-top: 100px;
 }
