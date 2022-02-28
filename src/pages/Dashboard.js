@@ -14,6 +14,7 @@ import her3 from "../img/h3.jpg";
 import { Clusterer, Map, Placemark, YMaps } from "react-yandex-maps";
 import "./form.css"
 import her4 from "../img/h4.jpg";
+import rishod from '../img/rishod.jpg'
 import her5 from "../img/h5.png";
 import her6 from "../img/h6.png";
 import head4 from '../img/head4.jpg'
@@ -260,7 +261,7 @@ modalB:false,
        </Row>
       </Modal>
       <Modal
-        title="Shaxram G'iyosov"
+        title="Rishod Sobirov"
         centered
         footer={false}
         visible={this.state.modalB}
@@ -300,7 +301,10 @@ modalB:false,
           </Col> 
           <Col lg={6} md={12} sm={12} style={{padding:'20px'}}>
           <p>
-          <b>SHahram G'iyosov</b> – 1993 yilning 7 iyul kuni Buxoro shahrida dunyoga kelgan. 10 yoshidan boks bilan shug'ullanishni boshlagan. 2003 yili Buxoro shahridagi Bolalar va o'smirlar sport maktabining boks bo'limiga qabul qilingan. Ilk murabbiyi Olim Muhammedov. Bu mutaxassis ikki karra jahon chempioni Abbos Atoevning murabbiyi ham hisoblanadi. Malumot uchun, Atoev bokschilik faoliyatini yakunlab, bugungi kunda Buxoroda murabbiylik faoliyatini olib boryapti.
+          <b>Rishod Sobirov</b> – Rishod Rashidovich Sobirov 1986 yilning 11 sentyabrida Buxoro viloyatining Jondor tumani, Burbog'i qishlog'ida tug'ilgan. O'zbek dzyudochisi, ikki karra jahon chempioni, uch karra Olimpiya o'yinlari bronza medali sohibi.
+
+Dzyudo bilan 11 yoshida Rustam To'raev qo'l ostida shug'ullanishni boshlagan. Xalqaro musobaqalarga Furqat Soliev va Boris Grigorev kabi murabbiylar qo'l ostida tayyorgarlik ko'rardi.
+Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
   </p>
           </Col>
        </Row>
@@ -444,74 +448,74 @@ modalB:false,
                     autoPlay={this.props.deviceType !== "mobile" ? true : false}
                   >
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   <div style={{padding:'10px'}}><div className={style.sportchi} onClick={this.openModalB}>
-                  <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT5F-d2FfVvQRMomTlDroRJKKxi5qiRxquPw5ioKjnuAI6Lg1-SG_ZKQfB7R2Hz"/>
-                  <h5>Shaxram G'iyosov</h5>
-                  <p>Bokschi</p>
+                  <img src={rishod}/>
+                  <h5>Rishod Sobirov</h5>
+                  <p>Belbogʻli kurash ustasi</p>
                   </div></div>
                   
  

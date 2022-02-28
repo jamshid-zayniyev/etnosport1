@@ -39,7 +39,7 @@ export default class Icons extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid #1b6602" }}
                   className="ahref"
-                  href={""}
+                  href={"https://t.me/UzEtnosport"}
                 >
                   <i className="fab fa-telegram"></i>
                 </a>
@@ -49,7 +49,7 @@ export default class Icons extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid #1b6602" }}
                   className="ahref"
-                  href={""}
+                  href={"https://www.instagram.com/etnosport.uzb/"}
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
@@ -59,7 +59,7 @@ export default class Icons extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid #1b6602" }}
                   className="ahref"
-                  href={""}
+                  href={"https://www.facebook.com/Etnosport-103183432278003/?ref=page_internal"}
                 >
                   <i className="fab fa-facebook"></i>
                 </a>
@@ -69,7 +69,7 @@ export default class Icons extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid #1b6602" }}
                   className="ahref"
-                  href={""}
+                  href={"https://www.youtube.com/channel/UCoczFw9HeseR80AAbIllB3w"}
                 >
                   <i className="fab fa-youtube"></i>
                 </a>
