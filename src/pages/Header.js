@@ -49,11 +49,7 @@ export default class NavbarA extends Component {
               <li onClick={this.closeNav}>
                     <NavLink className={style.lik} to="/">Bosh sahifa</NavLink>
                             </li>
-                            <li onClick={this.closeNav}>
-                <NavLink className={style.lik} to="/yangiliklar">
-                  Yangiliklar
-                </NavLink>
-              </li>
+                         
                             <li onClick={this.closeNav} className="fr">
                 <Dropdown>
                   <Dropdown.Toggle
@@ -66,6 +62,11 @@ export default class NavbarA extends Component {
 
                   <Dropdown.Menu>
                  
+                  <Dropdown.Item>
+                  <NavLink className={style.lik} to="/yangiliklar">
+                  Yangiliklar
+                </NavLink>
+                    </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/musoboqalar">
                         Musoboqalar
@@ -81,11 +82,7 @@ export default class NavbarA extends Component {
                         Fotolavhalar
                       </NavLink>
                     </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/kutubxona">
-                        O'quv qo'llanmalar
-                      </NavLink>
-                    </Dropdown.Item>
+                 
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
                         Sportchilar
@@ -131,6 +128,11 @@ export default class NavbarA extends Component {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
+              </li>
+              <li onClick={this.closeNav}>
+              <NavLink className={style.lik1} to="/kutubxona">
+                        O'quv qo'llanmalar
+                      </NavLink>
               </li>
               <li onClick={this.closeNav}>
               <Dropdown>

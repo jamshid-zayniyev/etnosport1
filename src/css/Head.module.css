@@ -9,8 +9,10 @@ display: flex; align-items: center;  padding-left: 0; padding-right:10%;}
 .nav ul{display:flex;width:100%; list-style: none; padding:10px;}
 .nav ul li{flex:20%; font-size:16px !important;}
 .brand img{width:80px; height:80px; border-radius:50%; }
-.lik{color:rgb(8, 6, 112); font-weight: bold;}
+.lik{color:rgb(8, 6, 112);  font-weight: bold;}
 .lik:hover{color:orangered}
+.lik1{color:rgb(8, 6, 112); margin-left: -20px; margin-top: 6px; font-weight: bold;}
+.lik1:hover{color:orangered}
 .tool{display:none;}
 
 @media (max-width:1050px){

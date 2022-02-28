@@ -315,7 +315,7 @@ Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
                       <h2>
                       <span>“Mahalla va oila”</span> ilmiy-tadqiqot institutining  <span>"Mahallalarda etnosportni rivojlantirishning nazariy-metodologik asoslari”</span> loyihasi
                       </h2>
-                      <a className={style.but} href="tel: +998930820372">Biz bilan bog'laning</a>
+                      <a className={style.but} target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeMMzTKdIwFE2ysPi4F1N9VzVTMUQVp7LV86c46Cm_OY11exQ/viewform">So'rovnomani to'ldiring</a>
                   </Col>
                   <Col lg={6} md={12}>
                   <Carousel
@@ -329,6 +329,10 @@ Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
                     <img src={head1} alt="..." />
                     
                 </div>
+                <div>
+                    <img src={head2} alt="..." />
+                    
+                </div>
                     <div>
                     <img src={head5} alt="..." />
                     
@@ -337,10 +341,7 @@ Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
                     <img src={head} alt="..." />
                     
                 </div>
-                <div>
-                    <img src={head2} alt="..." />
-                    
-                </div>
+               
                 <div>
                     <img src={head3} alt="..." />
                     
@@ -651,7 +652,7 @@ Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
                     rel: 0,
                   },
                 }}
-                video="FY_6xf6leCA"
+                video="nRpmfAU7ttk"
                 className={stylev.you}
                
               />
@@ -666,7 +667,7 @@ Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
                     rel: 0,
                   },
                 }}
-                video="FY_6xf6leCA"
+                video="3_iAy1vdTGE"
                 className={stylev.you}
                
               />
@@ -681,7 +682,7 @@ Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
                     rel: 0,
                   },
                 }}
-                video="FY_6xf6leCA"
+                video="2yiW87QtFjY"
                 className={stylev.you}
                
               />

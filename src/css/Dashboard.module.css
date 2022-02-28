@@ -54,6 +54,7 @@
 .n:hover p{color:white}
 .but {
   color: white;
+  margin-top:20px !important;
 }
 .but:hover {
   color: rgb(8, 6, 112);
