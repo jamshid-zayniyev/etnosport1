@@ -35,6 +35,7 @@ import { url } from '../host/Host'
 import { Link } from 'react-router-dom'
 import { Modal } from 'antd'
 import Dashreyting from './Dashreyting'
+import YouTube from '@u-wave/react-youtube'
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -133,6 +134,25 @@ modalB:false,
         })
       }
     render() {
+      const responsiveY = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 2,
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 2,
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 1,
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+        },
+      };
       const responsive2 = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -510,31 +530,7 @@ modalB:false,
         
             <Container>
               <Row>
-              <Col lg={6} md={6} sm={12} className={style.new}>
-<Link to="/yangiliklar">
-  <Row className={style.n}>
-    <Col lg={4}>
-      <img src={head5} alt="..."/>
-    </Col>
-    <Col lg={8}>
-      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
-    </Col>
-    </Row>
-</Link>
-                </Col>
-                <Col lg={6} md={6} sm={12} className={style.new}>
-<Link to="/yangiliklar">
-  <Row className={style.n}>
-    <Col lg={4}>
-      <img src={head5} alt="..."/>
-    </Col>
-    <Col lg={8}>
-      <p>Poytaxtimizda “O‘zbekistonda etnosportni rivojlantirish istiqbollari” mavzuida xalqaro konferensiya bo‘lib o‘tdi.</p>
-    </Col>
-    </Row>
-</Link>
-                </Col>
-                <Col lg={6} md={6} sm={12} className={style.new}>
+                        <Col lg={6} md={6} sm={12} className={style.new}>
 <Link to="/yangiliklar">
   <Row className={style.n}>
     <Col lg={4}>
@@ -600,6 +596,95 @@ modalB:false,
               }}
               className={style.homiy}
             ><br/>
+         <h1 className={style.sarlavha}>Yangiliklar</h1>
+         <div className={style.chiziq}></div>
+        
+                    <div className={style.videos}>
+          <div id="video"></div>
+
+          <br />
+
+          <Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={true}
+            responsive={responsiveY}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={this.props.deviceType !== "mobile" ? true : false}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={100}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            deviceType={this.props.deviceType}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            <div className={style.videos_item}>
+              <YouTube
+                
+                showCaptions={false}
+                showRelatedVideos={false}
+                opts={{
+                  playerVars: {
+                    rel: 0,
+                  },
+                }}
+                video="FY_6xf6leCA"
+                className={style.you}
+               
+              />
+            </div>
+            <div className={style.videos_item}>
+              <YouTube
+                
+                showCaptions={false}
+                showRelatedVideos={false}
+                opts={{
+                  playerVars: {
+                    rel: 0,
+                  },
+                }}
+                video="FY_6xf6leCA"
+                className={style.you}
+               
+              />
+            </div>
+            <div className={style.videos_item}>
+              <YouTube
+                
+                showCaptions={false}
+                showRelatedVideos={false}
+                opts={{
+                  playerVars: {
+                    rel: 0,
+                  },
+                }}
+                video="FY_6xf6leCA"
+                className={style.you}
+               
+              />
+            </div>
+            <div className={style.videos_item}>
+              <YouTube
+                
+                showCaptions={false}
+                showRelatedVideos={false}
+                opts={{
+                  playerVars: {
+                    rel: 0,
+                  },
+                }}
+                video="FY_6xf6leCA"
+                className={style.you}
+               
+              />
+            </div>
+          </Carousel>
+        </div>
+
             <br/>
               <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
               <div className={style.chiziq}></div>
