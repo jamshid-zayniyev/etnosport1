@@ -18,7 +18,7 @@ import her5 from "../img/h5.png";
 import her6 from "../img/h6.png";
 import head4 from '../img/head4.jpg'
 import kurash from '../img/kurash.PNG'
-
+import stylev from '../css/Videolar.module.css'
 import kurash1 from "../img/kurash1.jpg"
 import kurash2 from "../img/kurash2.jpg"
 import kurash3 from "../img/kurash3.jpg"
@@ -596,10 +596,10 @@ modalB:false,
               }}
               className={style.homiy}
             ><br/>
-         <h1 className={style.sarlavha}>Yangiliklar</h1>
+         <h1 className={style.sarlavha}>Videolavhalar</h1>
          <div className={style.chiziq}></div>
         
-                    <div className={style.videos}>
+                    <div className={stylev.videos}>
           <div id="video"></div>
 
           <br />
@@ -622,7 +622,7 @@ modalB:false,
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-            <div className={style.videos_item}>
+            <div className={stylev.videos_item}>
               <YouTube
                 
                 showCaptions={false}
@@ -633,11 +633,11 @@ modalB:false,
                   },
                 }}
                 video="FY_6xf6leCA"
-                className={style.you}
+                className={stylev.you}
                
               />
             </div>
-            <div className={style.videos_item}>
+            <div className={stylev.videos_item}>
               <YouTube
                 
                 showCaptions={false}
@@ -648,11 +648,11 @@ modalB:false,
                   },
                 }}
                 video="FY_6xf6leCA"
-                className={style.you}
+                className={stylev.you}
                
               />
             </div>
-            <div className={style.videos_item}>
+            <div className={stylev.videos_item}>
               <YouTube
                 
                 showCaptions={false}
@@ -663,11 +663,11 @@ modalB:false,
                   },
                 }}
                 video="FY_6xf6leCA"
-                className={style.you}
+                className={stylev.you}
                
               />
             </div>
-            <div className={style.videos_item}>
+            <div className={stylev.videos_item}>
               <YouTube
                 
                 showCaptions={false}
@@ -678,7 +678,7 @@ modalB:false,
                   },
                 }}
                 video="FY_6xf6leCA"
-                className={style.you}
+                className={stylev.you}
                
               />
             </div>

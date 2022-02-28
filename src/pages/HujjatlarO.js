@@ -27,11 +27,11 @@ export default class HujjatlarO extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -40,11 +40,7 @@ export default class HujjatlarO extends Component {
                     <h1>
                       Etnosport - bu jismoniy faoliyatning barcha an'anaviy
                       uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. Etnosport nazariyasining maqsadi
-                      sportning etnik-madaniy sport jarayonlari namoyon bo'lishi
-                      sharoitida ijtimoiy va madaniy tizimlarning shakllanishi
-                      va ishlashini loyihalash va bashorat qilish uchun uslubiy
-                      asosni ta'minlashdan iborat.
+                      institutsional shakli.
                     </h1>
                   </Col>
                 </Row>
@@ -59,11 +55,11 @@ export default class HujjatlarO extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -72,11 +68,7 @@ export default class HujjatlarO extends Component {
                     <h1>
                       Etnosport - bu jismoniy faoliyatning barcha an'anaviy
                       uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. Etnosport nazariyasining maqsadi
-                      sportning etnik-madaniy sport jarayonlari namoyon bo'lishi
-                      sharoitida ijtimoiy va madaniy tizimlarning shakllanishi
-                      va ishlashini loyihalash va bashorat qilish uchun uslubiy
-                      asosni ta'minlashdan iborat.
+                      institutsional shakli.
                     </h1>
                   </Col>
                 </Row>
@@ -91,11 +83,11 @@ export default class HujjatlarO extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -104,11 +96,7 @@ export default class HujjatlarO extends Component {
                     <h1>
                       Etnosport - bu jismoniy faoliyatning barcha an'anaviy
                       uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. Etnosport nazariyasining maqsadi
-                      sportning etnik-madaniy sport jarayonlari namoyon bo'lishi
-                      sharoitida ijtimoiy va madaniy tizimlarning shakllanishi
-                      va ishlashini loyihalash va bashorat qilish uchun uslubiy
-                      asosni ta'minlashdan iborat.
+                      institutsional shakli.
                     </h1>
                   </Col>
                 </Row>
@@ -123,11 +111,11 @@ export default class HujjatlarO extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -136,11 +124,7 @@ export default class HujjatlarO extends Component {
                     <h1>
                       Etnosport - bu jismoniy faoliyatning barcha an'anaviy
                       uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. Etnosport nazariyasining maqsadi
-                      sportning etnik-madaniy sport jarayonlari namoyon bo'lishi
-                      sharoitida ijtimoiy va madaniy tizimlarning shakllanishi
-                      va ishlashini loyihalash va bashorat qilish uchun uslubiy
-                      asosni ta'minlashdan iborat.
+                      institutsional shakli.
                     </h1>
                   </Col>
                 </Row>
@@ -155,11 +139,11 @@ export default class HujjatlarO extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -168,11 +152,7 @@ export default class HujjatlarO extends Component {
                     <h1>
                       Etnosport - bu jismoniy faoliyatning barcha an'anaviy
                       uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. Etnosport nazariyasining maqsadi
-                      sportning etnik-madaniy sport jarayonlari namoyon bo'lishi
-                      sharoitida ijtimoiy va madaniy tizimlarning shakllanishi
-                      va ishlashini loyihalash va bashorat qilish uchun uslubiy
-                      asosni ta'minlashdan iborat.
+                      institutsional shakli.
                     </h1>
                   </Col>
                 </Row>
@@ -187,11 +167,11 @@ export default class HujjatlarO extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -200,11 +180,7 @@ export default class HujjatlarO extends Component {
                     <h1>
                       Etnosport - bu jismoniy faoliyatning barcha an'anaviy
                       uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. Etnosport nazariyasining maqsadi
-                      sportning etnik-madaniy sport jarayonlari namoyon bo'lishi
-                      sharoitida ijtimoiy va madaniy tizimlarning shakllanishi
-                      va ishlashini loyihalash va bashorat qilish uchun uslubiy
-                      asosni ta'minlashdan iborat.
+                      institutsional shakli.
                     </h1>
                   </Col>
                 </Row>

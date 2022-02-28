@@ -1,17 +1,17 @@
-.sarlavha{color:orangered; margin-top:40px; padding:10px; text-align: center; margin-bottom:20px}
-.sarlavha a{color:orangered; text-decoration:none;}
+.sarlavha{color:rgb(8, 6, 112); margin-top:40px; padding:10px; text-align: center; margin-bottom:20px}
+.sarlavha a{color:rgb(8, 6, 112); text-decoration:none;}
 .sarlavha:hover a{color:white;}
 body{ background-color: white; width:100%; overflow-x: hidden;}
 .chiziq{width:200px; height:8px; background-color: white; margin-top:-20px;margin-bottom:20px; animation-name: chiziq; animation-duration:3s; animation-iteration-count: infinite;}
-.chiziqoq{width:200px; height:8px; background-color: rgb(8, 187, 8); margin-top:-20px;margin-bottom:20px; animation-name: chiziq; animation-duration:3s; animation-iteration-count: infinite;}
+.chiziqoq{width:200px; height:8px; background-color: orangered; margin-top:-20px;margin-bottom:20px; animation-name: chiziq; animation-duration:3s; animation-iteration-count: infinite;}
 @keyframes chiziq{
   0%{margin-left:0px;}
   50%{margin-left:calc(100% - 200px);}
   100%{margin-left:0px;}
 } 
 .dropD{
-  background-color: white !important; border:none !important;  color: rgb(8, 187, 8) !important; padding:0px !important; outline: none !important; font-size:16px !important ;
-  box-shadow: 0px 0px 0px transparent  !important;
+  background-color: white !important; border:none !important;  color: rgb(8, 6, 112) !important; padding:0px !important; outline: none !important; font-size:16px !important ;
+  box-shadow: 0px 0px 0px transparent  !important; font-weight: bold !important;
 }
 .grt{
   display: none;
@@ -41,7 +41,7 @@ body{ background-color: white; width:100%; overflow-x: hidden;}
 ::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-   background: orangered;
+   background: rgb(8, 6, 112);
   
 }
 .formInput{font-size:14px; border-radius: 3px; padding:5px 10px;}
@@ -50,11 +50,11 @@ body{ background-color: white; width:100%; overflow-x: hidden;}
 	opacity: 0.9;
   }
 .btnFormIn{position: fixed; bottom:20vh; right:0px;}
-.formnew{padding:20px; background-color: rgb(8, 187, 8);box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
-.tablenew{margin-top:30px;padding:20px; background-color: rgb(8, 187, 8);box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+.formnew{padding:20px; background-color: orangered;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+.tablenew{margin-top:30px;padding:20px; background-color: orangered;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
 .tablenew td{font-size:16px}
-.you_col{padding:10px; background-color: rgb(8, 187, 8);box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
-.mur_you{padding:10px; background-color: rgb(8, 187, 8);box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; display:flex; align-items: center; justify-content:space-around}
+.you_col{padding:10px; background-color: orangered;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+.mur_you{padding:10px; background-color: orangered;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; display:flex; align-items: center; justify-content:space-around}
 .you_btn{display:flex; width:100%; justify-content: space-between;}
 .mur_you h4{ position: relative; top:5px;}
 
@@ -117,7 +117,7 @@ body{ background-color: white; width:100%; overflow-x: hidden;}
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .sliderHomiy p {
-  color: orangered;
+  color: rgb(8, 6, 112);
   font-size: 14px;
   margin-top: 20px;
   width: 80%;
@@ -133,5 +133,5 @@ body{ background-color: white; width:100%; overflow-x: hidden;}
   width: 100%;
   margin-top: 30px;
 }
- .navbar{color:rgb(8, 187, 8);}
-.navbar:hover{color:orangered} 
+ .navbar{color:orangered;}
+.navbar:hover{color:rgb(8, 6, 112)} 

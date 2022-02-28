@@ -106,7 +106,7 @@
 
 .dashnew body {
 	
-	color: orangered;
+	color: rgb(8, 6, 112);
 	text-align: center;
 
 	font-size: calc(1em + 0.5vw);
@@ -132,7 +132,7 @@ header,
 
 .dashnew #cards {
 	list-style: none;
-	outline: calc(var(--outline-width) * 10) solid orangered;
+	outline: calc(var(--outline-width) * 10) solid rgb(8, 6, 112);
 	
 	display: grid;
 	grid-template-columns: 1fr;
@@ -151,7 +151,7 @@ padding-top:50px;
 .dashnew .card__content {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	background: white;
-	color: orangered;
+	color: rgb(8, 6, 112);
 	border-radius: 1em;
   
 	overflow: hidden;
@@ -162,7 +162,7 @@ padding-top:50px;
 	grid-template-rows: auto;
 
 	align-items: stretch;
-	outline: var(--outline-width) solid orangered;
+	outline: var(--outline-width) solid rgb(8, 6, 112);
 }
 .dashnew .card__content > div {
 	grid-area: text;
@@ -225,5 +225,5 @@ padding-top:50px;
 .dashnew aside p {
 	margin-bottom: 1em;
 }
-.gh h1{color:orangered; font-weight: bold; margin-top: 20px;}
+.gh h1{color:rgb(8, 6, 112); font-weight: bold; margin-top: 20px;}
 .gh h2{margin-top:2px !important; line-height: 20px !important; font-weight:bold !important; padding:0px !important; }

@@ -7,9 +7,10 @@ import GridLoader from "react-spinners/GridLoader";
 import axios from "axios";
 import { url } from "../host/Host";
 import Header from "./Header";
+
 import { Collapse } from "antd";
 import Footer from "./Footer";
-import rasm from "../img/news.jpg";
+import rasm from "../img/head.jpg";
 import etnosport8 from "../img/etnoimg8.jpg";
 const { Panel } = Collapse;
 
@@ -21,33 +22,33 @@ export default class Yangiliklar extends Component {
     raqam: "0",
   };
 
-  componentDidMount() {
-    this.getNews();
-    var link = window.location.href;
+  // componentDidMount() {
+  //   this.getNews();
+  //   var link = window.location.href;
 
-    this.setState({
-      raqam: link.slice(link.lastIndexOf("/") + 1, link.length),
-    });
-  }
-  getNews = () => {
-    axios.get(`${url}/boshqarma`).then((res) => {
-      this.setState({
-        school: res.data[0],
-      });
-      axios.get(`${url}/news/`).then((res) => {
-        var a = res.data.reverse();
-        a.splice(0, 1);
-        a.splice(1, 1);
-        a.splice(4, 1);
-        this.setState({
-          news: a,
-        });
-        setTimeout(() => {
-          this.setState({ loader: false });
-        }, 1000);
-      });
-    });
-  };
+  //   this.setState({
+  //     raqam: link.slice(link.lastIndexOf("/") + 1, link.length),
+  //   });
+  // }
+  // getNews = () => {
+  //   axios.get(`${url}/boshqarma`).then((res) => {
+  //     this.setState({
+  //       school: res.data[0],
+  //     });
+  //     axios.get(`${url}/news/`).then((res) => {
+  //       var a = res.data.reverse();
+  //       a.splice(0, 1);
+  //       a.splice(1, 1);
+  //       a.splice(4, 1);
+  //       this.setState({
+  //         news: a,
+  //       });
+  //       setTimeout(() => {
+  //         this.setState({ loader: false });
+  //       }, 1000);
+  //     });
+  //   });
+  // };
   render() {
     return (
       <>
@@ -62,36 +63,257 @@ export default class Yangiliklar extends Component {
 
           <div className={styles.newsY}>
             <Collapse accordion defaultActiveKey={[this.state.raqam]}>
-              {this.state.news !== null
-                ? this.state.news.map((item) => {
-                    return (
-                      <Panel
+             
+            <Panel
                         className={styles.panel}
-                        header={<p style={{ color: "white" }}>{item.name}</p>}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
                       >
                         <div>
                           <Container>
                             <div style={{ display: "flex" }}>
                               <div className={styles.imag}>
-                                <img src={item.image} />
+                                <img src={rasm} />
                               </div>
                               <div className={styles.yozuv}>
-                                <h1>{item.name}</h1>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
                                 <p className={styles.dat}>
                                   <i className="fa fa-calendar"></i>
-                                  {item.date_added}
+                                  10.10.2021 yil
                                 </p>
                               </div>
                             </div>
                             <div className={styles.yozuv}>
-                              <p className={styles.text}>{item.description}</p>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
                             </div>
                           </Container>
                         </div>
                       </Panel>
-                    );
-                  })
-                : ""}
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                      <Panel
+                        className={styles.panel}
+                        header={<p style={{ color: "white" }}>O‘zbekistonda Etnosport uyushmasi tashkil etildi</p>}
+                      >
+                        <div>
+                          <Container>
+                            <div style={{ display: "flex" }}>
+                              <div className={styles.imag}>
+                                <img src={rasm} />
+                              </div>
+                              <div className={styles.yozuv}>
+                                <h1>O‘zbekistonda Etnosport uyushmasi tashkil etildi</h1>
+                                <p className={styles.dat}>
+                                  <i className="fa fa-calendar"></i>
+                                  10.10.2021 yil
+                                </p>
+                              </div>
+                            </div>
+                            <div className={styles.yozuv}>
+                              <p className={styles.text}>Turizm va sport vazirligi tomonidan tashkil etilgan tadbirni O‘zbekiston Respublikasi Bosh vaziri o‘rinbosari, Turizm va sport vaziri Aziz Abduhakimov, Butunjahon etnosport konfederatsiyasi raisi Nejmeddin Bilol Erdo‘g‘on ochib berdi. – O‘zbekistonda milliy sport turlarini rivojlantirish va ommalashtirish, nomoddiy madaniy merosni asrab-avaylash, shuningdek, O‘zbekiston aholisi o‘rtasida jismoniy tarbiya va sportni rivojlantirishga alohida e’tibor qaratilayotgani rahbariyat tomonidan ilgari surilayotgan muhim yo‘nalishlardan biridir. davlatimizning. Shu maqsadda va shiori ostida xalqaro konferensiya tashkil etildi “O‘zbekistonni etnosport va milliy qadriyatlar orqali kashf et!”. Milliy o‘yinlar azal-azaldan davlatlarning shakllanishida, qabila va elatlarning birlashuvida, shuningdek, odamlarni himoya qilishda muhim ahamiyatga ega bo‘lgan. Bugungi kunda xalq o‘yinlariga e’tiborni kuchaytirish, ularni yoshlar o‘rtasida ommalashtirish insonni jismonan sog‘lom, matonatli, sabr-toqatli, sezgir, ma’nan yetuk bo‘lib yetishishi uchun aholi salomatligini mustahkamlashga katta hissa qo‘shadi. Xalq tarixining ming yillar davomida shakllanganligi uning moddiy-madaniy boyligi, etnografiyasida o‘z ifodasini topadi. Shuning uchun fursatdan foydalanib, O‘zbekiston etnosport assotsiatsiyasi ochilganini e’lon qilmoqchiman”, — dedi Aziz Abduhakimov.</p>
+                            </div>
+                          </Container>
+                        </div>
+                      </Panel>
+                      
+                 
             </Collapse>
           </div>
           <Footer />

@@ -31,11 +31,11 @@ export default class HujjatlarT extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -45,12 +45,7 @@ export default class HujjatlarT extends Component {
                       Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
                       sport va o'yinlar haqida xabardorlikni oshirish va
                       tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
-                      xalqaro muassasadir. Ushbu faoliyatni saqlash, amalga
-                      oshirish va qo'llab-quvvatlash uchun avloddan-avlodga
-                      o'tib kelayotgan an'anaviy o'yinlar va sport turlarini
-                      qo'llab-quvvatlash orqali muassasa ushbu faoliyatni
-                      soyabon tashkilot orqali yanada doimiy va tizimli holatga
-                      keltirishni maqsad qilgan.
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -65,11 +60,11 @@ export default class HujjatlarT extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={otchop} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -79,12 +74,7 @@ export default class HujjatlarT extends Component {
                       Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
                       sport va o'yinlar haqida xabardorlikni oshirish va
                       tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
-                      xalqaro muassasadir. Ushbu faoliyatni saqlash, amalga
-                      oshirish va qo'llab-quvvatlash uchun avloddan-avlodga
-                      o'tib kelayotgan an'anaviy o'yinlar va sport turlarini
-                      qo'llab-quvvatlash orqali muassasa ushbu faoliyatni
-                      soyabon tashkilot orqali yanada doimiy va tizimli holatga
-                      keltirishni maqsad qilgan.
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -99,11 +89,11 @@ export default class HujjatlarT extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={eskietno} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -113,12 +103,7 @@ export default class HujjatlarT extends Component {
                       Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
                       sport va o'yinlar haqida xabardorlikni oshirish va
                       tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
-                      xalqaro muassasadir. Ushbu faoliyatni saqlash, amalga
-                      oshirish va qo'llab-quvvatlash uchun avloddan-avlodga
-                      o'tib kelayotgan an'anaviy o'yinlar va sport turlarini
-                      qo'llab-quvvatlash orqali muassasa ushbu faoliyatni
-                      soyabon tashkilot orqali yanada doimiy va tizimli holatga
-                      keltirishni maqsad qilgan.
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -133,11 +118,11 @@ export default class HujjatlarT extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={uzb} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -147,12 +132,7 @@ export default class HujjatlarT extends Component {
                       Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
                       sport va o'yinlar haqida xabardorlikni oshirish va
                       tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
-                      xalqaro muassasadir. Ushbu faoliyatni saqlash, amalga
-                      oshirish va qo'llab-quvvatlash uchun avloddan-avlodga
-                      o'tib kelayotgan an'anaviy o'yinlar va sport turlarini
-                      qo'llab-quvvatlash orqali muassasa ushbu faoliyatni
-                      soyabon tashkilot orqali yanada doimiy va tizimli holatga
-                      keltirishni maqsad qilgan.
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -167,11 +147,11 @@ export default class HujjatlarT extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={otchop} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -181,12 +161,7 @@ export default class HujjatlarT extends Component {
                       Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
                       sport va o'yinlar haqida xabardorlikni oshirish va
                       tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
-                      xalqaro muassasadir. Ushbu faoliyatni saqlash, amalga
-                      oshirish va qo'llab-quvvatlash uchun avloddan-avlodga
-                      o'tib kelayotgan an'anaviy o'yinlar va sport turlarini
-                      qo'llab-quvvatlash orqali muassasa ushbu faoliyatni
-                      soyabon tashkilot orqali yanada doimiy va tizimli holatga
-                      keltirishni maqsad qilgan.
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -201,11 +176,11 @@ export default class HujjatlarT extends Component {
             >
               <a className={style.ss} href="#" target="_blank">
                 <Row>
-                  <Col lg={3}>
+                  <Col lg={4}>
                     <img src={eskietno} />
                   </Col>
                   <Col
-                    lg={9}
+                    lg={8}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -215,12 +190,7 @@ export default class HujjatlarT extends Component {
                       Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
                       sport va o'yinlar haqida xabardorlikni oshirish va
                       tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
-                      xalqaro muassasadir. Ushbu faoliyatni saqlash, amalga
-                      oshirish va qo'llab-quvvatlash uchun avloddan-avlodga
-                      o'tib kelayotgan an'anaviy o'yinlar va sport turlarini
-                      qo'llab-quvvatlash orqali muassasa ushbu faoliyatni
-                      soyabon tashkilot orqali yanada doimiy va tizimli holatga
-                      keltirishni maqsad qilgan.
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>

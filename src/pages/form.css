@@ -28,7 +28,7 @@ background-size: 100%;
   margin-top: 10px;
   font-weight: 900;
   font-size: 1.8rem;
-  color: orangered;
+  color: rgb(8, 6, 112);
   letter-spacing: 1px;
 }
 
@@ -85,7 +85,7 @@ background-size: 100%;
   
 .formFER button {
   margin-top: 20px;
-  background: #2aca0ae0;
+  background: orangered;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
@@ -124,7 +124,7 @@ background-size: 100%;
   right: 4px;
   text-decoration: none;
   color: black;
-  background: orangered;
+  background: rgb(8, 6, 112);
   border-radius: 10px;
   padding: 2px;
 }

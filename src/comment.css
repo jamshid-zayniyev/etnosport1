@@ -4,7 +4,7 @@
 }
 .comments{max-height:80vh; overflow-y:auto}
 .comments .darker {
-    border: 1px solid gold;
+    border: 1px solid orangered;
     background-color: black;
     float: right;
     border-radius: 5px;
@@ -16,8 +16,8 @@
 .comments .comment {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    border: 1px solid orangered;
-    background-color: orangered;
+    border: 1px solid rgb(8, 6, 112);
+    background-color: rgb(8, 6, 112);
     float: left;
     width:98%;
     border-radius: 5px;
@@ -71,13 +71,13 @@
 .comments .form-group input,
 .comments .form-group textarea {
     background-color: white;
-    border: 1px solid orangered;
+    border: 1px solid rgb(8, 6, 112);
     border-radius: 12px
 }
 
 .comments form {
-    border: 1px solid orangered;
-    background-color: orangered;
+    border: 1px solid rgb(8, 6, 112);
+    background-color: rgb(8, 6, 112);
     border-radius: 5px;
     padding: 20px
 }
@@ -88,7 +88,7 @@
     padding-bottom: 1px;
     text-align: center;
     width: 100%;
-    background-color: gold;
+    background-color: orangered;
     border-color: #a88734 #9c7e31 #846a29;
     color: black;
     border-width: 1px;
@@ -106,7 +106,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
     text-align: center;
-    background-color: gold;
+    background-color: orangered;
     border-color: #a88734 #9c7e31 #846a29;
     color: black;
     border-width: 1px;

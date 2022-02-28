@@ -33,6 +33,7 @@
 .newsY h1 {
   font-size: 27px;
   flex: 50%;
+  color:rgb(8, 6, 112);
   padding: 40px 20px;
   display: inline-block;
   text-align: center;
@@ -40,11 +41,13 @@
 .text {
   font-size: 18px;
   margin-top: 20px;
+  color:rgb(8, 6, 112);
 }
 .dat {
   font-size: 18px;
   font-weight: bold;
   margin-top: -20px;
+  color:rgb(8, 6, 112);
   text-align: center;
 }
 .yozuv p i {
@@ -89,7 +92,7 @@
   border-top: 2px solid white;
   text-align: center;
   padding: 20px;
-  background-color: orangered;
+  background-color: #ff4e00;
   color: white;
   font-size: 25px;
   font-weight: 700;
@@ -112,5 +115,5 @@
 }
 .panel {
   font-size: 20px;
-  background-color: #ff4e00;
+  background-color: rgb(8, 6, 112);
 }

@@ -71,14 +71,14 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 .fikr {
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   font-size: 20px;
   margin-top: 30px;
 }
 .ism {
   font-size: 16px;
   text-align: right;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
 }
 .second_item img {
   width: 100%;
@@ -103,7 +103,7 @@
 }
 .items_item p {
   font-size: 18px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   margin-top: 20px;
   text-align: center;
 }
@@ -122,25 +122,25 @@
   padding: 30px;
 }
 .items_item1:hover p {
-  color: rgb(243, 207, 2);
+  color: rgb(8, 6, 112);
 }
 .items_item1:hover h1 {
-  color: rgb(243, 207, 2);
+  color: rgb(8, 6, 112);
 }
 .items_item1:hover i {
-  color: rgb(243, 207, 2);
+  color: rgb(8, 6, 112);
 }
 .items_item1 i {
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
 }
 .items_item1 p {
   font-size: 23px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   margin-top: 20px;
   text-align: center;
 }
 .items_item1 h1 {
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
 
   text-align: center;
 }
@@ -175,11 +175,11 @@
   font-size: 26px;
   margin-top: 20px;
   text-align: center;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
 }
 .ustoz_item p {
   font-size: 16px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .gal {
@@ -187,7 +187,7 @@
   background-color: white;
 }
 .sarlavha {
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   font-size: 32px;
   text-align: center;
 }
@@ -221,7 +221,7 @@
 }
 .back {
   width: 100%;
-  background-color: rgba(100, 6, 100, 0.556);
+  background-color: rgb(8, 6, 112);
   height: 100%;
   position: absolute;
   top: 0px;
@@ -247,7 +247,7 @@
   font-size: 17px;
   margin-top: 20px;
   text-align: center;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
 }
 .tad_item img {
   width: 100%;
@@ -268,12 +268,12 @@
   font-size: 22px;
   margin-top: 20px;
   text-align: center;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
 }
 
 .new_item .text {
   font-size: 18px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .new_item .date {
@@ -282,18 +282,18 @@
   bottom: 0px;
   left: 0px;
   width: 100%;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .new_item .date i {
   font-size: 18px;
   margin-right: 10px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .tad_item .text {
   font-size: 18px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .tad_item .date {
@@ -302,13 +302,13 @@
   bottom: 30px;
   left: 0px;
   width: 100%;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .tad_item .date i {
   font-size: 18px;
   margin-right: 10px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .tad_item .mar {
@@ -317,13 +317,13 @@
   bottom: 60px;
   left: 0px;
   width: 100%;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .tad_item .mar i {
   font-size: 18px;
   margin-right: 10px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 
@@ -333,13 +333,13 @@
   bottom: 0px;
   left: 0px;
   width: 100%;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .tad_item .time i {
   font-size: 18px;
   margin-right: 10px;
-  color: rgb(8, 187, 8);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .videos {
@@ -354,7 +354,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: none;
   padding: 10px 40px;
-  background-color: rgb(53, 15, 89);
+  background-color: rgb(8, 6, 112);
   font-size: 22px;
   color: white;
   margin-top: 40px;
@@ -363,7 +363,7 @@
   color: white;
 }
 .but:hover {
-  color: rgb(53, 15, 89);
+  color: rgb(8, 6, 112);
   background-color: white;
 }
 .but:active {
