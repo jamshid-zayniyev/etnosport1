@@ -18,7 +18,7 @@ import her5 from "../img/h5.png";
 import her6 from "../img/h6.png";
 import head4 from '../img/head4.jpg'
 import kurash from '../img/kurash.PNG'
-import back2 from '../videos/b.mp4'
+
 import kurash1 from "../img/kurash1.jpg"
 import kurash2 from "../img/kurash2.jpg"
 import kurash3 from "../img/kurash3.jpg"

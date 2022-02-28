@@ -143,7 +143,7 @@ export default class Footer extends Component {
               <div className={style.chiziqq}></div>
               <ul>
                 <li>
-                  <Nav.Link className={style.ijsahifa}>
+                  <Nav.Link style={{color:'rgb(8, 187, 8)'}} className={style.ijsahifa}>
                     <i style={style.iconcala}>
                       {" "}
                       <AiFillInstagram />
@@ -152,7 +152,7 @@ export default class Footer extends Component {
                   </Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link className={style.ijsahifa}>
+                  <Nav.Link style={{color:'rgb(8, 187, 8)'}} className={style.ijsahifa}>
                     <i style={style.iconcala}>
                       <BsTelegram />
                     </i>
@@ -160,7 +160,7 @@ export default class Footer extends Component {
                   </Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link className={style.ijsahifa}>
+                  <Nav.Link style={{color:'rgb(8, 187, 8)'}} className={style.ijsahifa}>
                     <i style={style.iconcala}>
                       <AiFillFacebook />
                     </i>
@@ -168,7 +168,7 @@ export default class Footer extends Component {
                   </Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link className={style.ijsahifa}>
+                  <Nav.Link style={{color:'rgb(8, 187, 8)'}} className={style.ijsahifa}>
                     <i style={style.iconcala}>
                       <AiFillYoutube />
                     </i>

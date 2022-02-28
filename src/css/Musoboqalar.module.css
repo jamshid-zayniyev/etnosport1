@@ -11,7 +11,7 @@
 .bag {
   padding: 3px 9px;
   font-size: 12px;
-  color: rgb(46, 12, 79);
+  color: orangered;
   background-color: white;
   position: absolute;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -23,7 +23,7 @@
   padding: 3px 9px;
   cursor: pointer;
   font-size: 12px;
-  color: rgb(46, 12, 79);
+  color: orangered;
   background-color: white;
   position: absolute;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -33,17 +33,17 @@
 }
 .bag1:hover {
   color: white;
-  background-color: rgb(46, 12, 79);
+  background-color: orangered;
 }
 .ss img {
   width: 100%;
 }
 .ss h1 {
   font-size: 18px;
-  color: blueviolet;
+  color: orangered;
 }
 .ss h1:hover {
-  color: rgb(46, 12, 79);
+  color: blue;
 }
 .sarlavha {
   color: rebeccapurple;
@@ -55,18 +55,18 @@
 }
 .colT:nth-child(odd) {
   padding-right: 10px;
-  border-right: 3px solid rgb(46, 12, 79);
+  border-right: 3px solid orangered;
 }
 .rowT {
-  border-bottom: 3px solid rgb(46, 12, 79);
+  border-bottom: 3px solid orangered;
   padding-bottom: 20px;
 }
 .HT {
-  color: rgb(46, 12, 79);
+  color: orangered;
   padding: 20px;
 }
 .panel {
-  color: rgb(46, 12, 79) !important;
+  color: orangered !important;
   padding: 10px !important;
   font-size: 22px !important;
 }

@@ -10,6 +10,7 @@ import Musoboqalar from "./pages/Musoboqalar";
 import HujjatlarT from "./pages/HujjatlarT";
 import ElektronK from "./pages/Sporthm";
 import Boglanish from "./pages/Boglanish";
+import "./comment.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "antd/dist/antd.css";
 export default class App extends Component {

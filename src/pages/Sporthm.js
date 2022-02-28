@@ -29,8 +29,7 @@ export default class Sporthm extends Component {
 
         <div className={style.head}>
           <img src={etnosport5}></img>
-          <div className={style.headsarlavha}>
-            Etnosportga oid Prezident farmonlari, farmoyishlari va qarorlari
+          <div className={style.headsarlavha}>Elektron kutubxona
           </div>
         </div>
 

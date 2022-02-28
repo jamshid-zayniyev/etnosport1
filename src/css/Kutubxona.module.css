@@ -15,7 +15,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: none;
   padding: 10px 20px;
-  background-color: rgb(53, 15, 89);
+  background-color: orangered;
   font-size: 16px;
   color: white;
   margin-top: 20px;
@@ -38,7 +38,7 @@
   color: white !important;
 }
 .but:hover {
-  color: rgb(53, 15, 89) !important;
+  color: orangered !important;
   background-color: white;
 }
 .but:active {
@@ -60,7 +60,7 @@
   margin-bottom: 20px;
   background-size: 100% 100%;
   /* background-image: url(../img/etnoimg2.jpg); */
-  /* background-color: rgb(53, 15, 89); */
+  /* background-color: orangered; */
   padding-top: 50px;
   background-attachment: fixed;
   background-repeat: no-repeat;

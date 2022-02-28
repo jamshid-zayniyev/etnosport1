@@ -12,17 +12,17 @@
 }
 .ss h1 {
   font-size: 18px;
-  color: rgb(8, 187, 8);
+  color: orangered;
 }
 .ss h1:hover {
-  color: rgb(46, 12, 79);
+  color: rgb(8, 187, 8);
 }
 .colT:nth-child(odd) {
   padding-right: 10px;
-  border-right: 3px solid rgb(46, 12, 79);
+  border-right: 3px solid orangered;
 }
 .rowT {
-  border-bottom: 3px solid rgb(46, 12, 79);
+  border-bottom: 3px solid orangered;
   padding-bottom: 20px;
 }
 .load {
@@ -41,7 +41,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: none;
   padding: 10px 20px;
-  background-color: rgb(53, 15, 89);
+  background-color: orangered;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -54,7 +54,7 @@
   color: white !important;
 }
 .but:hover {
-  color: rgb(53, 15, 89) !important;
+  color: orangered !important;
   background-color: white;
 }
 .but:active {
