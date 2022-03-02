@@ -529,7 +529,7 @@
     font-size: 60px;
   }
   .binaf {
-    height: 100vh;
+   
   }
   .second {
     margin-top: 100vh !important;
@@ -564,9 +564,7 @@
   .gal img {
     height: 350px;
   }
-  .videos {
-    margin-top: 1600px;
-  }
+ 
   .video1 video {
     width: 110%;
     position: relative;

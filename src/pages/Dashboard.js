@@ -605,7 +605,7 @@ Rishod ilk xalqaro sovrinini 2006 yilda qo'lga kiritgan.
          <div className={style.chiziq}></div>
         
                     <div className={stylev.videos}>
-          <div id="video"></div>
+          
 
           <br />
 
