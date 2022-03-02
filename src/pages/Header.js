@@ -169,7 +169,7 @@ export default class NavbarA extends Component {
                 </Dropdown>
               </li>
             
-            
+             
              
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/talim">
@@ -212,6 +212,9 @@ export default class NavbarA extends Component {
                   Bog'lanish
                 </NavLink>
               </li>
+              <li onClick={this.closeNav}>
+                    <NavLink className={style.lik} to="/">Kirish</NavLink>
+                            </li>
             </ul>
           </div>
         </div>
