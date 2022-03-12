@@ -8,6 +8,7 @@ import style from "../css/Boglanish.module.css";
 import GridLoader from "react-spinners/GridLoader";
 import rasm from "../img/boglanish.jpg";
 import { message } from "antd";
+import school from "../img/gerb.png";
 import etnosport7 from "../img/etnoimg7.jpg";
 
 export default class Boglanish extends Component {
@@ -16,6 +17,7 @@ export default class Boglanish extends Component {
     this.state = {
       timePassed: false,
       boshqarma: null,
+      loader: true,
     };
   }
 
@@ -46,9 +48,35 @@ export default class Boglanish extends Component {
   //         })
   //       })
   //   }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loader: false,
+      });
+    }, 3000);
+  }
   render() {
+    const loaderT = () => {
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
+    };
     return (
-      <div>
+      <div
+        onLoad={() => {
+          loaderT();
+        }}
+      >
+        {this.state.loader ? (
+          <div className="loaderG">
+            <div className="befG">
+              <img src={school} alt="..." />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
         <Header />
         <div className={style.head}>
           <img src={etnosport7}></img>
@@ -73,7 +101,7 @@ export default class Boglanish extends Component {
                       boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
                       height: "550px",
                     }}
-                    defaultState={{ center: [41.318973, 69.303470], zoom: 12 }}
+                    defaultState={{ center: [41.318973, 69.30347], zoom: 12 }}
                   >
                     <Clusterer
                       options={{
@@ -82,7 +110,7 @@ export default class Boglanish extends Component {
                     >
                       <Placemark
                         key={-1}
-                        geometry={[41.318973, 69.303470]}
+                        geometry={[41.318973, 69.30347]}
                         options={{
                           iconLayout: "default#image",
                         }}
