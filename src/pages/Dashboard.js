@@ -46,6 +46,8 @@ import { Link } from "react-router-dom";
 import { Modal } from "antd";
 import Dashreyting from "./Dashreyting";
 import YouTube from "@u-wave/react-youtube";
+import { ChartS } from "./ChartS";
+import { ChartT } from "./ChartT";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -384,8 +386,25 @@ export default class Dashboard extends Component {
           <br />
           <br />
           <Dashreyting />
+          <h1 className={style.sarlavha}>Statistika</h1>
+            
+            <div className={style.chiziq}></div>
+            <Row style={{padding:'20px'}}>
+            <Col lg={6} md={12} sm={12}>
+             
+          
+             <ChartS/>
+             </Col>
+             <Col lg={6} md={12} sm={12}>
+             
+          
+             <ChartT/>
+             </Col>
+            </Row>
+
           <div className={style.sports}>
             <h1 className={style.sarlavha}>Etnosport turlari</h1>
+
             <div className={style.chiziq}></div>
 
             <Carousel
@@ -488,121 +507,10 @@ export default class Dashboard extends Component {
             <br />
             <br />
           </div>
-          <div className={style.sports}>
-            <h1 className={style.sarlavha}>Sportchilar</h1>
-            <div className={style.chiziq}></div>
+       
 
-            <Carousel
-              responsive={responsive3}
-              infinite={true}
-              autoPlaySpeed={800}
-              autoPlay={this.props.deviceType !== "mobile" ? true : false}
-            >
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-              <div style={{ padding: "10px" }}>
-                <div className={style.sportchi} onClick={this.openModalB}>
-                  <img src={rishod} />
-                  <h5>Rishod Sobirov</h5>
-                  <p>Belbogʻli kurash ustasi</p>
-                </div>
-              </div>
-            </Carousel>
-            <br />
-            <br />
-          </div>
-
-          <Row xs={12} md={2} lg={2}>
-            <Col>
+          <Row>
+            <Col lg={6} md={12} sm={12}>
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Zulfiyaxonim avlodlari</h1>
                 <div className={style.chiziq}></div>
@@ -716,7 +624,7 @@ export default class Dashboard extends Component {
                 <br />
               </div>
             </Col>
-            <Col>
+            <Col lg={6} md={12} sm={12}>
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Bizning faxrlarimiz</h1>
                 <div className={style.chiziq}></div>
@@ -830,7 +738,7 @@ export default class Dashboard extends Component {
                 <br />
               </div>
             </Col>
-            <Col>
+            <Col lg={6} md={12} sm={12}>
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Jahon chempionlari</h1>
                 <div className={style.chiziq}></div>
@@ -944,7 +852,7 @@ export default class Dashboard extends Component {
                 <br />
               </div>
             </Col>
-            <Col>
+            <Col lg={6} md={12} sm={12}>
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Olimpiada chempionlari</h1>
                 <div className={style.chiziq}></div>
