@@ -403,14 +403,14 @@ export default class Dashboard extends Component {
             </Row>
 
           <div className={style.sports}>
-            <h1 className={style.sarlavha}>Etnosport turlari</h1>
+            <h1 className={style.sarlavha}>Sport turlari</h1>
 
             <div className={style.chiziq}></div>
 
             <Carousel
               responsive={responsive1}
               infinite={true}
-              autoPlaySpeed={800}
+              autoPlaySpeed={1500}
               autoPlay={this.props.deviceType !== "mobile" ? true : false}
             >
               <div style={{ padding: "10px" }}>
@@ -518,7 +518,7 @@ export default class Dashboard extends Component {
                 <Carousel
                   responsive={responsive4}
                   infinite={true}
-                  autoPlaySpeed={800}
+                  autoPlaySpeed={1500}
                   autoPlay={this.props.deviceType !== "mobile" ? true : false}
                 >
                   <div style={{ padding: "10px" }}>
@@ -632,7 +632,7 @@ export default class Dashboard extends Component {
                 <Carousel
                   responsive={responsive4}
                   infinite={true}
-                  autoPlaySpeed={800}
+                  autoPlaySpeed={1500}
                   autoPlay={this.props.deviceType !== "mobile" ? true : false}
                 >
                   <div style={{ padding: "10px" }}>
@@ -746,7 +746,7 @@ export default class Dashboard extends Component {
                 <Carousel
                   responsive={responsive4}
                   infinite={true}
-                  autoPlaySpeed={800}
+                  autoPlaySpeed={1500}
                   autoPlay={this.props.deviceType !== "mobile" ? true : false}
                 >
                   <div style={{ padding: "10px" }}>
@@ -860,7 +860,7 @@ export default class Dashboard extends Component {
                 <Carousel
                   responsive={responsive4}
                   infinite={true}
-                  autoPlaySpeed={800}
+                  autoPlaySpeed={1500}
                   autoPlay={this.props.deviceType !== "mobile" ? true : false}
                 >
                   <div style={{ padding: "10px" }}>
@@ -1083,7 +1083,7 @@ export default class Dashboard extends Component {
               <h1 className={style.sarlavha}>Videolavhalar</h1>
               <div className={style.chiziq}></div>
 
-              <div className={stylev.videos}>
+            
                 <div className={stylev.videos}>
                   <div id="video"></div>
 
@@ -1169,7 +1169,8 @@ export default class Dashboard extends Component {
 
                 <div
                   className="sliderHomiy"
-                  style={{ backgroundColor: "white" }}
+                  
+                  style={{ width:'100%', backgroundColor: "white" }}
                 >
                   <Carousel
                     responsive={responsive5}
@@ -1292,7 +1293,7 @@ export default class Dashboard extends Component {
                   </Carousel>
                 </div>
                 <div id="bog'lanish"></div>
-              </div>
+              <Container>
               <div className={style.xarita}>
                 <Row>
                   <Col lg={6} md={12} sm={12}>
@@ -1365,6 +1366,7 @@ export default class Dashboard extends Component {
                   </Col>
                 </Row>
               </div>
+              </Container>
             </div>
           </>
           <Footer />
