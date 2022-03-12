@@ -84,7 +84,7 @@ export default class NavbarA extends Component {
                     </Dropdown.Item>
 
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/">
+                      <NavLink className={style.lik} to="/sportchilar">
                         Sportchilar
                       </NavLink>
                     </Dropdown.Item>
@@ -132,7 +132,6 @@ export default class NavbarA extends Component {
                   O'quv qo'llanmalar
                 </NavLink>
               </li> */}
-             
               <li onClick={this.closeNav}>
                 <Dropdown>
                   <Dropdown.Toggle
@@ -144,7 +143,7 @@ export default class NavbarA extends Component {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                  <Dropdown.Item>
+                    <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
                         Toshkent shahar
                       </NavLink>
