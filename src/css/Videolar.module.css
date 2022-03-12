@@ -528,12 +528,8 @@
   .binaf h1 {
     font-size: 60px;
   }
-  .binaf {
-    height: 100vh;
-  }
-  .second {
-    margin-top: 100vh !important;
-  }
+
+ 
   .fikr {
     font-size: 37px;
   }
@@ -565,7 +561,7 @@
     height: 350px;
   }
   .videos {
-    margin-top: 1600px;
+    margin-top: 40px;
   }
   .video1 video {
     width: 110%;

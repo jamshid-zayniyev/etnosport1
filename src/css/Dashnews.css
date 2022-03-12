@@ -226,4 +226,11 @@ padding-top:50px;
 	margin-bottom: 1em;
 }
 .gh h1{color:rgb(8, 6, 112); font-weight: bold; margin-top: 20px;}
-.gh h2{margin-top:2px !important; line-height: 20px !important; font-weight:bold !important; padding:0px !important; }
+.gh h2{margin-top:2px !important; line-height: 25px !important; font-weight:bold !important; padding:0px !important; }
+@media (min-width:1500px){
+	.dashnew h1{font-size: 18px;}
+.dashnew h2{font-size: 18px;}
+.dashnew p{font-size: 18px; line-height: 2;}
+.gh h1{font-size: 30px !important;}
+.gh h2{font-size: 22px !important;}
+}
