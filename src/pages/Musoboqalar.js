@@ -13,6 +13,7 @@ import power from "../img/kurash4.jpg";
 import pdf from "../img/kurash4.jpg";
 import file from "../img/kurash4.jpg";
 import kurash6 from "../img/kurash6.jpg";
+import school from "../img/gerb.png";
 import Header from "./Header";
 import etnosport7 from "../img/etnoimg7.jpg";
 import Footer from "./Footer";
@@ -24,46 +25,65 @@ export default class Musoboqalar extends Component {
     loader: true,
     news: null,
     school: null,
-    tumanlar:null,
-    showComment:false,
-    showCommentT:false,
-    raqam:"0",
-    comments:[],
-    id:null
+    tumanlar: null,
+    showComment: false,
+    showCommentT: false,
+    raqam: "0",
+    comments: [],
+    id: null,
+  };
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loader: false,
+      });
+    }, 3000);
+  }
+
+  handleClose = () => {
+    this.setState({
+      showComment: false,
+    });
+  };
+  openModal = (id) => {
+    this.setState({
+      showComment: true,
+    });
   };
 
-  handleClose=()=>{
+  handleCloseT = () => {
     this.setState({
-      showComment:false
-    })
-  }
-  openModal=(id)=>{
+      showCommentT: false,
+    });
+  };
+  openModalT = (id) => {
     this.setState({
-   showComment:true,
-    })
-
-
-  }
-
-  handleCloseT=()=>{
-    this.setState({
-      showCommentT:false
-    })
-  }
-  openModalT=(id)=>{
-
-    this.setState({
-      showCommentT:true,
-      id:id
-    })
-  }
-
-
-
+      showCommentT: true,
+      id: id,
+    });
+  };
 
   render() {
+    const loaderT = () => {
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
+    };
     return (
-      <>
+      <div
+        onLoad={() => {
+          loaderT();
+        }}
+      >
+        {this.state.loader ? (
+          <div className="loaderG">
+            <div className="befG">
+              <img src={school} alt="..." />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
         <Header />
         <div className={styled.head}>
           <img src={etnosport7}></img>
@@ -73,9 +93,13 @@ export default class Musoboqalar extends Component {
         </div>
         <div className="loyiha">
           <div className={styles.newsY}>
-           
             <Collapse accordion defaultActiveKey={1}>
-              <Panel className={styled.panel} header={"Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi"}>
+              <Panel
+                className={styled.panel}
+                header={
+                  "Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi"
+                }
+              >
                 <div>
                   <Container>
                     <Row>
@@ -111,9 +135,17 @@ export default class Musoboqalar extends Component {
                                 flexDirection: "column",
                               }}
                             >
-                              <h1 style={{ textAlign: "left" }}>Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi</h1>
-                  <p style={{padding:'20px', fontSize:'18px' }}>Belbog'li kurash bo'yicha Qashqadaryo viloyati Mborak tumani katta xalqaro turnir o'tqaziladi. Bu turnirda 25 ta davlat dan belbog'li kurash bo'yicha ko'plab naijalarga errishgan sportchilar tashrif buyuradi.</p>
-                           
+                              <h1 style={{ textAlign: "left" }}>
+                                Belbog'li kurash bo'yicha Qashqadaryoda musobaqa
+                                bo'lib o'tadi
+                              </h1>
+                              <p style={{ padding: "20px", fontSize: "18px" }}>
+                                Belbog'li kurash bo'yicha Qashqadaryo viloyati
+                                Mborak tumani katta xalqaro turnir o'tqaziladi.
+                                Bu turnirda 25 ta davlat dan belbog'li kurash
+                                bo'yicha ko'plab naijalarga errishgan
+                                sportchilar tashrif buyuradi.
+                              </p>
                             </Col>
                           </Row>
                           <br />
@@ -128,24 +160,23 @@ export default class Musoboqalar extends Component {
                               Izoh qoldirish
                             </buttun>
 
-                            <a
-                              className={styled.but}
-                           
-                              href="#"
-                              target="_blank"
-                            >
+                            <a className={styled.but} href="#" target="_blank">
                               Yuklab olish
                             </a>
                           </div>
                         </div>
                       </Col>
-                     
                     </Row>
                   </Container>
                 </div>
               </Panel>
 
-              <Panel className={styled.panel} header={"Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi"}>
+              <Panel
+                className={styled.panel}
+                header={
+                  "Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi"
+                }
+              >
                 <div>
                   <Container>
                     <Row>
@@ -182,9 +213,17 @@ export default class Musoboqalar extends Component {
                                 flexDirection: "column",
                               }}
                             >
-                              <h1 style={{ textAlign: "left" }}>Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi</h1>
-                  <p style={{padding:'20px', fontSize:'18px' }}>Belbog'li kurash bo'yicha Qashqadaryo viloyati Mborak tumani katta xalqaro turnir o'tqaziladi. Bu turnirda 25 ta davlat dan belbog'li kurash bo'yicha ko'plab naijalarga errishgan sportchilar tashrif buyuradi.</p>
-
+                              <h1 style={{ textAlign: "left" }}>
+                                Belbog'li kurash bo'yicha Qashqadaryoda musobaqa
+                                bo'lib o'tadi
+                              </h1>
+                              <p style={{ padding: "20px", fontSize: "18px" }}>
+                                Belbog'li kurash bo'yicha Qashqadaryo viloyati
+                                Mborak tumani katta xalqaro turnir o'tqaziladi.
+                                Bu turnirda 25 ta davlat dan belbog'li kurash
+                                bo'yicha ko'plab naijalarga errishgan
+                                sportchilar tashrif buyuradi.
+                              </p>
                             </Col>
                           </Row>
                           <br />
@@ -212,14 +251,17 @@ export default class Musoboqalar extends Component {
                           </div>
                         </div>
                       </Col>
-                     
                     </Row>
                   </Container>
                 </div>
               </Panel>
             </Collapse>
           </div>
-          <Modal style={{ zIndex: "4789" }} show={this.state.showComment} onHide={this.handleClose}>
+          <Modal
+            style={{ zIndex: "4789" }}
+            show={this.state.showComment}
+            onHide={this.handleClose}
+          >
             <Modal.Header closeButton>
               <Modal.Title className={style.sarlavha}>
                 Foydalanuvchilarning fikrlari
@@ -227,7 +269,7 @@ export default class Musoboqalar extends Component {
             </Modal.Header>
             <Modal.Body>
               <div className="comments">
-              <div className="comment mt-4 text-justify float-left">
+                <div className="comment mt-4 text-justify float-left">
                   <img
                     src="https://i.imgur.com/yTFUilP.jpg"
                     alt=""
@@ -263,11 +305,14 @@ export default class Musoboqalar extends Component {
                   <span>12.01.2022</span> <br />
                   <p>Trunirga qanaday qilib ishtirok etsak bo'ladi</p>
                 </div>
-               
               </div>
             </Modal.Body>
           </Modal>
-          <Modal style={{ zIndex: "4789" }} show={this.state.showCommentT} onHide={this.handleCloseT}>
+          <Modal
+            style={{ zIndex: "4789" }}
+            show={this.state.showCommentT}
+            onHide={this.handleCloseT}
+          >
             <Modal.Header closeButton>
               <Modal.Title className={style.sarlavha}>
                 Fikringiz biz uchun muhim
@@ -321,7 +366,7 @@ export default class Musoboqalar extends Component {
           </Modal>
         </div>
         <Footer />
-      </>
+      </div>
     );
   }
 }
