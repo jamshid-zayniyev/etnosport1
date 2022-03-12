@@ -13,6 +13,7 @@ import her2 from "../img/h2.jpg";
 import her3 from "../img/h3.jpg";
 import { Clusterer, Map, Placemark, YMaps } from "react-yandex-maps";
 import "./form.css";
+import {MapDash} from './MapDash'
 import her4 from "../img/h4.jpg";
 import rishod from "../img/rishod.jpg";
 import her5 from "../img/h5.png";
@@ -335,8 +336,7 @@ export default class Dashboard extends Component {
               <h2>
                 <span>“Mahalla va oila”</span> ilmiy-tadqiqot institutining{" "}
                 <span>
-                  "Mahallalarda etnosportni rivojlantirishning
-                  nazariy-metodologik asoslari”
+                Mahallalarda xotin-qizlar o'rtasida sportni rivojlantirish platformasi
                 </span>{" "}
                 loyihasi
               </h2>
@@ -1047,7 +1047,13 @@ export default class Dashboard extends Component {
               }}
               className={style.homiy}
             >
+              <br/>
+              <h1 className={style.sarlavha}>Xarita</h1>
+              <div className={style.chiziq}></div>
+
+              <MapDash/>
               <br />
+
               <h1 className={style.sarlavha}>Videolavhalar</h1>
               <div className={style.chiziq}></div>
 
