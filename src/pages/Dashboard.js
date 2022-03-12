@@ -93,6 +93,7 @@ export default class Dashboard extends Component {
     news: null,
     modalA: false,
     modalB: false,
+
   };
   openModalA = () => {
     this.setState({
@@ -159,25 +160,7 @@ export default class Dashboard extends Component {
         items: 1,
       },
     };
-    const responsive2 = {
-      superLargeDesktop: {
-        // the naming can be any, depends on you.
-        breakpoint: { max: 4000, min: 3000 },
-        items: 3,
-      },
-      desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 3,
-      },
-      tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2,
-      },
-      mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-      },
-    };
+   
     const responsive5 = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -235,8 +218,20 @@ export default class Dashboard extends Component {
         items: 1,
       },
     };
+    const loaderT=()=>{
+      setTimeout(()=>{
+          this.setState({loader:false})
+      }, 2000)
+  }
     return (
-      <div>
+      <div onLoad={()=>{loaderT()}}>
+      {this.state.loader?<div className="loaderG">
+<div className="befG">
+<img src={school} alt="..."/>
+</div>
+
+</div>
+:''}
         <Header />
         <Modal
           title="Belbog'li kurash sport turi"
