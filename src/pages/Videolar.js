@@ -5,11 +5,22 @@ import style from "../css/Videolar.module.css";
 import YouTube from "@u-wave/react-youtube";
 import Carousel from "react-multi-carousel";
 import etnosport9 from "../img/etnoimg3.jpg";
+import school from "../img/gerb.png";
 import etnosport7 from "../img/etnoimg7.jpg";
 export default class Videolar extends Component {
+  state = {
+    loader: true,
+  };
   onEndY = (e) => {
     console.log(e);
   };
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loader: false,
+      });
+    }, 3000);
+  }
   render() {
     const responsiveY = {
       superLargeDesktop: {
@@ -30,12 +41,29 @@ export default class Videolar extends Component {
         items: 1,
       },
     };
-
+    const loaderT = () => {
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
+    };
     return (
-      <div>
+      <div
+        onLoad={() => {
+          loaderT();
+        }}
+      >
+        {this.state.loader ? (
+          <div className="loaderG">
+            <div className="befG">
+              <img src={school} alt="..." />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
         <Header />
         <div className={style.head}>
-          <img src={etnosport9} alt="..."/>
+          <img src={etnosport9} alt="..." />
           <div className={style.headsarlavha}>Videolavhalar</div>
         </div>
         <div className={style.videos}>
