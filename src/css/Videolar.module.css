@@ -528,8 +528,12 @@
   .binaf h1 {
     font-size: 60px;
   }
-
- 
+  .binaf {
+   
+  }
+  .second {
+    margin-top: 100vh !important;
+  }
   .fikr {
     font-size: 37px;
   }
@@ -560,9 +564,7 @@
   .gal img {
     height: 350px;
   }
-  .videos {
-    margin-top: 40px;
-  }
+ 
   .video1 video {
     width: 110%;
     position: relative;

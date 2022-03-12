@@ -47,10 +47,11 @@ export default class NavbarA extends Component {
           <div className={style.nav}>
             <ul id="navb">
               <li onClick={this.closeNav}>
-                    <NavLink className={style.lik} to="/">Bosh sahifa</NavLink>
-                            </li>
-                         
-                            <li onClick={this.closeNav} className="fr">
+                <NavLink className={style.lik} to="/">
+                  Bosh sahifa
+                </NavLink>
+              </li>
+              <li onClick={this.closeNav} className="fr">
                 <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
@@ -61,11 +62,10 @@ export default class NavbarA extends Component {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                 
-                  <Dropdown.Item>
-                  <NavLink className={style.lik} to="/yangiliklar">
-                  Yangiliklar
-                </NavLink>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/yangiliklar">
+                        Yangiliklar
+                      </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/musoboqalar">
@@ -82,20 +82,18 @@ export default class NavbarA extends Component {
                         Fotolavhalar
                       </NavLink>
                     </Dropdown.Item>
-                 
+
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
                         Sportchilar
                       </NavLink>
                     </Dropdown.Item>
-                    
+
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
                         Loyiha haqida
                       </NavLink>
                     </Dropdown.Item>
-                   
-                   
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
@@ -129,13 +127,13 @@ export default class NavbarA extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
+              {/* <li onClick={this.closeNav}>
+                <NavLink className={style.lik1} to="/kutubxona">
+                  O'quv qo'llanmalar
+                </NavLink>
+              </li> */}
               <li onClick={this.closeNav}>
-              <NavLink className={style.lik1} to="/kutubxona">
-                        O'quv qo'llanmalar
-                      </NavLink>
-              </li>
-              <li onClick={this.closeNav}>
-              <Dropdown>
+                <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
                     variant="light"
@@ -152,7 +150,7 @@ export default class NavbarA extends Component {
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
-                       Tadbirlar
+                        Tadbirlar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
@@ -168,9 +166,80 @@ export default class NavbarA extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
-            
-            
-             
+              <li onClick={this.closeNav}>
+                <Dropdown>
+                  <Dropdown.Toggle
+                    className="dropD"
+                    variant="light"
+                    id="dropdown-basic"
+                  >
+                    Viloyatlar
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/">
+                        Toshkent viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/">
+                        Samarqand viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/">
+                        Buxoro viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Andijon viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Namangan viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Farg'ona viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Qashqadaryo viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Surxondaryo viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Xorazm viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Navoiy viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Sirdaryo viloyati
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/#">
+                        Qoraqalpog'iston Respublikasi
+                      </NavLink>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </li>
               <li className="grt" onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/talim">
                   Butun jahon etnosportga oid qonunlar
@@ -210,6 +279,11 @@ export default class NavbarA extends Component {
               <li onClick={this.closeNav}>
                 <NavLink className={style.lik} to="/boglanish">
                   Bog'lanish
+                </NavLink>
+              </li>
+              <li onClick={this.closeNav}>
+                <NavLink className={style.lik} to="/">
+                  Kirish
                 </NavLink>
               </li>
             </ul>
