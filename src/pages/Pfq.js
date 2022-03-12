@@ -3,43 +3,14 @@ import React, { Component } from "react";
 import style from "../css/Hujjatlart.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import school from "../img/gerb.png";
 import uzb from "../img/kurash5.jfif";
 import otchop from "../img/Otchoptirish.jfif";
 import eskietno from "../img/kurash7.jpg";
 import etnosport7 from "../img/etnoimg7.jpg";
-export default class HujjatlarT extends Component {
-  state = {
-    loader: true,
-  };
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 3000);
-  }
+export default class Pfq extends Component {
   render() {
-    const loaderT = () => {
-      setTimeout(() => {
-        this.setState({ loader: false });
-      }, 2000);
-    };
     return (
-      <div
-        onLoad={() => {
-          loaderT();
-        }}
-      >
-        {this.state.loader ? (
-          <div className="loaderG">
-            <div className="befG">
-              <img src={school} alt="..." />
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
+      <>
         <Header />
         <div className={style.head}>
           <img src={etnosport7}></img>
@@ -231,7 +202,7 @@ export default class HujjatlarT extends Component {
           <br />
         </div>
         <Footer />
-      </div>
+      </>
     );
   }
 }

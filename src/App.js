@@ -17,6 +17,11 @@ import Gallery from "./pages/Gallery";
 import Icons from "./pages/Icons";
 import { Xarita } from "./pages/Xarita";
 import Sportchilar from "./pages/Sportchilar";
+import Pfq from "./pages/Pfq";
+import Vmq from "./pages/Vmq";
+import Svmh from "./pages/Svmh";
+import Sonqh from "./pages/Sonqh";
+import Vixsh from "./pages/vixsh";
 export default class App extends Component {
   render() {
     return (
@@ -38,6 +43,11 @@ export default class App extends Component {
             <Route element={<Boglanish />} exact path="/boglanish" />
             <Route element={<Gallery />} exact path="/gallery" />
             <Route element={<Xarita />} exact path="/mahallalar" />
+            <Route element={<Pfq />} exact path="/prezidentfq" />
+            <Route element={<Vmq />} exact path="/vazirlarmq" />
+            <Route element={<Svmh />} exact path="/sportvmh" />
+            <Route element={<Sonqh />} exact path="/sportgaonqh" />
+            <Route element={<Vixsh />} exact path="/vazirlikixsh" />
           </Routes>
         </BrowserRouter>
       </div>

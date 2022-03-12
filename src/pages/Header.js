@@ -110,18 +110,33 @@ export default class NavbarA extends Component {
                   <Dropdown.Menu>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/talim">
-                        Butun jahon etnosportga oid qonunlar
+                        Sport oid qonunlar
+                      </NavLink>
+                    </Dropdown.Item>
+
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/prezidentfq">
+                        Prezident farmonlari, farmoyishlari va qarorlari
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/farmon">
-                        Etnosportga oid Prezident farmonlari, farmoyishlari va
-                        qarorlari
+                      <NavLink className={style.lik} to="/vazirlarmq">
+                        Vazirlik mahkamasi qarorlari
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink className={style.lik} to="/oquvchi">
-                        Sportchilar uchun qonunlar
+                      <NavLink className={style.lik} to="/sportvmh">
+                        Sport vazirligining meyoriy hujjatlari
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/sportgaonqh">
+                        Sport oid normativ-qonuniy hujjatlar
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <NavLink className={style.lik} to="/vazirlikixsh">
+                        Vazirlik ishtirokidagi xalqaro shartnomalar
                       </NavLink>
                     </Dropdown.Item>
                   </Dropdown.Menu>
