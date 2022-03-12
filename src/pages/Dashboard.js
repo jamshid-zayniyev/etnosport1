@@ -13,7 +13,7 @@ import her2 from "../img/h2.jpg";
 import her3 from "../img/h3.jpg";
 import { Clusterer, Map, Placemark, YMaps } from "react-yandex-maps";
 import "./form.css";
-import {MapDash} from './MapDash'
+import { MapDash } from "./MapDash";
 import her4 from "../img/h4.jpg";
 import rishod from "../img/rishod.jpg";
 import her5 from "../img/h5.png";
@@ -93,7 +93,6 @@ export default class Dashboard extends Component {
     news: null,
     modalA: false,
     modalB: false,
-
   };
   openModalA = () => {
     this.setState({
@@ -160,7 +159,7 @@ export default class Dashboard extends Component {
         items: 1,
       },
     };
-   
+
     const responsive5 = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -203,35 +202,41 @@ export default class Dashboard extends Component {
       superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 1,
+        items: 2,
       },
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 1,
+        items: 2,
       },
       tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 1,
+        items: 2,
       },
       mobile: {
         breakpoint: { max: 464, min: 0 },
         items: 1,
       },
     };
-    const loaderT=()=>{
-      setTimeout(()=>{
-          this.setState({loader:false})
-      }, 2000)
-  }
+    const loaderT = () => {
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
+    };
     return (
-      <div onLoad={()=>{loaderT()}}>
-      {this.state.loader?<div className="loaderG">
-<div className="befG">
-<img src={school} alt="..."/>
-</div>
-
-</div>
-:''}
+      <div
+        onLoad={() => {
+          loaderT();
+        }}
+      >
+        {this.state.loader ? (
+          <div className="loaderG">
+            <div className="befG">
+              <img src={school} alt="..." />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
         <Header />
         <Modal
           title="Belbog'li kurash sport turi"
@@ -331,7 +336,8 @@ export default class Dashboard extends Component {
               <h2>
                 <span>“Mahalla va oila”</span> ilmiy-tadqiqot institutining{" "}
                 <span>
-                Mahallalarda xotin-qizlar o'rtasida sportni rivojlantirish platformasi
+                  Mahallalarda xotin-qizlar o'rtasida sportni rivojlantirish
+                  platformasi
                 </span>{" "}
                 loyihasi
               </h2>
@@ -374,9 +380,9 @@ export default class Dashboard extends Component {
           </Row>
           <h1 className={style.sarlavha}>Viloyatlar reytengi</h1>
           <div className={style.chiziq}></div>
-          <br/>
-          <br/>
-          <br/>
+          <br />
+          <br />
+          <br />
           <Dashreyting />
           <div className={style.sports}>
             <h1 className={style.sarlavha}>Etnosport turlari</h1>
@@ -595,121 +601,7 @@ export default class Dashboard extends Component {
             <br />
           </div>
 
-          <Row xs={12} md={3} lg={3}>
-            <Col>
-              <div className={style.sports}>
-                <h1 className={style.sarlavhaa}>Jahon chempionlari</h1>
-                <div className={style.chiziq}></div>
-
-                <Carousel
-                  responsive={responsive4}
-                  infinite={true}
-                  autoPlaySpeed={800}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                >
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                </Carousel>
-                <br />
-                <br />
-              </div>
-            </Col>
+          <Row xs={12} md={2} lg={2}>
             <Col>
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Zulfiyaxonim avlodlari</h1>
@@ -826,7 +718,7 @@ export default class Dashboard extends Component {
             </Col>
             <Col>
               <div className={style.sports}>
-                <h1 className={style.sarlavhaa}>Faxriy insonlarimiz</h1>
+                <h1 className={style.sarlavhaa}>Bizning faxrlarimiz</h1>
                 <div className={style.chiziq}></div>
 
                 <Carousel
@@ -931,6 +823,234 @@ export default class Dashboard extends Component {
                       <img src={faxriylar2} />
                       <h5>Faxriylarimiz</h5>
                       <p>Faxriylarimiz-bizning faxrimiz</p>
+                    </div>
+                  </div>
+                </Carousel>
+                <br />
+                <br />
+              </div>
+            </Col>
+            <Col>
+              <div className={style.sports}>
+                <h1 className={style.sarlavhaa}>Jahon chempionlari</h1>
+                <div className={style.chiziq}></div>
+
+                <Carousel
+                  responsive={responsive4}
+                  infinite={true}
+                  autoPlaySpeed={800}
+                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                >
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                </Carousel>
+                <br />
+                <br />
+              </div>
+            </Col>
+            <Col>
+              <div className={style.sports}>
+                <h1 className={style.sarlavhaa}>Olimpiada chempionlari</h1>
+                <div className={style.chiziq}></div>
+
+                <Carousel
+                  responsive={responsive4}
+                  infinite={true}
+                  autoPlaySpeed={800}
+                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                >
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: "10px" }}>
+                    <div className={style.sportchi} onClick={this.openModalB}>
+                      <img src={rishod} />
+                      <h5>Rishod Sobirov</h5>
+                      <p>Belbogʻli kurash ustasi</p>
                     </div>
                   </div>
                 </Carousel>
@@ -1045,11 +1165,11 @@ export default class Dashboard extends Component {
               }}
               className={style.homiy}
             >
-              <br/>
+              <br />
               <h1 className={style.sarlavha}>Xarita</h1>
               <div className={style.chiziq}></div>
 
-              <MapDash/>
+              <MapDash />
               <br />
 
               <h1 className={style.sarlavha}>Videolavhalar</h1>

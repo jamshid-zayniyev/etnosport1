@@ -24,7 +24,6 @@
   font-family: sans-serif;
 }
 .ByIt a {
-
   color: rgb(8, 6, 112);
   font-size: 20px;
   text-align: center;
@@ -34,8 +33,8 @@
 
 .footerxalq {
   margin-top: 40px;
-  width: 180px;
-  height: auto;
+  /* width: auto; */
+  height: 50%;
   align-items: center;
   text-align: center;
 }
@@ -93,7 +92,7 @@
 }
 @media only screen and (max-width: 600px) {
   .Footerhead .footerxalq {
-    width: 130px;
+    /* width: 130px; */
     /* height: 50px; */
   }
   .Footerhead .ByIt {
@@ -105,7 +104,7 @@
 }
 @media only screen and (max-width: 450px) {
   .Footerhead .footerxalq {
-    width: 130px;
+    /* width: 130px; */
     height: auto;
   }
   /* .ul2 {
@@ -114,7 +113,7 @@
 }
 @media only screen and (max-width: 360px) {
   .Footerhead .footerxalq {
-    width: 130px;
+    /* width: 130px; */
     /* height: 100px; */
   }
   .Footerhead .ByIt {
@@ -125,8 +124,8 @@
   } */
 }
 
-@media (min-width:1500px){
+@media (min-width: 1500px) {
   .Footerhead .footerxalq {
-    width:200px
+    /* width: 200px; */
   }
 }

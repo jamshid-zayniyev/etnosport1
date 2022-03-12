@@ -30,7 +30,9 @@ export default class Footer extends Component {
                 textAlign: "center",
               }}
             >
-             “Mahalla va oila” ilmiy-tadqiqot institutining  "Mahallalarda etnosportni rivojlantirishning nazariy-metodologik asoslari” loyihasi
+              “Mahalla va oila” ilmiy-tadqiqot institutining "Mahallalarda
+              etnosportni rivojlantirishning nazariy-metodologik asoslari”
+              loyihasi
             </p>
           </Col>
           <Col lg={4} xs={12} md={6}>
@@ -143,7 +145,10 @@ export default class Footer extends Component {
               <div className={style.chiziqq}></div>
               <ul>
                 <li>
-                  <Nav.Link style={{color:'orangered'}} className={style.ijsahifa}>
+                  <Nav.Link
+                    style={{ color: "orangered" }}
+                    className={style.ijsahifa}
+                  >
                     <i style={style.iconcala}>
                       {" "}
                       <AiFillInstagram />
@@ -152,7 +157,10 @@ export default class Footer extends Component {
                   </Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link style={{color:'orangered'}} className={style.ijsahifa}>
+                  <Nav.Link
+                    style={{ color: "orangered" }}
+                    className={style.ijsahifa}
+                  >
                     <i style={style.iconcala}>
                       <BsTelegram />
                     </i>
@@ -160,7 +168,10 @@ export default class Footer extends Component {
                   </Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link style={{color:'orangered'}} className={style.ijsahifa}>
+                  <Nav.Link
+                    style={{ color: "orangered" }}
+                    className={style.ijsahifa}
+                  >
                     <i style={style.iconcala}>
                       <AiFillFacebook />
                     </i>
@@ -168,7 +179,10 @@ export default class Footer extends Component {
                   </Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link style={{color:'orangered'}} className={style.ijsahifa}>
+                  <Nav.Link
+                    style={{ color: "orangered" }}
+                    className={style.ijsahifa}
+                  >
                     <i style={style.iconcala}>
                       <AiFillYoutube />
                     </i>
