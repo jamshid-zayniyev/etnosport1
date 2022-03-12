@@ -6,7 +6,7 @@ export default class Dashreyting extends Component {
         return (
             <div>
                <Container>
-                   <h1 className={style.reyh1}> O'zbekiston Respublikasida kiber sportni rivojlantirish bo'yicha mahallalar reytengi</h1>
+                   
                 <ul className={style.rey}>
                 <li>
                         <p className={style.p1}>
@@ -14,7 +14,7 @@ export default class Dashreyting extends Component {
                         </p>
                         
                         <p className={style.p2}>
-                            Buxoro viloyati Qorovulbozor tumani Imom Buxoriy MFY
+                            Toshkent shahar
                         </p>
                         <p className={style.p3}>
                             95 %
@@ -22,57 +22,181 @@ export default class Dashreyting extends Component {
                     </li>
                     <li>
                         <p className={style.p1}>
-                            2-o'rin
+                            1-o'rin
                         </p>
                         
                         <p className={style.p2}>
-                            Andijon viloyati Pop tumani Tinchlik MFY
+                            Toshkent viloyati
                         </p>
                         <p className={style.p3}>
-                            90 %
+                            95 %
                         </p>
                     </li>
                     <li>
                         <p className={style.p1}>
-                            3-o'rin
+                            1-o'rin
                         </p>
                         
                         <p className={style.p2}>
-                            Toshkent Shahar Yakkasaroy tumani Yakkasaroy MFY
+                            Samarqand viloyati
                         </p>
                         <p className={style.p3}>
-                            93 %
+                            95 %
                         </p>
                     </li>
                     <li>
                         <p className={style.p1}>
-                            4-o'rin
+                            1-o'rin
                         </p>
                         
                         <p className={style.p2}>
-                            Qashqadaryo viloyati Muborak tumani Vatanparvar MFY
+                            Buxoro viloyati
                         </p>
                         <p className={style.p3}>
-                            85 %
+                            95 %
                         </p>
                     </li>
                     <li>
                         <p className={style.p1}>
-                            5-o'rin
+                            1-o'rin
                         </p>
                         
                         <p className={style.p2}>
-                            Surxandaryo viloyati Denov tumani Rohat MFY
+                            Andijon viloyati
                         </p>
                         <p className={style.p3}>
-                            84.5 %
+                            95 %
                         </p>
                     </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Namangan viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Farg'ona viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Qashqadaryo viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Surxondaryo viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Xorazm viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Navoiy viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Jizzax viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Sirdaryo viloyati
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    <li>
+                        <p className={style.p1}>
+                            1-o'rin
+                        </p>
+                        
+                        <p className={style.p2}>
+                            Qoraqalpog'iston Respublikasi
+                        </p>
+                        <p className={style.p3}>
+                            95 %
+                        </p>
+                    </li>
+                    
                    
                 </ul>
-                <button className={style.hamma}>Hammasini ko'rish</button>
+                
                 </Container>
             </div>
         )
     }
 }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

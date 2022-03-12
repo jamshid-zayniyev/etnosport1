@@ -132,40 +132,7 @@ export default class NavbarA extends Component {
                   O'quv qo'llanmalar
                 </NavLink>
               </li> */}
-              <li onClick={this.closeNav}>
-                <Dropdown>
-                  <Dropdown.Toggle
-                    className="dropD"
-                    variant="light"
-                    id="dropdown-basic"
-                  >
-                    Mahallalar
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/">
-                        Mahallalar reytengi
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/">
-                        Tadbirlar
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/">
-                        Tanlovlar
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink className={style.lik} to="/mahallalar">
-                        Xarita
-                      </NavLink>
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </li>
+             
               <li onClick={this.closeNav}>
                 <Dropdown>
                   <Dropdown.Toggle
@@ -177,6 +144,11 @@ export default class NavbarA extends Component {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
+                  <Dropdown.Item>
+                      <NavLink className={style.lik} to="/">
+                        Toshkent shahar
+                      </NavLink>
+                    </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink className={style.lik} to="/">
                         Toshkent viloyati

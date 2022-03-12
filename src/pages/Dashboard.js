@@ -372,8 +372,11 @@ export default class Dashboard extends Component {
               </Carousel>
             </Col>
           </Row>
-          <h1 className={style.sarlavha}>Mahallalar reytengi</h1>
+          <h1 className={style.sarlavha}>Viloyatlar reytengi</h1>
           <div className={style.chiziq}></div>
+          <br/>
+          <br/>
+          <br/>
           <Dashreyting />
           <div className={style.sports}>
             <h1 className={style.sarlavha}>Etnosport turlari</h1>
