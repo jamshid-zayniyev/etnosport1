@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import NavbarA from "./Header";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import kurash from "../img/kurash.PNG";
+import kurash from "../img/kurash_ccexpress.png";
 import rishod from "../img/rishod.jpg";
 import style from "../css/Dashboard.module.css";
 import { Col, Container, Row } from "react-bootstrap";
@@ -105,9 +105,26 @@ export class Sportchilar extends Component {
       <div>
         <NavbarA />
         <div style={{ height: 100, backgroundColor: "black" }}></div>
-        <div style={{ width: "100%" }}>
-          <Container style={{ paddingTop: 50, paddingBottom: 50 }}>
-            <Row>
+        <div style={{ width: "100%", backgroundColor: "rgb(255,78,0)" }}>
+          <img
+            src={kurash}
+            alt="rasm"
+            style={{
+              width: "auto",
+              height: "350px",
+              display: "block",
+              marginRight: "auto",
+              marginLeft: "auto",
+            }}
+          />
+          <div style={{ backgroundColor: "white", height: 3 }}></div>
+          <br />
+          <h2
+            style={{ color: "white", textAlign: "center", paddingBottom: 30 }}
+          >
+            Sportchilar
+          </h2>
+          {/* <Row>
               <Col md={6}>
                 <div>
                   <h2
@@ -192,8 +209,7 @@ export class Sportchilar extends Component {
                   </div>
                 </Carousel>
               </Col>
-            </Row>
-          </Container>
+            </Row> */}
         </div>
         <div>
           <Row>
