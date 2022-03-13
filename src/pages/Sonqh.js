@@ -3,12 +3,12 @@ import React, { Component } from "react";
 import style from "../css/Hujjatlart.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import uzb from "../img/kurash5.jfif";
+import uzb from "../img/doc.png";
 import otchop from "../img/Otchoptirish.jfif";
 import eskietno from "../img/kurash7.jpg";
 import etnosport7 from "../img/etnoimg7.jpg";
 import school from "../img/gerb.png";
-export default class Sonqh extends Component {
+export default class Svmh extends Component {
   state = {
     loader: true,
   };
@@ -40,6 +40,7 @@ export default class Sonqh extends Component {
         ) : (
           ""
         )}
+
         <Header />
         <div className={style.head}>
           <img src={etnosport7}></img>
@@ -90,36 +91,7 @@ export default class Sonqh extends Component {
               <a className={style.ss} href="#" target="_blank">
                 <Row>
                   <Col lg={4}>
-                    <img src={otchop} />
-                  </Col>
-                  <Col
-                    lg={8}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    <h1>
-                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
-                      sport va o'yinlar haqida xabardorlikni oshirish va
-                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
-                      xalqaro muassasadir.
-                    </h1>
-                  </Col>
-                </Row>
-              </a>
-            </Col>
-            <Col
-              lg={6}
-              md={12}
-              className={style.colT}
-              style={{ marginTop: "20px" }}
-              sm={12}
-            >
-              <a className={style.ss} href="#" target="_blank">
-                <Row>
-                  <Col lg={4}>
-                    <img src={eskietno} />
+                    <img src={uzb} />
                   </Col>
                   <Col
                     lg={8}
@@ -177,7 +149,7 @@ export default class Sonqh extends Component {
               <a className={style.ss} href="#" target="_blank">
                 <Row>
                   <Col lg={4}>
-                    <img src={otchop} />
+                    <img src={uzb} />
                   </Col>
                   <Col
                     lg={8}
@@ -206,7 +178,36 @@ export default class Sonqh extends Component {
               <a className={style.ss} href="#" target="_blank">
                 <Row>
                   <Col lg={4}>
-                    <img src={eskietno} />
+                    <img src={uzb} />
+                  </Col>
+                  <Col
+                    lg={8}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1>
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
+                    </h1>
+                  </Col>
+                </Row>
+              </a>
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              className={style.colT}
+              style={{ marginTop: "20px" }}
+              sm={12}
+            >
+              <a className={style.ss} href="#" target="_blank">
+                <Row>
+                  <Col lg={4}>
+                    <img src={uzb} />
                   </Col>
                   <Col
                     lg={8}

@@ -1,190 +1,236 @@
+import { Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
-import styles from "../css/Hujjatlar.module.css";
-import style from "../css/Kutubxona.module.css";
-import Footer from "./Footer";
+import style from "../css/Hujjatlart.module.css";
 import Header from "./Header";
-
-import { Col, Container, Row } from "react-bootstrap";
-import sinf1 from "../img/Otchoptirish.jfif";
-import sinf2 from "../img/kurash6.jpg";
-import sinf3 from "../img/otchopar.jpg";
-import sinf4 from "../img/kurash6.jpg";
-import sinf5 from "../img/kurash7.jpg";
-import sinf6 from "../img/kurash5.jfif";
-import sinf7 from "../img/kurash7.jpg";
-import sinf8 from "../img/kurash6.jpg";
-import sinf9 from "../img/kurash7.jpg";
-import sinf10 from "../img/Otchoptirish.jfif";
-import sinf11 from "../img/kurash6.jpg";
-import etnosport5 from "../img/etnoimg5.jpg";
-export default class Sporthm extends Component {
+import Footer from "./Footer";
+import uzb from "../img/doc.png";
+import otchop from "../img/Otchoptirish.jfif";
+import eskietno from "../img/kurash7.jpg";
+import etnosport7 from "../img/etnoimg7.jpg";
+import school from "../img/gerb.png";
+export default class Svmh extends Component {
   state = {
     loader: true,
   };
-
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loader: false,
+      });
+    }, 3000);
+  }
   render() {
+    const loaderT = () => {
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
+    };
     return (
-      <div>
-        <Header />
+      <div
+        onLoad={() => {
+          loaderT();
+        }}
+      >
+        {this.state.loader ? (
+          <div className="loaderG">
+            <div className="befG">
+              <img src={school} alt="..." />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
 
+        <Header />
         <div className={style.head}>
-          <img src={etnosport5}></img>
-          <div className={style.headsarlavha}>Elektron kutubxona
+          <img src={etnosport7}></img>
+          <div className={style.headsarlavha}>
+            Butun jahon etnosport oid qonunlar
           </div>
         </div>
+        <br />
+        <br />
+        <div className={style.hujjat}>
+          <Row className={style.rowT}>
+            <Col
+              lg={6}
+              md={12}
+              className={style.colT}
+              style={{ marginTop: "20px" }}
+              sm={12}
+            >
+              <a className={style.ss} href="#" target="_blank">
+                <Row>
+                  <Col lg={4}>
+                    <img src={uzb} />
+                  </Col>
+                  <Col
+                    lg={8}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1>
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
+                    </h1>
+                  </Col>
+                </Row>
+              </a>
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              className={style.colT}
+              style={{ marginTop: "20px" }}
+              sm={12}
+            >
+              <a className={style.ss} href="#" target="_blank">
+                <Row>
+                  <Col lg={4}>
+                    <img src={uzb} />
+                  </Col>
+                  <Col
+                    lg={8}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1>
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
+                    </h1>
+                  </Col>
+                </Row>
+              </a>
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              className={style.colT}
+              style={{ marginTop: "20px" }}
+              sm={12}
+            >
+              <a className={style.ss} href="#" target="_blank">
+                <Row>
+                  <Col lg={4}>
+                    <img src={uzb} />
+                  </Col>
+                  <Col
+                    lg={8}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1>
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
+                    </h1>
+                  </Col>
+                </Row>
+              </a>
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              className={style.colT}
+              style={{ marginTop: "20px" }}
+              sm={12}
+            >
+              <a className={style.ss} href="#" target="_blank">
+                <Row>
+                  <Col lg={4}>
+                    <img src={uzb} />
+                  </Col>
+                  <Col
+                    lg={8}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1>
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
+                    </h1>
+                  </Col>
+                </Row>
+              </a>
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              className={style.colT}
+              style={{ marginTop: "20px" }}
+              sm={12}
+            >
+              <a className={style.ss} href="#" target="_blank">
+                <Row>
+                  <Col lg={4}>
+                    <img src={uzb} />
+                  </Col>
+                  <Col
+                    lg={8}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1>
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
+                    </h1>
+                  </Col>
+                </Row>
+              </a>
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              className={style.colT}
+              style={{ marginTop: "20px" }}
+              sm={12}
+            >
+              <a className={style.ss} href="#" target="_blank">
+                <Row>
+                  <Col lg={4}>
+                    <img src={uzb} />
+                  </Col>
+                  <Col
+                    lg={8}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1>
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
+                    </h1>
+                  </Col>
+                </Row>
+              </a>
+            </Col>
+          </Row>
 
-        <div className={style.sinflar}>
-          <Container>
-            <Row style={{ justifyContent: "center" }}>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf1} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/146"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf2} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/147"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf3} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/148"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf4} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/149"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf5} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/150"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf6} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/151"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf7} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/152"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf8} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/153"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf9} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/154"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf10} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/155"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-              <Col style={{ padding: "15px" }} xl={3} lg={4} md={6} sm={12}>
-                <div className={style.sinf}>
-                  <img src={sinf11} slt="..." />
-                  <a
-                    className={style.but}
-                    href="https://www.kitob.uz/catalog/subgenres/156"
-                    target="_blank"
-                  >
-                    Kitoblarni ko'rish
-                  </a>
-                  <br />
-                </div>
-              </Col>
-            </Row>
-          </Container>
+          <br />
+          <br />
         </div>
-        <br />
-        <br />
-
         <Footer />
       </div>
     );

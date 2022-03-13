@@ -414,7 +414,7 @@ export class Sportchilar extends Component {
                       onChange={() => this.handleOnChange2(vil.length)}
                       style={{ color: "rgb(8,6,112)" }}
                     />
-                    <label style={{ paddingLeft: 10 }} htmlFor={"UZBVIL"}>
+                    <label style={{ paddingLeft: 5 }} htmlFor={"UZBVIL"}>
                       <h5 style={{ color: "rgb(8,6,112)" }}>Hammasi</h5>
                     </label>
                   </li>
@@ -431,7 +431,7 @@ export class Sportchilar extends Component {
                           style={{ color: "rgb(8,6,112)" }}
                         />
                         <label
-                          style={{ paddingLeft: 10 }}
+                          style={{ paddingLeft: 5 }}
                           htmlFor={`${item.id}`}
                         >
                           <h5 style={{ color: "rgb(8,6,112)" }}>{item.name}</h5>

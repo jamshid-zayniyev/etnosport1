@@ -1,19 +1,53 @@
+
+
 import { Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
-import style from "../css/Hujjatlarf.module.css";
+import style from "../css/Hujjatlart.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import uzb from "../img/head2.jpg";
-import etnosport5 from "../img/etnoimg5.jpg";
-export default class HujjatlarF extends Component {
+import uzb from "../img/doc.png";
+import otchop from "../img/Otchoptirish.jfif";
+import eskietno from "../img/kurash7.jpg";
+import etnosport7 from "../img/etnoimg7.jpg";
+import school from "../img/gerb.png";
+export default class Svmh extends Component {
+  state = {
+    loader: true,
+  };
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loader: false,
+      });
+    }, 3000);
+  }
   render() {
+    const loaderT = () => {
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
+    };
     return (
-      <>
+      <div
+        onLoad={() => {
+          loaderT();
+        }}
+      >
+        {this.state.loader ? (
+          <div className="loaderG">
+            <div className="befG">
+              <img src={school} alt="..." />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+
         <Header />
         <div className={style.head}>
-          <img src={etnosport5}></img>
+          <img src={etnosport7}></img>
           <div className={style.headsarlavha}>
-            Etnosportga oid Prezident farmonlari, farmoyishlari va qarorlari
+            Butun jahon etnosport oid qonunlar
           </div>
         </div>
         <br />
@@ -40,9 +74,10 @@ export default class HujjatlarF extends Component {
                     }}
                   >
                     <h1>
-                      Etnosport - bu jismoniy faoliyatning barcha an'anaviy
-                      uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. 
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -68,9 +103,10 @@ export default class HujjatlarF extends Component {
                     }}
                   >
                     <h1>
-                      Etnosport - bu jismoniy faoliyatning barcha an'anaviy
-                      uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. 
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -96,9 +132,10 @@ export default class HujjatlarF extends Component {
                     }}
                   >
                     <h1>
-                      Etnosport - bu jismoniy faoliyatning barcha an'anaviy
-                      uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. 
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -124,9 +161,10 @@ export default class HujjatlarF extends Component {
                     }}
                   >
                     <h1>
-                      Etnosport - bu jismoniy faoliyatning barcha an'anaviy
-                      uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. 
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -152,9 +190,10 @@ export default class HujjatlarF extends Component {
                     }}
                   >
                     <h1>
-                      Etnosport - bu jismoniy faoliyatning barcha an'anaviy
-                      uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. 
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -180,9 +219,10 @@ export default class HujjatlarF extends Component {
                     }}
                   >
                     <h1>
-                      Etnosport - bu jismoniy faoliyatning barcha an'anaviy
-                      uslublari uchun birlashgan ijtimoiy va madaniy makonning
-                      institutsional shakli. 
+                      Butunjahon Etnosport Konfederatsiyasi (WEC) an'anaviy
+                      sport va o'yinlar haqida xabardorlikni oshirish va
+                      tarqatishga qaratilgan faoliyat bilan shug'ullanadigan
+                      xalqaro muassasadir.
                     </h1>
                   </Col>
                 </Row>
@@ -194,7 +234,7 @@ export default class HujjatlarF extends Component {
           <br />
         </div>
         <Footer />
-      </>
+      </div>
     );
   }
 }
