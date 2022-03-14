@@ -32,7 +32,8 @@ export default class NavbarA extends Component {
             <i className="fa fa-bars"></i>
           </div>
           <div className={style.brand}>
-            <NavLink exact  
+            <NavLink
+              exact
               style={{
                 textDecoration: "none",
                 display: "flex",
@@ -47,9 +48,14 @@ export default class NavbarA extends Component {
           <div className={style.nav}>
             <ul id="navb">
               <li onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/"
+                >
                   Bosh sahifa
                 </NavLink>
               </li>
@@ -65,46 +71,76 @@ export default class NavbarA extends Component {
 
                   <Dropdown.Menu>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/yangiliklar">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/yangiliklar"
+                      >
                         Yangiliklar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/musoboqalar">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/musoboqalar"
+                      >
                         Musoboqalar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/ishlanma">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/ishlanma"
+                      >
                         Videolavhalar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/gallery">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/gallery"
+                      >
                         Fotolavhalar
                       </NavLink>
                     </Dropdown.Item>
 
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/sportchilar">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/sportchilar"
+                      >
                         Sportchilar
                       </NavLink>
                     </Dropdown.Item>
 
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/"
+                      >
                         Loyiha haqida
                       </NavLink>
                     </Dropdown.Item>
@@ -123,45 +159,75 @@ export default class NavbarA extends Component {
 
                   <Dropdown.Menu>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/talim">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/talim"
+                      >
                         Sport oid qonunlar
                       </NavLink>
                     </Dropdown.Item>
 
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/prezidentfq">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/prezidentfq"
+                      >
                         Prezident farmonlari, farmoyishlari va qarorlari
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/vazirlarmq">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/vazirlarmq"
+                      >
                         Vazirlik mahkamasi qarorlari
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/sportvmh">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/sportvmh"
+                      >
                         Sport vazirligining meyoriy hujjatlari
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/sportgaonqh">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/sportgaonqh"
+                      >
                         Sport oid normativ-qonuniy hujjatlar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/vazirlikixsh">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/vazirlikixsh"
+                      >
                         Vazirlik ishtirokidagi xalqaro shartnomalar
                       </NavLink>
                     </Dropdown.Item>
@@ -187,93 +253,158 @@ export default class NavbarA extends Component {
 
                   <Dropdown.Menu>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Toshkent shahar
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Toshkent viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Samarqand viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Buxoro viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Andijon viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Namangan viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Farg'ona viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Qashqadaryo viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Surxondaryo viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Xorazm viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Navoiy viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Sirdaryo viloyati
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/#">
+                      <NavLink
+                        exact
+                        style={({ isActive }) =>
+                          isActive ? { color: "orangered" } : undefined
+                        }
+                        className={style.lik}
+                        to="/viloyatlar"
+                      >
                         Qoraqalpog'iston Respublikasi
                       </NavLink>
                     </Dropdown.Item>
@@ -281,66 +412,111 @@ export default class NavbarA extends Component {
                 </Dropdown>
               </li>
               <li className="grt" onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/talim">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/talim"
+                >
                   Butun jahon etnosportga oid qonunlar
                 </NavLink>
               </li>{" "}
               <li className="grt" onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/farmon">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/farmon"
+                >
                   Etnosportga oid Prezident farmonlari, farmoyishlari va
                   qarorlari
                 </NavLink>
               </li>{" "}
               <li className="grt" onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/oquvchi">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/oquvchi"
+                >
                   Sportchilar uchun qonunlar
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/ishlanma">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/ishlanma"
+                >
                   Etnosport turlari
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/kutubxona">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/kutubxona"
+                >
                   Elektron kutubxona
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/musoboqalar">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/musoboqalar"
+                >
                   Musoboqalar
                 </NavLink>
               </li>
               <li className="grt" onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/maktablar">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/maktablar"
+                >
                   Xarita
                 </NavLink>
               </li>
               <li onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/boglanish">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/boglanish"
+                >
                   Bog'lanish
                 </NavLink>
               </li>
               <li onClick={this.closeNav}>
-                <NavLink exact  style={({ isActive }) =>
-              isActive ? {color:'orangered'} : undefined
-            } className={style.lik} to="/">
+                <NavLink
+                  exact
+                  style={({ isActive }) =>
+                    isActive ? { color: "orangered" } : undefined
+                  }
+                  className={style.lik}
+                  to="/"
+                >
                   Kirish
                 </NavLink>
               </li>

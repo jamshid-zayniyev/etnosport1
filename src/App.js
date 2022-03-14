@@ -22,6 +22,7 @@ import Vmq from "./pages/Vmq";
 import Svmh from "./pages/Svmh";
 import Sonqh from "./pages/Sonqh";
 import Vixsh from "./pages/vixsh";
+import Viloyatlar from "./pages/Viloyatlar";
 export default class App extends Component {
   render() {
     return (
@@ -48,6 +49,7 @@ export default class App extends Component {
             <Route element={<Svmh />} exact path="/sportvmh" />
             <Route element={<Sonqh />} exact path="/sportgaonqh" />
             <Route element={<Vixsh />} exact path="/vazirlikixsh" />
+            <Route element={<Viloyatlar />} exact path="/viloyatlar" />
           </Routes>
         </BrowserRouter>
       </div>
