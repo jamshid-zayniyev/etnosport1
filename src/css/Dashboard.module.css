@@ -141,10 +141,28 @@
 .but:active {
   box-shadow: 0px 0px 0px 0px transparent;
 }
-@media (min-width:1500px){
-   .n p{font-size:20px}
-   .sport p{font-size: 18px;}
+@media (min-width: 1500px) {
+  .n p {
+    font-size: 20px;
+  }
+  .sport p {
+    font-size: 18px;
+  }
 
-.kurash p{font-size: 18px;}
-.sportchi p{font-size: 18px;}
+  .kurash p {
+    font-size: 18px;
+  }
+  .sportchi p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head h2 {
+    font-size: 35px;
+  }
+  .head .but {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
 }

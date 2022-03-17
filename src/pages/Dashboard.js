@@ -335,7 +335,7 @@ export default class Dashboard extends Component {
         <div className={style.head}>
           <Row>
             <Col lg={6} md={12}>
-              <h2>
+              <h2 className={style.textmah}>
                 <span>“Mahalla va oila”</span> ilmiy-tadqiqot institutining{" "}
                 <span>
                   Mahallalarda xotin-qizlar o'rtasida sportni rivojlantirish
@@ -387,20 +387,16 @@ export default class Dashboard extends Component {
           <br />
           <Dashreyting />
           <h1 className={style.sarlavha}>Statistika</h1>
-            
-            <div className={style.chiziq}></div>
-            <Row style={{padding:'20px'}}>
+
+          <div className={style.chiziq}></div>
+          <Row style={{ padding: "20px" }}>
             <Col lg={6} md={12} sm={12}>
-             
-          
-             <ChartS/>
-             </Col>
-             <Col lg={6} md={12} sm={12}>
-             
-          
-             <ChartT/>
-             </Col>
-            </Row>
+              <ChartS />
+            </Col>
+            <Col lg={6} md={12} sm={12}>
+              <ChartT />
+            </Col>
+          </Row>
 
           <div className={style.sports}>
             <h1 className={style.sarlavha}>Sport turlari</h1>
@@ -507,7 +503,6 @@ export default class Dashboard extends Component {
             <br />
             <br />
           </div>
-       
 
           <Row>
             <Col lg={6} md={12} sm={12}>
@@ -1083,289 +1078,287 @@ export default class Dashboard extends Component {
               <h1 className={style.sarlavha}>Videolavhalar</h1>
               <div className={style.chiziq}></div>
 
-            
-                <div className={stylev.videos}>
-                  <div id="video"></div>
-
-                  <br />
-
-                  <Carousel
-                    swipeable={false}
-                    draggable={false}
-                    showDots={true}
-                    responsive={responsiveY}
-                    ssr={true} // means to render carousel on server-side.
-                    infinite={true}
-                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                    autoPlaySpeed={3000}
-                    keyBoardControl={true}
-                    customTransition="all .5"
-                    transitionDuration={100}
-                    containerClass="carousel-container"
-                    removeArrowOnDeviceType={["tablet", "mobile"]}
-                    deviceType={this.props.deviceType}
-                    dotListClass="custom-dot-list-style"
-                    itemClass="carousel-item-padding-40-px"
-                  >
-                    <div className={stylev.videos_item}>
-                      <YouTube
-                        showCaptions={false}
-                        showRelatedVideos={false}
-                        opts={{
-                          playerVars: {
-                            rel: 0,
-                          },
-                        }}
-                        video="FY_6xf6leCA"
-                        className={stylev.you}
-                      />
-                    </div>
-                    <div className={stylev.videos_item}>
-                      <YouTube
-                        showCaptions={false}
-                        showRelatedVideos={false}
-                        opts={{
-                          playerVars: {
-                            rel: 0,
-                          },
-                        }}
-                        video="nRpmfAU7ttk"
-                        className={stylev.you}
-                      />
-                    </div>
-                    <div className={stylev.videos_item}>
-                      <YouTube
-                        showCaptions={false}
-                        showRelatedVideos={false}
-                        opts={{
-                          playerVars: {
-                            rel: 0,
-                          },
-                        }}
-                        video="3_iAy1vdTGE"
-                        className={stylev.you}
-                      />
-                    </div>
-                    <div className={stylev.videos_item}>
-                      <YouTube
-                        showCaptions={false}
-                        showRelatedVideos={false}
-                        opts={{
-                          playerVars: {
-                            rel: 0,
-                          },
-                        }}
-                        video="2yiW87QtFjY"
-                        className={stylev.you}
-                      />
-                    </div>
-                  </Carousel>
-                </div>
+              <div className={stylev.videos}>
+                <div id="video"></div>
 
                 <br />
-                <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
-                <div className={style.chiziq}></div>
-                <br />
 
-                <div
-                  className="sliderHomiy"
-                  
-                  style={{ width:'100%', backgroundColor: "white" }}
+                <Carousel
+                  swipeable={false}
+                  draggable={false}
+                  showDots={true}
+                  responsive={responsiveY}
+                  ssr={true} // means to render carousel on server-side.
+                  infinite={true}
+                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  autoPlaySpeed={3000}
+                  keyBoardControl={true}
+                  customTransition="all .5"
+                  transitionDuration={100}
+                  containerClass="carousel-container"
+                  removeArrowOnDeviceType={["tablet", "mobile"]}
+                  deviceType={this.props.deviceType}
+                  dotListClass="custom-dot-list-style"
+                  itemClass="carousel-item-padding-40-px"
                 >
-                  <Carousel
-                    responsive={responsive5}
-                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                    autoPlaySpeed={2000}
-                    infinite={true}
+                  <div className={stylev.videos_item}>
+                    <YouTube
+                      showCaptions={false}
+                      showRelatedVideos={false}
+                      opts={{
+                        playerVars: {
+                          rel: 0,
+                        },
+                      }}
+                      video="FY_6xf6leCA"
+                      className={stylev.you}
+                    />
+                  </div>
+                  <div className={stylev.videos_item}>
+                    <YouTube
+                      showCaptions={false}
+                      showRelatedVideos={false}
+                      opts={{
+                        playerVars: {
+                          rel: 0,
+                        },
+                      }}
+                      video="nRpmfAU7ttk"
+                      className={stylev.you}
+                    />
+                  </div>
+                  <div className={stylev.videos_item}>
+                    <YouTube
+                      showCaptions={false}
+                      showRelatedVideos={false}
+                      opts={{
+                        playerVars: {
+                          rel: 0,
+                        },
+                      }}
+                      video="3_iAy1vdTGE"
+                      className={stylev.you}
+                    />
+                  </div>
+                  <div className={stylev.videos_item}>
+                    <YouTube
+                      showCaptions={false}
+                      showRelatedVideos={false}
+                      opts={{
+                        playerVars: {
+                          rel: 0,
+                        },
+                      }}
+                      video="2yiW87QtFjY"
+                      className={stylev.you}
+                    />
+                  </div>
+                </Carousel>
+              </div>
+
+              <br />
+              <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
+              <div className={style.chiziq}></div>
+              <br />
+
+              <div
+                className="sliderHomiy"
+                style={{ width: "100%", backgroundColor: "white" }}
+              >
+                <Carousel
+                  responsive={responsive5}
+                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  autoPlaySpeed={2000}
+                  infinite={true}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
                   >
                     <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        padding: "20px",
-                        alingItems: "center",
-                      }}
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
                     >
-                      <div
-                        className="toolpat"
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <a href="https://president.uz/oz" target="_blank">
-                          <img src={school} />
-                        </a>
-                      </div>
-                      <p>
-                        O'zbekiston Respublikasi Prezidentining rasmiy veb-sayti
-                      </p>
+                      <a href="https://president.uz/oz" target="_blank">
+                        <img src={school} />
+                      </a>
                     </div>
+                    <p>
+                      O'zbekiston Respublikasi Prezidentining rasmiy veb-sayti
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
                     <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        padding: "20px",
-                        alingItems: "center",
-                      }}
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
                     >
-                      <div
-                        className="toolpat"
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <a href="https://www.gov.uz/uz" target="_blank">
-                          <img src={her2} />
-                        </a>
-                      </div>
-                      <p>O'zbekiston Respublikasining Hukumat portali</p>
+                      <a href="https://www.gov.uz/uz" target="_blank">
+                        <img src={her2} />
+                      </a>
                     </div>
+                    <p>O'zbekiston Respublikasining Hukumat portali</p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
                     <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        padding: "20px",
-                        alingItems: "center",
-                      }}
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
                     >
-                      <div
-                        className="toolpat"
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <a href="https://lex.uz/" target="_blank">
-                          <img src={her3} />
-                        </a>
-                      </div>
-                      <p>
-                        O'zbekiston Respublikasi qonun hujjatlari milliy bazasi
-                      </p>
+                      <a href="https://lex.uz/" target="_blank">
+                        <img src={her3} />
+                      </a>
                     </div>
+                    <p>
+                      O'zbekiston Respublikasi qonun hujjatlari milliy bazasi
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
                     <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        padding: "20px",
-                        alingItems: "center",
-                      }}
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
                     >
-                      <div
-                        className="toolpat"
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <a href="https://my.gov.uz/oz" target="_blank">
-                          <img src={her4} />
-                        </a>
-                      </div>
-                      <p>Interaktiv davlat xizmatlarining Yagona portali</p>
+                      <a href="https://my.gov.uz/oz" target="_blank">
+                        <img src={her4} />
+                      </a>
                     </div>
+                    <p>Interaktiv davlat xizmatlarining Yagona portali</p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
                     <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        padding: "20px",
-                        alingItems: "center",
-                      }}
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
                     >
-                      <div
-                        className="toolpat"
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <a href="https://www.uzedu.uz/" target="_blank">
-                          <img src={her5} />
-                        </a>
-                      </div>
-                      <p>O'zbekiston Respublikasi xalq ta'limi vazirligi</p>
+                      <a href="https://www.uzedu.uz/" target="_blank">
+                        <img src={her5} />
+                      </a>
                     </div>
+                    <p>O'zbekiston Respublikasi xalq ta'limi vazirligi</p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      alingItems: "center",
+                    }}
+                  >
                     <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        padding: "20px",
-                        alingItems: "center",
-                      }}
+                      className="toolpat"
+                      style={{ backgroundColor: "white" }}
                     >
-                      <div
-                        className="toolpat"
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <a href="https://ittower.uz/" target="_blank">
-                          <img src={her6} />
-                        </a>
-                      </div>
-                      <p>IT Tower firmasi </p>
+                      <a href="https://ittower.uz/" target="_blank">
+                        <img src={her6} />
+                      </a>
                     </div>
-                  </Carousel>
-                </div>
-                <div id="bog'lanish"></div>
+                    <p>IT Tower firmasi </p>
+                  </div>
+                </Carousel>
+              </div>
+              <div id="bog'lanish"></div>
               <Container>
-              <div className={style.xarita}>
-                <Row>
-                  <Col lg={6} md={12} sm={12}>
-                    <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
-                    <br />
+                <div className={style.xarita}>
+                  <Row>
+                    <Col lg={6} md={12} sm={12}>
+                      <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
+                      <br />
 
-                    <YMaps>
-                      <div className={style.xarita_item}>
-                        <Map
-                          style={{ width: "100%", height: "550px" }}
-                          defaultState={{
-                            center: [41.318973, 69.30347],
-                            zoom: 12,
-                          }}
-                        >
-                          <Clusterer
-                            options={{
-                              groupByCoordinates: false,
+                      <YMaps>
+                        <div className={style.xarita_item}>
+                          <Map
+                            style={{ width: "100%", height: "550px" }}
+                            defaultState={{
+                              center: [41.318973, 69.30347],
+                              zoom: 12,
                             }}
                           >
-                            <Placemark
-                              key={-1}
-                              geometry={[41.318973, 69.30347]}
+                            <Clusterer
                               options={{
-                                iconLayout: "default#image",
+                                groupByCoordinates: false,
                               }}
-                              properties={{
-                                hintContent: `<i><b className="personStyle">Namangan viloyati VXTB</b></i>`,
-                              }}
-                              modules={["geoObject.addon.hint"]}
-                            />
-                          </Clusterer>
-                        </Map>
-                      </div>
-                    </YMaps>
-                  </Col>
+                            >
+                              <Placemark
+                                key={-1}
+                                geometry={[41.318973, 69.30347]}
+                                options={{
+                                  iconLayout: "default#image",
+                                }}
+                                properties={{
+                                  hintContent: `<i><b className="personStyle">Namangan viloyati VXTB</b></i>`,
+                                }}
+                                modules={["geoObject.addon.hint"]}
+                              />
+                            </Clusterer>
+                          </Map>
+                        </div>
+                      </YMaps>
+                    </Col>
 
-                  <Col lg={6} md={12} sm={12}>
-                    <h1 className={style.sarlavha}>Biz bilan bo'glaning</h1>
+                    <Col lg={6} md={12} sm={12}>
+                      <h1 className={style.sarlavha}>Biz bilan bo'glaning</h1>
 
-                    <div className="formFER">
-                      <div className="container">
-                        <div className="brand-logo"></div>
-                        <div className="inputs">
-                          <form>
-                            <label>F.I.O.</label>
-                            <input
-                              type="text"
-                              id="name"
-                              placeholder="Ism Familiya Sharifi"
-                            />
-                            <label>Telefon raqam</label>
-                            <input
-                              type="text"
-                              id="phone"
-                              placeholder="+998 99 999 99 99"
-                            />
-                            <label>Murojaat</label>
-                            <textarea
-                              id="text"
-                              placeholder="Murojaat matni..."
-                            ></textarea>
-                            <button type="button" onClick={this.sendMurojat}>
-                              Yuborish
-                            </button>
-                          </form>
+                      <div className="formFER">
+                        <div className="container">
+                          <div className="brand-logo"></div>
+                          <div className="inputs">
+                            <form>
+                              <label>F.I.O.</label>
+                              <input
+                                type="text"
+                                id="name"
+                                placeholder="Ism Familiya Sharifi"
+                              />
+                              <label>Telefon raqam</label>
+                              <input
+                                type="text"
+                                id="phone"
+                                placeholder="+998 99 999 99 99"
+                              />
+                              <label>Murojaat</label>
+                              <textarea
+                                id="text"
+                                placeholder="Murojaat matni..."
+                              ></textarea>
+                              <button type="button" onClick={this.sendMurojat}>
+                                Yuborish
+                              </button>
+                            </form>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
+                    </Col>
+                  </Row>
+                </div>
               </Container>
             </div>
           </>
