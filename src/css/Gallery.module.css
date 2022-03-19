@@ -33,7 +33,7 @@
 .newsY h1 {
   font-size: 27px;
   flex: 50%;
-  color:rgb(8, 6, 112);
+  color: rgb(8, 6, 112);
   padding: 40px 20px;
   display: inline-block;
   text-align: center;
@@ -41,21 +41,27 @@
 .text {
   font-size: 18px;
   margin-top: 20px;
-  color:rgb(8, 6, 112);
+  color: rgb(8, 6, 112);
 }
 .dat {
   font-size: 18px;
   font-weight: bold;
   margin-top: -20px;
-  color:rgb(8, 6, 112);
+  color: rgb(8, 6, 112);
   text-align: center;
 }
 .yozuv p i {
   margin-right: 10px;
 }
+.flex {
+  display: flex;
+}
 @media (max-width: 700px) {
   .newsY h1 {
     font-size: 25px;
+  }
+  .flex {
+    display: block;
   }
 }
 @media (min-width: 1650px) {

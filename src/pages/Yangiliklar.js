@@ -98,7 +98,7 @@ export default class Yangiliklar extends Component {
             >
               <div>
                 <Container>
-                  <div style={{ display: "flex" }}>
+                  <div className={styles.flex}>
                     <div className={styles.imag}>
                       <img src={rasm} />
                     </div>

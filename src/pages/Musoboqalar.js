@@ -86,7 +86,7 @@ export default class Musoboqalar extends Component {
         )}
         <Header />
         <div className={styled.head}>
-          <img src={etnosport7}></img>
+          <img src={etnosport7} />
           <div className={styled.headsarlavha}>
             Etnosport bo'yicha o'tqaziladigan musobaqalar
           </div>
