@@ -1,0 +1,171 @@
+.head {
+  width: 100%;
+  padding-top: 100px;
+  
+  background-color: white;
+}
+.head img {
+  width: 100%;
+}
+.head h2 {
+  color: orangered;
+  padding-left: 40px;
+  line-height: 70px;
+  font-size: 40px;
+  margin-top: 50px;
+}
+.head h2 span {
+  color: rgb(8, 6, 112);
+}
+.head .but {
+  padding: 10px;
+  margin-top: 60px;
+  margin-left: 40px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgb(8, 6, 112);
+  transition: 0.3s;
+  border: 1px solid rgb(8, 6, 112);
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+}
+.head .but:hover {
+  background-color: white;
+  color: rgb(8, 6, 112);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.sports {
+  width: 90%;
+  margin-left: 5%;
+}
+.sport {
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.sport img {
+  width: 100%;
+}
+.sport p {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(8, 6, 112);
+}
+.sport:hover {
+  background-color: rgb(8, 6, 112);
+}
+.sport:hover p {
+  color: white;
+}
+.kurash img {
+  width: 100%;
+}
+.kurash p {
+  font-size: 16px;
+}
+.sportchi {
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.sportchi img {
+  width: 100%;
+  transition: 1s;
+}
+.sportchi:hover img {
+  transform: scale(1.1, 1.1);
+}
+.sportchi h5 {
+  text-align: center;
+  color: rgb(8, 6, 112);
+  margin-top: 20px;
+}
+.sportchi p {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(8, 6, 112);
+}
+.chiziq {
+  height: 4px;
+  width: 90%;
+  margin: auto;
+  background-color: rgb(8, 6, 112);
+  margin-bottom: 20px;
+}
+.sarlavha {
+  margin-top: 30px;
+  color: rgb(8, 6, 112);
+  font-size: 37px;
+  text-align: center;
+}
+.sarlavhaa {
+  margin-top: 30px;
+  color: rgb(8, 6, 112);
+  font-size: 27px;
+  text-align: center;
+}
+.news img {
+  width: 100%;
+}
+.news p {
+  font-size: 16px;
+  color: rgb(8, 6, 112);
+}
+.new,
+.n {
+  padding: 5px;
+}
+.n:hover {
+  background-color: rgb(8, 6, 112);
+}
+.n:hover p {
+  color: white;
+}
+.but {
+  color: white;
+  margin-top: 20px !important;
+}
+.but:hover {
+  color: rgb(8, 6, 112);
+  background-color: white;
+}
+.but:active {
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+@media (min-width: 1500px) {
+  .n p {
+    font-size: 20px;
+  }
+  .lY{padding-top: ;}
+  .sport p {
+    font-size: 18px;
+  }
+
+  .kurash p {
+    font-size: 18px;
+  }
+  .sportchi p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head h2 {
+    font-size: 35px;
+  }
+  .head .but {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+}
+
