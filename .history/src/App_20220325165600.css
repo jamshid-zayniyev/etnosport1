@@ -171,5 +171,5 @@ body{ background-color: white; width:100%; overflow-x: hidden;}
 .loaderG img{width:100% !important; border-radius:50% !important; animation-name:logo !important; animation-duration: 2s !important;animation-iteration-count: infinite !important; }
 
 .befG{width:200px !important; border-radius:50% !important; padding:2px !important;}
-.react-multi-carousel-dot button{border-radius: 5px !important;  width:30px !important; height:5px !important; border: none !important; }
-
+.react-multi-carousel-dot button{border-radius: 5px !important; width:30px !important; height:5px !important; border: none !important; }
+.react-multi-carousel-dot{position: relative !important; top:300px !important}
