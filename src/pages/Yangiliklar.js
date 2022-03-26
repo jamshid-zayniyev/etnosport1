@@ -25,18 +25,18 @@ export default class Yangiliklar extends Component {
 
   componentDidMount() {
     this.getNews();
-    setTimeout(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 3000);
+    var link = window.location.href;
+
+    this.setState({
+      raqam: link.slice(link.lastIndexOf("/") + 1, link.length),
+    });
   }
   getNews = () => {
     axios.get(`${url}/news/`).then((res) => {
       this.setState({
         news: res.data.reverse(),
       });
-      console.log(res.data);
+      // res.data.forEach((item) => console.log(item.news_images[0]));
     });
   };
   // componentDidMount() {
@@ -98,6 +98,36 @@ export default class Yangiliklar extends Component {
 
         <div className={styles.newsY}>
           <Collapse accordion defaultActiveKey={[this.state.raqam]}>
+            {this.state.news !== null
+              ? this.state.news.map((item) => {
+                  return (
+                    <Panel
+                      className={styles.panel}
+                      header={<p style={{ color: "white" }}>{item.name}</p>}
+                    >
+                      <div>
+                        <Container>
+                          <div className={styles.flex}>
+                            <div className={styles.imag}>
+                              <img src={item.news_images[0].image} />
+                            </div>
+                            <div className={styles.yozuv}>
+                              <h1>{item.name}</h1>
+                              <p className={styles.dat}>
+                                <i className="fa fa-calendar"></i>
+                                10.10.2021 yil
+                              </p>
+                            </div>
+                          </div>
+                          <div className={styles.yozuv}>
+                            <p className={styles.text}>{item.title}</p>
+                          </div>
+                        </Container>
+                      </div>
+                    </Panel>
+                  );
+                })
+              : ""}
             <Panel
               className={styles.panel}
               header={

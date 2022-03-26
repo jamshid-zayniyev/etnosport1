@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import axios from "axios";
+import { url } from "../host/Host";
 import style from "../css/Videolar.module.css";
 import YouTube from "@u-wave/react-youtube";
 import Carousel from "react-multi-carousel";
@@ -15,12 +17,20 @@ export default class Videolar extends Component {
     console.log(e);
   };
   componentDidMount() {
+    this.getVideos();
     setTimeout(() => {
       this.setState({
         loader: false,
       });
     }, 3000);
   }
+  getVideos = () => {
+    axios.get(`${url}/videos/`).then((res) => {
+      this.setState({
+        videoss: res.data.reverse(),
+      });
+    });
+  };
   render() {
     const responsiveY = {
       superLargeDesktop: {
@@ -89,22 +99,28 @@ export default class Videolar extends Component {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-            <div className={style.videos_item}>
-              <YouTube
-                onEnd={this.onEndY(this)}
-                showCaptions={false}
-                showRelatedVideos={false}
-                opts={{
-                  playerVars: {
-                    rel: 0,
-                  },
-                }}
-                video="FY_6xf6leCA"
-                className={style.you}
-                // autoplay={true}
-                muted={true}
-              />
-            </div>
+            {/* {this.state.videoss !== null
+              ? this.state.videoss.map((item) => {
+                  return (
+                    <div className={style.videos_item}>
+                      <YouTube
+                        onEnd={this.onEndY(this)}
+                        showCaptions={false}
+                        showRelatedVideos={false}
+                        opts={{
+                          playerVars: {
+                            rel: 0,
+                          },
+                        }}
+                        video={item.video}
+                        className={style.you}
+                        // autoplay={true}
+                        muted={true}
+                      />
+                    </div>
+                  );
+                })
+              : ""} */}
             <div className={style.videos_item}>
               <YouTube
                 onEnd={this.onEndY(this)}
