@@ -1,8 +1,11 @@
-import { vil } from "./MapViloyatlar";
+// import { vil } from "./MapViloyatlar";
 import style from '../css/MapDash.module.css'
 import '../css/map.scss'
 import { useState } from "react";
 import { Modal } from "antd";
+import {FaUserTie, FaEnvelope} from 'react-icons/fa'
+import {GiRotaryPhone} from 'react-icons/gi'
+import {HiLocationMarker} from 'react-icons/hi'
 // import Particles from 'react-particles-js';
 // import particlesConfig from './particlesConfig';
 export function MapDash(props) {
@@ -90,10 +93,22 @@ const [modalData, setModalData]=useState(null)
                         <circle cx="636" cy="498.9" id="2">
                         </circle>
                         </svg>
-                        <Modal footer={false} title={modalData!==null?modalData.name:''} visible={show} onCancel={()=>{setShow(false)}}>
+                        <Modal footer={false} className={style.mod} title={modalData!==null?<h3>{modalData.name}</h3>:''} visible={show} onCancel={()=>{setShow(false)}}>
      <ul>
          <li>
-             
+            <FaUserTie size="1.3rem"/> <span>{ modalData!==null?modalData.boss!==null?modalData.boss:" - ":' - '}</span>
+         </li>
+         
+         <li>
+            <GiRotaryPhone size="1.3rem"/> <span>{ modalData!==null?modalData.phone!==null?modalData.phone:" - ":' - '}</span>
+         </li>
+         
+         <li>
+            <FaEnvelope size="1.3rem"/> <span>{ modalData!==null?modalData.email!==null?modalData.email:" - ":' - '}</span>
+         </li>
+         
+         <li>
+            <HiLocationMarker size="1.3rem"/> <span>{ modalData!==null?modalData.address!==null?modalData.address:" - ":' - '}</span>
          </li>
      </ul>
       </Modal>
