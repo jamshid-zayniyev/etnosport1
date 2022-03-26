@@ -36,6 +36,9 @@ export default class Yangiliklar extends Component {
       this.setState({
         news: res.data.reverse(),
       });
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
       // res.data.forEach((item) => console.log(item.news_images[0]));
     });
   };
@@ -67,17 +70,13 @@ export default class Yangiliklar extends Component {
   //   });
   // };
   render() {
-    const loaderT = () => {
-      setTimeout(() => {
-        this.setState({ loader: false });
-      }, 2000);
-    };
+    // const loaderT = () => {
+    //   setTimeout(() => {
+    //     this.setState({ loader: false });
+    //   }, 2000);
+    // };
     return (
-      <div
-        onLoad={() => {
-          loaderT();
-        }}
-      >
+      <div>
         {this.state.loader ? (
           <div className="loaderG">
             <div className="befG">
@@ -128,7 +127,7 @@ export default class Yangiliklar extends Component {
                   );
                 })
               : ""}
-            <Panel
+            {/* <Panel
               className={styles.panel}
               header={
                 <p style={{ color: "white" }}>
@@ -685,7 +684,7 @@ export default class Yangiliklar extends Component {
                   </div>
                 </Container>
               </div>
-            </Panel>
+            </Panel> */}
           </Collapse>
         </div>
         <Footer />

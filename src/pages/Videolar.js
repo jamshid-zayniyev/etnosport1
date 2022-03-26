@@ -29,6 +29,9 @@ export default class Videolar extends Component {
       this.setState({
         videoss: res.data.reverse(),
       });
+      setTimeout(() => {
+        this.setState({ loader: false });
+      }, 2000);
     });
   };
   render() {
@@ -51,17 +54,13 @@ export default class Videolar extends Component {
         items: 1,
       },
     };
-    const loaderT = () => {
-      setTimeout(() => {
-        this.setState({ loader: false });
-      }, 2000);
-    };
+    // const loaderT = () => {
+    //   setTimeout(() => {
+    //     this.setState({ loader: false });
+    //   }, 2000);
+    // };
     return (
-      <div
-        onLoad={() => {
-          loaderT();
-        }}
-      >
+      <div>
         {this.state.loader ? (
           <div className="loaderG">
             <div className="befG">

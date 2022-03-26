@@ -48,11 +48,11 @@ const responsive1 = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 5,
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 5,
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 650 },
@@ -198,15 +198,11 @@ export default class Loyihahaqida extends Component {
                     <i className={style.abouticonsphone}>
                       <AiFillPhone />
                     </i>
-                    <i className={style.abouticonsinst}>
-                      <AiFillInstagram />
-                    </i>
-                    <i className={style.abouticonsface}>
-                      <AiFillFacebook />
-                    </i>
-                    <i className={style.abouticonsyou}>
-                      <AiFillYoutube />
-                    </i>
+                    <i
+                      className="fa fa-telegram"
+                      aria-hidden="true"
+                      style={{ color: "blue", margin: "auto 3px" }}
+                    ></i>
                   </div>
                 </div>
               </div>
@@ -222,15 +218,11 @@ export default class Loyihahaqida extends Component {
                     <i className={style.abouticonsphone}>
                       <AiFillPhone />
                     </i>
-                    <i className={style.abouticonsinst}>
-                      <AiFillInstagram />
-                    </i>
-                    <i className={style.abouticonsface}>
-                      <AiFillFacebook />
-                    </i>
-                    <i className={style.abouticonsyou}>
-                      <AiFillYoutube />
-                    </i>
+                    <i
+                      className="fa fa-telegram"
+                      aria-hidden="true"
+                      style={{ color: "blue", margin: "auto 3px" }}
+                    ></i>
                   </div>
                 </div>
               </div>
@@ -246,15 +238,11 @@ export default class Loyihahaqida extends Component {
                     <i className={style.abouticonsphone}>
                       <AiFillPhone />
                     </i>
-                    <i className={style.abouticonsinst}>
-                      <AiFillInstagram />
-                    </i>
-                    <i className={style.abouticonsface}>
-                      <AiFillFacebook />
-                    </i>
-                    <i className={style.abouticonsyou}>
-                      <AiFillYoutube />
-                    </i>
+                    <i
+                      className="fa fa-telegram"
+                      aria-hidden="true"
+                      style={{ color: "blue", margin: "auto 3px" }}
+                    ></i>
                   </div>
                 </div>
               </div>
@@ -270,15 +258,11 @@ export default class Loyihahaqida extends Component {
                     <i className={style.abouticonsphone}>
                       <AiFillPhone />
                     </i>
-                    <i className={style.abouticonsinst}>
-                      <AiFillInstagram />
-                    </i>
-                    <i className={style.abouticonsface}>
-                      <AiFillFacebook />
-                    </i>
-                    <i className={style.abouticonsyou}>
-                      <AiFillYoutube />
-                    </i>
+                    <i
+                      className="fa fa-telegram"
+                      aria-hidden="true"
+                      style={{ color: "blue", margin: "auto 3px" }}
+                    ></i>
                   </div>
                 </div>
               </div>

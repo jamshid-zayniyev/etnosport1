@@ -28,29 +28,35 @@ import school from "../img/gerb.png";
 export default class Gallery extends Component {
   state = {
     loader: true,
-    images: null,
+    fotos: null,
     boshqarma: null,
   };
   componentDidMount() {
+    this.getFotos();
+  }
+
+  getFotos = () => {
+    axios.get(`${url}/fotos/`).then((res) => {
+      this.setState({
+        fotos: res.data.reverse(),
+      });
+      res.data.forEach((item) => console.log(item.name));
+    });
     setTimeout(() => {
       this.setState({
         loader: false,
       });
     }, 3000);
-  }
+  };
 
   render() {
-    const loaderT = () => {
-      setTimeout(() => {
-        this.setState({ loader: false });
-      }, 2000);
-    };
+    // const loaderT = () => {
+    //   setTimeout(() => {
+    //     this.setState({ loader: false });
+    //   }, 2000);
+    // };
     return (
-      <div
-        onLoad={() => {
-          loaderT();
-        }}
-      >
+      <div>
         {this.state.loader ? (
           <div className="loaderG">
             <div className="befG">
@@ -68,10 +74,17 @@ export default class Gallery extends Component {
         </div>
         <div className={styles.rasmlar}>
           <Row style={{ justifyContent: "center" }}>
-            <Col style={{ padding: "10px" }} lg={4} md={6} sm={12}>
-              <img src={head} />
-            </Col>
-            <Col style={{ padding: "10px" }} lg={4} md={6} sm={12}>
+            {this.state.fotos !== null
+              ? this.state.fotos.map((item) => {
+                  return (
+                    <Col style={{ padding: "10px" }} lg={4} md={6} sm={12}>
+                      <img src={item.foto} />
+                    </Col>
+                  );
+                })
+              : ""}
+
+            {/* <Col style={{ padding: "10px" }} lg={4} md={6} sm={12}>
               <img src={head1} />
             </Col>
             <Col style={{ padding: "10px" }} lg={4} md={6} sm={12}>
@@ -109,7 +122,7 @@ export default class Gallery extends Component {
             </Col>{" "}
             <Col style={{ padding: "10px" }} lg={4} md={6} sm={12}>
               <img src={kurash7} />
-            </Col>
+            </Col> */}
           </Row>
         </div>
         <Footer />
