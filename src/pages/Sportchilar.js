@@ -469,13 +469,6 @@ export class Sportchilar extends Component {
                       </div>
                     );
                   })}
-                  <div style={{ marginLeft: 10, marginRight: 10 }}>
-                    <div style={{ padding: "10px" }} className={style.sportchi}>
-                      <img src={rishod} alt="RishodSobirov" />
-                      <h5>Rishod Sobirov(Buxoro viloyat)</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
                 </Carousel>
               ) : (
                 ""
