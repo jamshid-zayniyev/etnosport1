@@ -5,6 +5,7 @@
 }
 .mapA{width:100%;  padding:30px; z-index: 234;}
 .mod h3{color:rgb(8, 6, 112)}
-.mod ul {list-style-type:none; }
-.mod li {padding:10px 20px; font-size: 18px; color:rgb(8, 6, 112); border-bottom: 2px solid orangered; }
+.mod ul {list-style-type:none; padding:0px; }
+.mod li {padding:20px 0px; margin-left:0px; width:100%; font-size: 18px; color:rgb(8, 6, 112); border-bottom: 2px solid orangered; }
+.mod span{padding:3px 0px 0px 10px;}
 

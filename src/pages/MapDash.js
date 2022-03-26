@@ -96,19 +96,19 @@ const [modalData, setModalData]=useState(null)
                         <Modal footer={false} className={style.mod} title={modalData!==null?<h3>{modalData.name}</h3>:''} visible={show} onCancel={()=>{setShow(false)}}>
      <ul>
          <li>
-            <FaUserTie size="1.3rem"/> <span>{ modalData!==null?modalData.boss!==null?modalData.boss:" - ":' - '}</span>
+            <FaUserTie size="1.6rem"/> <span>{ modalData!==null?modalData.boss!==null?modalData.boss:" - ":' - '}</span>
          </li>
          
          <li>
-            <GiRotaryPhone size="1.3rem"/> <span>{ modalData!==null?modalData.phone!==null?modalData.phone:" - ":' - '}</span>
+            <GiRotaryPhone size="1.8rem"/> <span>{ modalData!==null?modalData.phone!==null?modalData.phone:" - ":' - '}</span>
          </li>
          
          <li>
-            <FaEnvelope size="1.3rem"/> <span>{ modalData!==null?modalData.email!==null?modalData.email:" - ":' - '}</span>
+            <FaEnvelope size="1.6rem"/> <span>{ modalData!==null?modalData.email!==null?modalData.email:" - ":' - '}</span>
          </li>
          
          <li>
-            <HiLocationMarker size="1.3rem"/> <span>{ modalData!==null?modalData.address!==null?modalData.address:" - ":' - '}</span>
+            <HiLocationMarker size="1.8rem"/> <span>{ modalData!==null?modalData.address!==null?modalData.address:" - ":' - '}</span>
          </li>
      </ul>
       </Modal>
