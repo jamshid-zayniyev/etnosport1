@@ -5,8 +5,8 @@ import { useState } from "react";
 import { Modal } from "antd";
 // import Particles from 'react-particles-js';
 // import particlesConfig from './particlesConfig';
-export function MapDash() {
-const [data, setData]=useState(vil)
+export function MapDash(props) {
+ 
 const [modalData, setModalData]=useState(null)
     const[show, setShow]=useState(false)
     
@@ -65,22 +65,23 @@ const [modalData, setModalData]=useState(null)
   <div className="star"></div>
   </div>
            
-            <svg className={style.map} style={{ width: "100%", }} xmlns="http://www.w3.org/2000/svg"
+            <svg className={style.mapA} style={{ width: "100%", }} xmlns="http://www.w3.org/2000/svg"
                         baseProfile="tiny"
                         fill="grey" height="652" stroke="white"
                         strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" version="1.2"
                         viewBox="0 0 1000 652"
                         width="1000">
-{data.map((item, key)=>{
+{props.regions!==null?props.regions.map((item, key)=>{
+ 
     return(<path key={key} 
         d={item.d}
         onClick={()=>{
             setShow(true)
             setModalData(item)
         }}
-        id={item.id} name={item.name}>
+        id={item.reg_id} name={item.name}>
             </path>)
-})}
+}):''}
 
 <circle cx="673.4" cy="626" id="0">
                         </circle>
@@ -90,7 +91,11 @@ const [modalData, setModalData]=useState(null)
                         </circle>
                         </svg>
                         <Modal footer={false} title={modalData!==null?modalData.name:''} visible={show} onCancel={()=>{setShow(false)}}>
-     
+     <ul>
+         <li>
+             
+         </li>
+     </ul>
       </Modal>
         </div>
     );

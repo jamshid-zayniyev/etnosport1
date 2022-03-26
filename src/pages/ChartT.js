@@ -30,23 +30,28 @@ export const options = {
   },
 };
 
-const labels = ['Buxoro', 'Xorazm', 'Toshkent vil', 'Samarqand', 'Jizzax', 'Andijon', 'Namangan', "Toshkent shah", "Qashqadaryo", "Surxondaryo", "Sirdaryo", "Qoraqalpog'iston", "Farg'ona", "Navoiy"];
-const dataT=[134, 156, 175, 183, 194, 117, 200, 135, 176, 131, 163, 198, 110, 122]
 
-export const data = {
-  labels,
-  datasets: [
-   
-    {
-      label: "Tadbirlar soni bo'yicha",
-      data: labels.map((item, key) => dataT[key]),
-      backgroundColor: 'orangered',
-    },
-  ],
-};
 
-export function ChartT() {
 
+export function ChartT(props) {
+  const labels = [];
+  const dataT=[]
+  if(props.regions!==null){
+    props.regions.map(item=>{
+      labels.push(item.name)
+      dataT.push(item.get_sportsmen_count)
+    })
+  }
     
-  return <Bar options={options} data={data} />;
+  return <Bar options={options} data={{
+    labels,
+    datasets: [
+     
+      {
+        label: "Tadbirlar soni bo'yicha",
+        data: labels.map((item, key) => dataT[key]),
+        backgroundColor: 'orangered',
+      },
+    ],
+  }} />;
 }

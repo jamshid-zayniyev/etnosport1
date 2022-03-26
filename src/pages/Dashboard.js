@@ -95,12 +95,18 @@ export default class Dashboard extends Component {
     news: null,
     modalA: false,
     modalB: false,
+    regions:null
   };
   openModalA = () => {
     this.setState({
       modalA: true,
     });
   };
+  getRegions=()=>{
+    axios.get(`${url}/regions/`).then(res=>{
+     this.setState({regions:res.data})
+    })
+  }
   closeModalA = () => {
     this.setState({
       modalA: false,
@@ -124,7 +130,8 @@ export default class Dashboard extends Component {
     });
   };
   componentDidMount() {
-    this.getNews();
+    // this.getNews();
+this.getRegions()
     setTimeout(() => {
       this.setState({
         loader: false,
@@ -385,16 +392,16 @@ export default class Dashboard extends Component {
           <br />
           <br />
           <br />
-          <Dashreyting />
+          <Dashreyting regions={this.state.regions}/>
           <h1 className={style.sarlavha}>Statistika</h1>
 
           <div className={style.chiziq}></div>
           <Row style={{ padding: "20px" }}>
             <Col lg={6} md={12} sm={12}>
-              <ChartS />
+              <ChartS regions={this.state.regions}/>
             </Col>
             <Col lg={6} md={12} sm={12}>
-              <ChartT />
+              <ChartT  regions={this.state.regions}/>
             </Col>
           </Row>
 
@@ -1072,7 +1079,7 @@ export default class Dashboard extends Component {
               <h1 className={style.sarlavha}>Xarita</h1>
               <div className={style.chiziq}></div>
 
-              <MapDash />
+              <MapDash regions={this.state.regions}/>
               <br />
 
               <h1 className={style.sarlavha}>Videolavhalar</h1>

@@ -1,7 +1,7 @@
-.map path:hover{
+.mapA path:hover{
     fill: rgb(8, 6, 112);
 
    
 }
-.map{width:100%;  padding:30px; z-index: 234;}
+.mapA{width:100%;  padding:30px; z-index: 234;}
 
