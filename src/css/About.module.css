@@ -1,0 +1,75 @@
+.about {
+  /* border: 2px solid red; */
+  width: 100vw;
+  /* height: 100vh; */
+  /* padding-top: 100px; */
+}
+
+.sarlavha {
+  margin-top: 30px;
+  color: rgb(8, 6, 112);
+  font-size: 37px;
+  text-align: center;
+}
+.chiziq {
+  height: 4px;
+  width: 90%;
+  margin: auto;
+  background-color: rgb(8, 6, 112);
+  margin-bottom: 20px;
+}
+.aboutteams {
+  width: 90%;
+  margin-left: 5%;
+}
+.aboutteam {
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.aboutteam img {
+  width: 100%;
+
+  border-radius: 50%;
+}
+.aboutteam p {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(8, 6, 112);
+}
+.aboutteam:hover {
+  background-color: rgb(8, 6, 112);
+}
+.aboutteam:hover p {
+  color: white;
+}
+.abouticons {
+  font-size: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.abouticons .abouticonsphone {
+  color: green;
+  margin: auto 3px;
+}
+.abouticons .abouticonsinst {
+  color: orangered;
+  margin: auto 3px;
+}
+.abouticons .abouticonsface {
+  color: blue;
+  margin: auto 3px;
+  border-radius: 50%;
+}
+.abouticons .abouticonsyou {
+  color: red;
+  margin: auto 3px;
+}
+.abouttext {
+  text-align: justify;
+  font-size: 20px;
+  padding: 20px 80px 0px 80px;
+  font-weight: 500;
+}

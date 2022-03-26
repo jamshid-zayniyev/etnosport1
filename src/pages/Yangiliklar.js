@@ -9,6 +9,7 @@ import { url } from "../host/Host";
 import Header from "./Header";
 import school from "../img/gerb.png";
 import { Collapse } from "antd";
+
 import Footer from "./Footer";
 import rasm from "../img/head.jpg";
 import etnosport8 from "../img/etnoimg8.jpg";
@@ -23,12 +24,21 @@ export default class Yangiliklar extends Component {
   };
 
   componentDidMount() {
+    this.getNews();
     setTimeout(() => {
       this.setState({
         loader: false,
       });
     }, 3000);
   }
+  getNews = () => {
+    axios.get(`${url}/news/`).then((res) => {
+      this.setState({
+        news: res.data.reverse(),
+      });
+      console.log(res.data);
+    });
+  };
   // componentDidMount() {
   //   this.getNews();
   //   var link = window.location.href;

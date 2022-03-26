@@ -8,13 +8,13 @@ import { url } from "../host/Host";
 export default class NavbarA extends Component {
   state = {
     id: 0,
-    category:null
+    category: null,
   };
-componentDidMount(){
-  axios.get(`${url}/categorydocs/`).then(res=>{
-    this.setState({category:res.data})
-  })
-}
+  componentDidMount() {
+    axios.get(`${url}/categorydocs/`).then((res) => {
+      this.setState({ category: res.data });
+    });
+  }
   Tool = () => {
     if (this.state.id === 0) {
       document.querySelector("#navb").style.display = "none";
@@ -146,7 +146,7 @@ componentDidMount(){
                           isActive ? { color: "orangered" } : undefined
                         }
                         className={style.lik}
-                        to="/"
+                        to="/loyihahaqida"
                       >
                         Loyiha haqida
                       </NavLink>
@@ -165,22 +165,24 @@ componentDidMount(){
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    {this.state.category!==null?this.state.category.map(item=>{
-                      return(<Dropdown.Item>
-                        <NavLink
-                          exact
-                          style={({ isActive }) =>
-                            isActive ? { color: "orangered" } : undefined
-                          }
-                          className={style.lik}
-                          to={`/qonunlar/${item.name}/${item.pk}`}
-                        >
-                          {item.name}
-                        </NavLink>
-                      </Dropdown.Item>
-  )
-                    }):''}
-                    
+                    {this.state.category !== null
+                      ? this.state.category.map((item) => {
+                          return (
+                            <Dropdown.Item>
+                              <NavLink
+                                exact
+                                style={({ isActive }) =>
+                                  isActive ? { color: "orangered" } : undefined
+                                }
+                                className={style.lik}
+                                to={`/qonunlar/${item.name}/${item.pk}`}
+                              >
+                                {item.name}
+                              </NavLink>
+                            </Dropdown.Item>
+                          );
+                        })
+                      : ""}
                   </Dropdown.Menu>
                 </Dropdown>
               </li>

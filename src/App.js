@@ -13,6 +13,7 @@ import "./comment.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "antd/dist/antd.css";
 import Gallery from "./pages/Gallery";
+import Loyihahaqida from "./pages/Loyihahaqida";
 import Icons from "./pages/Icons";
 import { Xarita } from "./pages/Xarita";
 import Sportchilar from "./pages/Sportchilar";
@@ -30,15 +31,16 @@ export default class App extends Component {
             <Route element={<Sportchilar />} exact path="/sportchilar" />
 
             <Route element={<Videolar />} exact path="/ishlanma" />
-          
+
             <Route element={<HujjatlarT />} path="/qonunlar/:nameT/:id" />
             <Route element={<Musoboqalar />} exact path="/musoboqalar" />
             <Route element={<ElektronK />} exact path="/kutubxona" />
             <Route element={<Boglanish />} exact path="/boglanish" />
             <Route element={<Gallery />} exact path="/gallery" />
             <Route element={<Xarita />} exact path="/mahallalar" />
-        
+
             <Route element={<Viloyatlar />} exact path="/viloyatlar" />
+            <Route element={<Loyihahaqida />} exact path="/loyihahaqida" />
           </Routes>
         </BrowserRouter>
       </div>
