@@ -111,6 +111,9 @@ export default class Loyihahaqida extends Component {
                 >
                   So'rovnomani to'ldiring
                 </a>
+                <br />
+                <br />
+                <br />
               </Col>
               <Col lg={6} md={12}>
                 <Carousel
