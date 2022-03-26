@@ -282,30 +282,6 @@ export default class Loyihahaqida extends Component {
                   </div>
                 </div>
               </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.aboutteam}>
-                  <img src={avatar5} />
-                  <p>
-                    <strong>Kendall Jenner</strong>
-                  </p>{" "}
-                  <p>Ferferro</p>
-                  <div className={style.abouticons}>
-                    <i className={style.abouticonsphone}>
-                      <AiFillPhone />
-                    </i>
-                    <i className={style.abouticonsinst}>
-                      <AiFillInstagram />
-                    </i>
-                    <i className={style.abouticonsface}>
-                      <AiFillFacebook />
-                    </i>
-                    <i className={style.abouticonsyou}>
-                      <AiFillYoutube />
-                    </i>
-                  </div>
-                </div>
-              </div>
             </Carousel>
             <br />
             <br />
