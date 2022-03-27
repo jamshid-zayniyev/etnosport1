@@ -14,9 +14,7 @@ export default class Videolar extends Component {
     loader: true,
     videoss:null
   };
-  onEndY = (e) => {
-    console.log(e);
-  };
+  
   componentDidMount() {
     this.getVideos();
    
@@ -80,7 +78,7 @@ export default class Videolar extends Component {
                     <Col lg={12} md={24} sm={24}>
                     <div className={style.videos_item}>
                       <YouTube
-                        onEnd={this.onEndY(this)}
+                       
                         showCaptions={false}
                         showRelatedVideos={false}
                         opts={{

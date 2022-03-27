@@ -95,8 +95,16 @@ export default class Dashboard extends Component {
     modalA: false,
     modalB: false,
     regions:null,
-    events:null
+    events:null,
+    videoss:null,
   };
+  getVideos = () => {
+    axios.get(`${url}/videos/`).then((res) => {
+      this.setState({
+        videoss: res.data.reverse(),
+      })
+     
+    })};
   openModalA = () => {
     this.setState({
       modalA: true,
@@ -134,10 +142,11 @@ export default class Dashboard extends Component {
         news: res.data.reverse(),
       });
     });
-  };
+  }
   componentDidMount() {
-    // this.getNews();
+    this.getNews();
 this.getRegions()
+this.getVideos()
    
   }
   muted2 = () => {
@@ -979,85 +988,29 @@ this.getRegions()
 
             <Container>
               <Row>
-                <Col lg={6} md={6} sm={12} className={style.new}>
-                  <Link to="/yangiliklar">
-                    <Row className={style.n}>
-                      <Col lg={4}>
-                        <img src={newsetno} alt="..." />
-                      </Col>
-                      <Col lg={8}>
-                        <p>
-                          Birinchi Xalqaro Strongman o'yinlari dasturida
-                          birinchi marta etnosport-kuchli odam intizomi bo'yicha
-                          musobaqalar o'tkazildi.Birinchi Xalqaro Strongman
-                          o‘yinlari YuNESKOning Butunjahon merosi ro‘yxatiga
-                          kiritilgan Ichan-Qal’a hududida bo‘lib o‘tdi va o‘rta
-                          asr shoiri va polvon Pahlavon Mahmud (1247–1326)
-                          xotirasiga bag‘ishlandi.
-                        </p>
-                      </Col>
-                    </Row>
-                  </Link>
-                </Col>
-                <Col lg={6} md={6} sm={12} className={style.new}>
-                  <Link to="/yangiliklar">
-                    <Row className={style.n}>
-                      <Col lg={4}>
-                        <img src={newsetno2} alt="..." />
-                      </Col>
-                      <Col lg={8}>
-                        <p>
-                          Musobaqada 12 davlat – Avstraliya, Braziliya,
-                          Gretsiya, Hindiston, Eron, Xitoy, Rossiya, Tojikiston,
-                          O‘zbekiston, Ukraina va Yaponiyadan 15 nafar eng
-                          kuchli sportchi ishtirok etdi. Xivada bo‘lib o‘tgan
-                          birinchi Xalqaro Strongmen o‘yinlarining g‘olibi
-                          ukrainalik Pavlo Kordiaka bo‘ldi.
-                        </p>
-                      </Col>
-                    </Row>
-                  </Link>
-                </Col>
-                <Col lg={6} md={6} sm={12} className={style.new}>
-                  <Link to="/yangiliklar">
-                    <Row className={style.n}>
-                      <Col lg={4}>
-                        <img src={newsetno3} alt="..." />
-                      </Col>
-                      <Col lg={8}>
-                        <p>
-                          Etnosport-kuchli odam intizomi beshta an'anaviy
-                          musobaqa - langar ko'tarish, tosh ko'tarish, ustunlar
-                          va qilichlarni ushlab turish, shuningdek, sportchilar
-                          aravaga yuklash va uni jabduqlar bilan tortib olish
-                          bilan ifodalandi. Barcha jihozlar o'ziga xos edi va
-                          shuning uchun u bilan mashq qilish sportchilar uchun
-                          alohida qiyinchilik tug'dirdi.
-                        </p>
-                      </Col>
-                    </Row>
-                  </Link>
-                </Col>
-                <Col lg={6} md={6} sm={12} className={style.new}>
-                  <Link to="/yangiliklar">
-                    <Row className={style.n}>
-                      <Col lg={4}>
-                        <img src={head5} alt="..." />
-                      </Col>
-                      <Col lg={8}>
-                        <p>
-                          Nejmiddin Bilol Erdo‘g‘on hamda Turizm va sport vaziri
-                          Aziz Abduhakimov o‘rtasida milliy sport turlari va
-                          xalq o‘yinlarini rivojlantirish bo‘yicha hamkorlik
-                          memorandumi imzolandi. Bundan tashqari, Butunjahon
-                          etnosport konfederatsiyasi va O‘zbekiston etnosport
-                          assotsiatsiyasi o‘rtasida memorandum imzolandi.
-                        </p>
-                      </Col>
-                    </Row>
-                  </Link>
-                </Col>
-              </Row>
+                {this.state.news!==null?this.state.news.map(item=>{
+ return( <Col lg={6} md={6} sm={12} className={style.new}>
+  <Link to="/yangiliklar">
+    <Row className={style.n}>
+      <Col lg={4}>
+        <img src={item.news_images!==null??item.news_images[0].image} alt="..." />
+      </Col>
+      <Col lg={8}>
+        <p>
+          <b>
+         {item.name}</b>
+        </p>
+        <p><i className="fa fa-calendar"></i>
+                                {item.date_added.slice(0, 10)} yil</p>
+      </Col>
+    </Row>
+  </Link>
+</Col>)
+                })
+               
+                :''}
+               
+               </Row>
               <Link className={style.but} to="/yangiliklar">
                 {" "}
                 Barchasini ko'rish
@@ -1093,75 +1046,38 @@ this.getRegions()
                 <br />
 
                 <Carousel
-                  swipeable={false}
-                  draggable={false}
-                  showDots={true}
-                  responsive={responsiveY}
-                  ssr={true} // means to render carousel on server-side.
-                  infinite={true}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                  autoPlaySpeed={3000}
-                  keyBoardControl={true}
-                  customTransition="all .5"
-                  transitionDuration={100}
-                  containerClass="carousel-container"
-                  removeArrowOnDeviceType={["tablet", "mobile"]}
-                  deviceType={this.props.deviceType}
-                  dotListClass="custom-dot-list-style"
-                  itemClass="carousel-item-padding-40-px"
+                 responsive={responsiveY}
+                 autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                 autoPlaySpeed={2000}
+                 infinite={true}
                 >
-                  <div className={stylev.videos_item}>
-                    <YouTube
-                      showCaptions={false}
-                      showRelatedVideos={false}
-                      opts={{
-                        playerVars: {
-                          rel: 0,
-                        },
-                      }}
-                      video="FY_6xf6leCA"
-                      className={stylev.you}
-                    />
-                  </div>
-                  <div className={stylev.videos_item}>
-                    <YouTube
-                      showCaptions={false}
-                      showRelatedVideos={false}
-                      opts={{
-                        playerVars: {
-                          rel: 0,
-                        },
-                      }}
-                      video="nRpmfAU7ttk"
-                      className={stylev.you}
-                    />
-                  </div>
-                  <div className={stylev.videos_item}>
-                    <YouTube
-                      showCaptions={false}
-                      showRelatedVideos={false}
-                      opts={{
-                        playerVars: {
-                          rel: 0,
-                        },
-                      }}
-                      video="3_iAy1vdTGE"
-                      className={stylev.you}
-                    />
-                  </div>
-                  <div className={stylev.videos_item}>
-                    <YouTube
-                      showCaptions={false}
-                      showRelatedVideos={false}
-                      opts={{
-                        playerVars: {
-                          rel: 0,
-                        },
-                      }}
-                      video="2yiW87QtFjY"
-                      className={stylev.you}
-                    />
-                  </div>
+                 {this.state.videoss !== null
+              ? this.state.videoss.map((item) => {
+          
+                  return (
+                  
+                    <div className={stylev.videos_item}>
+                      <YouTube
+                        
+                        showCaptions={false}
+                        showRelatedVideos={false}
+                        opts={{
+                          playerVars: {
+                            rel: 0,
+                          },
+                        }}
+                        video={item.url.split('/')[item.url.split('/').length-1]}
+                        className={stylev.you}
+                        // autoplay={true}
+                        muted={true}
+                      />
+                  
+                    </div>
+                  
+                  );
+                })
+              : <div></div>}
+           
                 </Carousel>
               </div>
 
