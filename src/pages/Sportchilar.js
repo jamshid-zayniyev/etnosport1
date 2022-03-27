@@ -60,17 +60,25 @@ export class Sportchilar extends Component {
         updatedChecked[this.state.sportType.length] = false;
       }
     }
-    var d = 1;
+    var k = 0;
     for (let i = 0; i < this.state.sportType.length; i++) {
       if (!updatedChecked[i]) {
-        d = 0;
-      } else {
-        type.push(this.state.sportType[i].name);
+        k++;
       }
     }
-    if (d === 1) {
+    if (k === this.state.sportType.length) {
       updatedChecked = new Array(this.state.sportType.length).fill(false);
       updatedChecked[this.state.sportType.length] = true;
+      for (let i = 0; i < this.state.sportType.length; i++) {
+        if (!updatedChecked[i]) {
+          type.push(this.state.sportType[i].name);
+        }
+      }
+    }
+    for (let i = 0; i < this.state.sportType.length; i++) {
+      if (updatedChecked[i]) {
+        type.push(this.state.sportType[i].name);
+      }
     }
     this.setState({ checked: updatedChecked, type });
   };
@@ -93,17 +101,25 @@ export class Sportchilar extends Component {
         updatedChecked[this.state.regions.length] = false;
       }
     }
-    var d = 1;
+    var k = 0;
     for (let i = 0; i < this.state.regions.length; i++) {
       if (!updatedChecked[i]) {
-        d = 0;
-      } else {
-        vil.push(this.state.regions[i].name);
+        k++;
       }
     }
-    if (d === 1) {
+    if (k === this.state.regions.length) {
       updatedChecked = new Array(this.state.regions.length).fill(false);
       updatedChecked[this.state.regions.length] = true;
+      for (let i = 0; i < this.state.regions.length; i++) {
+        if (!updatedChecked[i]) {
+          vil.push(this.state.regions[i].name);
+        }
+      }
+    }
+    for (let i = 0; i < this.state.regions.length; i++) {
+      if (updatedChecked[i]) {
+        vil.push(this.state.regions[i].name);
+      }
     }
     this.setState({ checked2: updatedChecked, vil });
   };
