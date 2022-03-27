@@ -9,11 +9,16 @@ export default class NavbarA extends Component {
   state = {
     id: 0,
     category: null,
+    regions:null
   };
   componentDidMount() {
     axios.get(`${url}/categorydocs/`).then((res) => {
       this.setState({ category: res.data });
     });
+    axios.get(`${url}/regions/`).then((res) => {
+      this.setState({ regions: res.data });
+    });
+   
   }
   Tool = () => {
     if (this.state.id === 0) {
@@ -200,166 +205,29 @@ export default class NavbarA extends Component {
                     variant="light"
                     id="dropdown-basic"
                   >
-                    Viloyatlar
+                    Tadbirlar
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item>
+                    {this.state.regions!==null?
+                    this.state.regions.map(item=>{
+                      return(
+<Dropdown.Item>
                       <NavLink
                         exact
                         style={({ isActive }) =>
                           isActive ? { color: "orangered" } : undefined
                         }
                         className={style.lik}
-                        to="/viloyatlar"
+                        to={`/tadbirlar/${item.id}/${item.name}`}
                       >
-                        Toshkent shahar
+                        {item.name}
                       </NavLink>
                     </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Toshkent viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Samarqand viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Buxoro viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Andijon viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Namangan viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Farg'ona viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Qashqadaryo viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Surxondaryo viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Xorazm viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Navoiy viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Sirdaryo viloyati
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to="/viloyatlar"
-                      >
-                        Qoraqalpog'iston Respublikasi
-                      </NavLink>
-                    </Dropdown.Item>
+                      )
+                    }):''}
+                    
+                   
                   </Dropdown.Menu>
                 </Dropdown>
               </li>

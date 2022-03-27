@@ -9,8 +9,22 @@ import head4 from '../img/head5.jpg'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import YouTube from "@u-wave/react-youtube";
+import { url } from '../host/Host'
+import axios from 'axios'
 export default class Dashnews extends Component {
-    render() {
+  state={
+    events:null,
+    eventsF:null,
+  }
+  getEvents=()=>{
+    axios.get(`${url}/events/`).then(res=>{
+     this.setState({eventsF:res.data,events:res.data.reverse().slice(0,4)})
+    })
+  }  
+  componentDidMount(){
+    this.getEvents()
+  }
+  render() {
         const responsive2 = {
             superLargeDesktop: {
               // the naming can be any, depends on you.
@@ -34,17 +48,110 @@ export default class Dashnews extends Component {
             <div className="dashnew">
 <main>
 	<ul id="cards">
-    <li className="card" id="card_1">
-			<div className="card__content">
-				<div className="gh">
-                <h1>Etnosport va yoshlar </h1>
-					<h2>Buxoro viloyati Qorovulbozor tumani Imom-Buxoriy mahalla fuqarolar yig'ini</h2>
-					<p>Mahalamizdagi yoshlar o'rtasida "Etnosport va yoshlar" tadbiri o'tqazildi. Bu tadbirda yoshlarimiz o'rtasida etnosportning ko'plab turlari (kurash, chillak, arqon tortish va boshqalar) bo'yicha musobaqalar o'tqazilib g'oliblar mahalla tomonidan ko'plab sovg'alar va faxriy yorliqlar bilan taqdirlandi. Shuningdek tadbirda otalar o'rtasida arqon tortish va onalar o'rtasida besh tosh o'yinlari bo'yicha musobaqalar ham bo'lib o'tdi. Tadbir turli kuy-qo'shiqlar va qiziqarli chiqishlar bilan ajoyib tarzda o'tdi.
+    {
+      this.props.id==="H"?
+      this.state.events!==null?this.state.events.map(item=>{
+return( <li className="card" id="card_1">
+		
+<div className="card__content">
+  <div className="gh">
+          <h1>{item.name} </h1>
+    <h2>{item.region.name}</h2>
+    <p>{item.text}
+    </p>
+    {/* <p><a href="#top" className="btn btn--accent">Read more</a></p> */}
+  </div>
+  <figure>
+    <div className="imgs">
+              <Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={true}
+            responsive={responsive2}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={this.props.deviceType !== "mobile" ? true : false}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={100}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            deviceType={this.props.deviceType}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {item.get_images.map(item1=>{
+              return( <div className="imgdiv">
+              <img src={item1.image}/>
+          </div>)
+            })}
+         
+          
+          </Carousel>
+              </div>
+<div className="you">
+<Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={true}
+            responsive={responsive2}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={this.props.deviceType !== "mobile" ? true : false}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={100}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            deviceType={this.props.deviceType}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {item.videos.map(item2=>{
+              
+              return(
+<div>
+<YouTube
+                onEnd={this._onEnd}
+                opts={{
+                  playerVars: {
+                    rel: 0,
+                  },
+                }}
+                video={item2.split('/')[item2.split('/').length-1]}
+                className="vid"
+
+              />
+
+</div>
+
+              )
+            })}
+
+          </Carousel>
+</div>
+  </figure>
+</div>
+</li>
+)
+      }):''
+   :this.state.eventsF!==null?this.state.eventsF.map(item=>{
+     if(item.region.id===Number(this.props.id)){
+      console.log("salom")
+      return( <li className="card" id="card_1">
+        
+      <div className="card__content">
+        <div className="gh">
+                <h1>{item.name} </h1>
+          <h2>{item.region.name}</h2>
+          <p>{item.text}
           </p>
-					{/* <p><a href="#top" className="btn btn--accent">Read more</a></p> */}
-				</div>
-				<figure>
-					<div className="imgs">
+          {/* <p><a href="#top" className="btn btn--accent">Read more</a></p> */}
+        </div>
+        <figure>
+          <div className="imgs">
                     <Carousel
                   swipeable={false}
                   draggable={false}
@@ -63,54 +170,17 @@ export default class Dashnews extends Component {
                   dotListClass="custom-dot-list-style"
                   itemClass="carousel-item-padding-40-px"
                 >
-                <div className="imgdiv">
-                    <img src={head}/>
-                </div>
+                  {item.get_images.map(item1=>{
+                    return( <div className="imgdiv">
+                    <img src={item1.image}/>
+                </div>)
+                  })}
+               
                 
-                <div className="imgdiv">
-                     <img src={head1}/>
-                 </div>
-                 
-                 <div className="imgdiv">
-                     <img src={head2}/>
-                 </div>
-                 
-                 <div className="imgdiv">
-                     <img src={head3}/>
-                 </div>
-                 
-                 <div className="imgdiv">
-                     <img src={head4}/>
-                 </div>
                 </Carousel>
                     </div>
-<div className="you">
-<YouTube
-                      onEnd={this._onEnd}
-                      opts={{
-                        playerVars: {
-                          rel: 0,
-                        },
-                      }}
-                      video="nRpmfAU7ttk"
-                      className="vid"
-
-                    />
-</div>
-				</figure>
-			</div>
-		</li>
-        <li className="card" id="card_1">
-			<div className="card__content">
-				<div className="gh">
-                <h1>Etnosport va yoshlar </h1>
-					<h2>Buxoro viloyati Qorovulbozor tumani Imom-Buxoriy mahalla fuqarolar yig'ini</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Loresit amet consectetur adipisicing elit .Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. vLorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-					{/* <p><a href="#top" className="btn btn--accent">Read more</a></p> */}
-				</div>
-				<figure>
-					<div className="imgs">
-                    <Carousel
+      <div className="you">
+      <Carousel
                   swipeable={false}
                   draggable={false}
                   showDots={true}
@@ -128,43 +198,36 @@ export default class Dashnews extends Component {
                   dotListClass="custom-dot-list-style"
                   itemClass="carousel-item-padding-40-px"
                 >
-                <div className="imgdiv">
-                    <img src={head}/>
-                </div>
-                
-                <div className="imgdiv">
-                     <img src={head1}/>
-                 </div>
-                 
-                 <div className="imgdiv">
-                     <img src={head2}/>
-                 </div>
-                 
-                 <div className="imgdiv">
-                     <img src={head3}/>
-                 </div>
-                 
-                 <div className="imgdiv">
-                     <img src={head4}/>
-                 </div>
-                </Carousel>
-                    </div>
-<div className="you">
-<YouTube
+                  {item.videos.map(item2=>{
+                    console.log(item2)
+                    return(
+      <div>
+      <YouTube
                       onEnd={this._onEnd}
                       opts={{
                         playerVars: {
                           rel: 0,
                         },
                       }}
-                      video="nRpmfAU7ttk"
+                      video={item2.split('/')[item2.split('/').length-1]}
                       className="vid"
-
+      
                     />
-</div>
-				</figure>
-			</div>
-		</li>
+      
+      </div>
+      
+                    )
+                  })}
+      
+                </Carousel>
+      </div>
+        </figure>
+      </div>
+      </li>
+      )
+     }
+    
+          }):'' }
        
 	</ul>
 </main>

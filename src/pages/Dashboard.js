@@ -95,7 +95,8 @@ export default class Dashboard extends Component {
     news: null,
     modalA: false,
     modalB: false,
-    regions:null
+    regions:null,
+    events:null
   };
   openModalA = () => {
     this.setState({
@@ -107,6 +108,7 @@ export default class Dashboard extends Component {
      this.setState({regions:res.data})
     })
   }
+ 
   closeModalA = () => {
     this.setState({
       modalA: false,
@@ -1065,7 +1067,7 @@ this.getRegions()
           <h1 className={style.sarlavha}>Tadbirlar</h1>
           <div className={style.chiziq}></div>
 
-          <Dashnews />
+          <Dashnews id="H"/>
           <>
             <div
               style={{

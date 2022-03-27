@@ -39,7 +39,7 @@ export default class App extends Component {
             <Route element={<Gallery />} exact path="/gallery" />
             <Route element={<Xarita />} exact path="/mahallalar" />
 
-            <Route element={<Viloyatlar />} exact path="/viloyatlar" />
+            <Route element={<Viloyatlar />} exact path="/tadbirlar/:id/:nameT" />
             <Route element={<Loyihahaqida />} exact path="/loyihahaqida" />
           </Routes>
         </BrowserRouter>
