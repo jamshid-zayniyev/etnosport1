@@ -30,7 +30,7 @@ export default class App extends Component {
             <Route element={<Yangiliklar />} exact path="/yangiliklar" />
             <Route element={<Sportchilar />} exact path="/sportchilar" />
 
-            <Route element={<Videolar />} exact path="/ishlanma" />
+            <Route element={<Videolar />} exact path="/videolar" />
 
             <Route element={<HujjatlarT />} path="/qonunlar/:nameT/:id" />
             <Route element={<Musoboqalar />} exact path="/musoboqalar" />

@@ -113,7 +113,7 @@ export default class NavbarA extends Component {
                           isActive ? { color: "orangered" } : undefined
                         }
                         className={style.lik}
-                        to="/ishlanma"
+                        to="/videolar"
                       >
                         Videolavhalar
                       </NavLink>

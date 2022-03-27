@@ -8,21 +8,18 @@ import YouTube from "@u-wave/react-youtube";
 import Carousel from "react-multi-carousel";
 import etnosport9 from "../img/etnoimg3.jpg";
 import school from "../img/gerb.png";
-import etnosport7 from "../img/etnoimg7.jpg";
+import {Row, Col} from 'antd'
 export default class Videolar extends Component {
   state = {
     loader: true,
+    videoss:null
   };
   onEndY = (e) => {
     console.log(e);
   };
   componentDidMount() {
     this.getVideos();
-    setTimeout(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 3000);
+   
   }
   getVideos = () => {
     axios.get(`${url}/videos/`).then((res) => {
@@ -54,11 +51,7 @@ export default class Videolar extends Component {
         items: 1,
       },
     };
-    // const loaderT = () => {
-    //   setTimeout(() => {
-    //     this.setState({ loader: false });
-    //   }, 2000);
-    // };
+   
     return (
       <div>
         {this.state.loader ? (
@@ -79,28 +72,12 @@ export default class Videolar extends Component {
           <div id="video"></div>
 
           <br />
-
-          <Carousel
-            swipeable={false}
-            draggable={false}
-            showDots={true}
-            responsive={responsiveY}
-            ssr={true} // means to render carousel on server-side.
-            infinite={true}
-            autoPlay={this.props.deviceType !== "mobile" ? true : false}
-            autoPlaySpeed={3000}
-            keyBoardControl={true}
-            customTransition="all .5"
-            transitionDuration={100}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            deviceType={this.props.deviceType}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-          >
-            {/* {this.state.videoss !== null
+<Row>
+            {this.state.videoss !== null
               ? this.state.videoss.map((item) => {
+               
                   return (
+                    <Col lg={12} md={24} sm={24}>
                     <div className={style.videos_item}>
                       <YouTube
                         onEnd={this.onEndY(this)}
@@ -111,48 +88,19 @@ export default class Videolar extends Component {
                             rel: 0,
                           },
                         }}
-                        video={item.video}
+                        video={item.url.split('/')[item.url.split('/').length-1]}
                         className={style.you}
                         // autoplay={true}
                         muted={true}
                       />
+                  
                     </div>
+                    </Col>
                   );
                 })
-              : ""} */}
-            <div className={style.videos_item}>
-              <YouTube
-                onEnd={this.onEndY(this)}
-                showCaptions={false}
-                showRelatedVideos={false}
-                opts={{
-                  playerVars: {
-                    rel: 0,
-                  },
-                }}
-                video="FY_6xf6leCA"
-                className={style.you}
-                // autoplay={true}
-                muted={true}
-              />
-            </div>
-            <div className={style.videos_item}>
-              <YouTube
-                onEnd={this.onEndY(this)}
-                showCaptions={false}
-                showRelatedVideos={false}
-                opts={{
-                  playerVars: {
-                    rel: 0,
-                  },
-                }}
-                video="nRpmfAU7ttk"
-                className={style.you}
-                // autoplay={true}
-                muted={true}
-              />
-            </div>
-          </Carousel>
+              : <div></div>}
+           
+           </Row>
         </div>
         <Footer />
       </div>
