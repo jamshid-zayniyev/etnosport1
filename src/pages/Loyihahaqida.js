@@ -12,9 +12,9 @@ import styles from "../css/Dashboard.module.css";
 import avatar2 from "../img/avatar2.png";
 import avatar3 from "../img/avatar3.png";
 import avatar4 from "../img/avatar4.png";
-import avatar5 from "../img/avatar5.png";
 import head from "../img/head.jpg";
 import head1 from "../img/head1.jpg";
+import etnosport9 from "../img/etnoimg3.jpg";
 import head2 from "../img/head2.jpg";
 import head3 from "../img/head3.jpg";
 import head5 from "../img/head5.jpg";
@@ -92,59 +92,9 @@ export default class Loyihahaqida extends Component {
           ""
         )}
         <Header />
+        <img src={etnosport9} className={style.headrasm} alt="..." />
+        <div className={style.headsarlavha}>Biz haqimizda</div>
         <div className={style.about}>
-          <div className={styles.head}>
-            <Row>
-              <Col lg={6} md={12} className={styles.lY}>
-                <h2 className={styles.textmah}>
-                  <span>“Mahalla va oila”</span> ilmiy-tadqiqot institutining{" "}
-                  <span>
-                    Mahallalarda xotin-qizlar o'rtasida sportni rivojlantirish
-                    platformasi
-                  </span>{" "}
-                  loyihasi
-                </h2>
-                <a
-                  className={styles.but}
-                  target="_blank"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeMMzTKdIwFE2ysPi4F1N9VzVTMUQVp7LV86c46Cm_OY11exQ/viewform"
-                >
-                  So'rovnomani to'ldiring
-                </a>
-                <br />
-                <br />
-                <br />
-              </Col>
-              <Col lg={6} md={12}>
-                <Carousel
-                  responsive={responsive}
-                  infinite={true}
-                  autoPlaySpeed={2000}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                >
-                  <div>
-                    <img src={head1} alt="..." />
-                  </div>
-                  <div>
-                    <img src={head2} alt="..." />
-                  </div>
-                  <div>
-                    <img src={head5} alt="..." />
-                  </div>
-                  <div>
-                    <img src={head} alt="..." />
-                  </div>
-
-                  <div>
-                    <img src={head3} alt="..." />
-                  </div>
-                  <div>
-                    <img src={head4} alt="..." />
-                  </div>
-                </Carousel>
-              </Col>
-            </Row>
-          </div>
           <div className={style.aboutconta}>
             <h1 className={style.sarlavha}>Biz haqimizda</h1>
             <div className={style.chiziq}></div>
