@@ -1000,7 +1000,7 @@ this.getVideos()
           <b>
          {item.name}</b>
         </p>
-        <p><i className="fa fa-calendar"></i>
+        <p style={{fontSize:'18px'}}><i style={{marginRight:'10px'}} className="fa fa-calendar"></i>
                                 {item.date_added.slice(0, 10)} yil</p>
       </Col>
     </Row>

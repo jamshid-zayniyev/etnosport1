@@ -17,6 +17,8 @@ import school from "../img/gerb.png";
 import Header from "./Header";
 import etnosport7 from "../img/etnoimg7.jpg";
 import Footer from "./Footer";
+import axios from "axios";
+import { url } from "../host/Host";
 
 const { Panel } = Collapse;
 
@@ -33,11 +35,17 @@ export default class Musoboqalar extends Component {
     id: null,
   };
   componentDidMount() {
-    setTimeout(() => {
+    axios.get(`${url}/competitions/`).then(res=>{
       this.setState({
-        loader: false,
-      });
-    }, 3000);
+        news:res.data  
+        })
+        setTimeout(() => {
+          this.setState({
+            loader: false,
+          });
+        }, 1000);
+    })
+    
   }
 
   handleClose = () => {
@@ -94,168 +102,86 @@ export default class Musoboqalar extends Component {
         <div className="loyiha">
           <div className={styles.newsY}>
             <Collapse accordion defaultActiveKey={1}>
-              <Panel
-                className={styled.panel}
-                header={
-                  "Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi"
-                }
-              >
-                <div>
-                  <Container>
-                    <Row>
-                      <Col
-                        lg={12}
-                        md={12}
-                        className={styled.colT}
-                        style={{ marginTop: "20px" }}
-                        sm={12}
-                      >
-                        <div className={styled.ss}>
-                          <div
-                            className={styled.bag1}
-                            onClick={() => {
-                              this.openModal();
-                            }}
-                          >
-                            <i className="fa fa-comments"></i> 3
-                          </div>
-                          <div className={styled.bag}>
-                            <i className="fa fa-download"></i> 25
-                          </div>
-                          <Row>
-                            <Col lg={3}>
-                              <img src={kurash6} />
-                            </Col>
-                            <Col
-                              lg={9}
-                              style={{
-                                display: "flex",
-                                position: "relative",
-                                justifyContent: "center",
-                                flexDirection: "column",
-                              }}
-                            >
-                              <h1 style={{ textAlign: "left" }}>
-                                Belbog'li kurash bo'yicha Qashqadaryoda musobaqa
-                                bo'lib o'tadi
-                              </h1>
-                              <p style={{ padding: "20px", fontSize: "18px" }}>
-                                Belbog'li kurash bo'yicha Qashqadaryo viloyati
-                                Mborak tumani katta xalqaro turnir o'tqaziladi.
-                                Bu turnirda 25 ta davlat dan belbog'li kurash
-                                bo'yicha ko'plab naijalarga errishgan
-                                sportchilar tashrif buyuradi.
-                              </p>
-                            </Col>
-                          </Row>
-                          <br />
-
-                          <div className={styled.butlar}>
-                            <buttun
+              {this.state.news!==null?this.state.news.map(item=>{
+                return(
+                  <Panel
+                  className={styled.panel}
+                  header={
+                    item.name
+                  }
+                >
+                  <div>
+                    <Container>
+                      <Row>
+                        <Col
+                          lg={12}
+                          md={12}
+                          className={styled.colT}
+                          style={{ marginTop: "20px" }}
+                          sm={12}
+                        >
+                          <div className={styled.ss}>
+                            <div
+                              className={styled.bag1}
                               onClick={() => {
-                                this.openModalT();
-                              }}
-                              className={styled.but1}
-                            >
-                              Izoh qoldirish
-                            </buttun>
-
-                            <a className={styled.but} href="#" target="_blank">
-                              Yuklab olish
-                            </a>
-                          </div>
-                        </div>
-                      </Col>
-                    </Row>
-                  </Container>
-                </div>
-              </Panel>
-
-              <Panel
-                className={styled.panel}
-                header={
-                  "Belbog'li kurash bo'yicha Qashqadaryoda musobaqa bo'lib o'tadi"
-                }
-              >
-                <div>
-                  <Container>
-                    <Row>
-                      <Col
-                        lg={12}
-                        md={12}
-                        className={styled.colT}
-                        style={{ marginTop: "20px" }}
-                        sm={12}
-                      >
-                        <div className={styled.ss}>
-                          <div
-                            className={styled.bag1}
-                            onClick={() => {
-                              this.openModal();
-                            }}
-                          >
-                            <i className="fa fa-comments"></i> 3
-                          </div>
-
-                          <div className={styled.bag}>
-                            <i className="fa fa-download"></i> 34
-                          </div>
-                          <Row>
-                            <Col lg={3}>
-                              <img src={kurash6} />
-                            </Col>
-                            <Col
-                              lg={9}
-                              style={{
-                                display: "flex",
-                                position: "relative",
-                                justifyContent: "center",
-                                flexDirection: "column",
+                                this.openModal();
                               }}
                             >
-                              <h1 style={{ textAlign: "left" }}>
-                                Belbog'li kurash bo'yicha Qashqadaryoda musobaqa
-                                bo'lib o'tadi
-                              </h1>
-                              <p style={{ padding: "20px", fontSize: "18px" }}>
-                                Belbog'li kurash bo'yicha Qashqadaryo viloyati
-                                Mborak tumani katta xalqaro turnir o'tqaziladi.
-                                Bu turnirda 25 ta davlat dan belbog'li kurash
-                                bo'yicha ko'plab naijalarga errishgan
-                                sportchilar tashrif buyuradi.
-                              </p>
-                            </Col>
-                          </Row>
-                          <br />
-
-                          <div className={styled.butlar}>
-                            <buttun
-                              onClick={() => {
-                                this.openModalT();
-                              }}
-                              className={styled.but1}
-                            >
-                              Izoh qoldirish
-                            </buttun>
-
-                            <a
-                              className={styled.but}
-                              onClick={() => {
-                                this.download();
-                              }}
-                              href={"#"}
-                              target="_blank"
-                            >
-                              Yuklab olish
-                            </a>
+                              <i className="fa fa-comments"></i> 3
+                            </div>
+                            <div className={styled.bag}>
+                              <i className="fa fa-download"></i> 25
+                            </div>
+                            <Row>
+                              <Col lg={3}>
+                                <img src={item.main_competition_image} />
+                              </Col>
+                              <Col
+                                lg={9}
+                                style={{
+                                  display: "flex",
+                                  position: "relative",
+                                  justifyContent: "center",
+                                  flexDirection: "column",
+                                }}
+                              >
+                                <p style={{ padding: "20px", fontSize: "18px" }}>
+                                  Belbog'li kurash bo'yicha Qashqadaryo viloyati
+                                  Mborak tumani katta xalqaro turnir o'tqaziladi.
+                                  Bu turnirda 25 ta davlat dan belbog'li kurash
+                                  bo'yicha ko'plab naijalarga errishgan
+                                  sportchilar tashrif buyuradi.
+                                </p>
+                              </Col>
+                            </Row>
+                            <br />
+  
+                            <div className={styled.butlar}>
+                              <buttun
+                                onClick={() => {
+                                  this.openModalT();
+                                }}
+                                className={styled.but1}
+                              >
+                                Izoh qoldirish
+                              </buttun>
+  
+                              <a className={styled.but} href={item.pdf} target="_blank">
+                                Yuklab olish
+                              </a>
+                            </div>
                           </div>
-                        </div>
-                      </Col>
-                    </Row>
-                  </Container>
-                </div>
-              </Panel>
-            </Collapse>
+                        </Col>
+                      </Row>
+                    </Container>
+                  </div>
+                </Panel>
+             
+                )
+              })
+              
+              :''}
+              </Collapse>
           </div>
           <Modal
             style={{ zIndex: "4789" }}
