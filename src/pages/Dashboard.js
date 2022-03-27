@@ -47,6 +47,8 @@ import Dashreyting from "./Dashreyting";
 import YouTube from "@u-wave/react-youtube";
 import { ChartS } from "./ChartS";
 import { ChartT } from "./ChartT";
+import { sportsGet } from "../host/Config";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -94,46 +96,57 @@ export default class Dashboard extends Component {
     news: null,
     modalA: false,
     modalB: false,
-    regions:null,
-    events:null,
-    videoss:null,
+    regions: null,
+    events: null,
+    videoss: null,
+    sportsType: null,
+    faxriylar: null,
+    zulfiyachilar: null,
+    olimpiadachilar: null,
+    jahonchilar: null,
+    sportType: null,
+    sportsmen: null,
   };
   getVideos = () => {
     axios.get(`${url}/videos/`).then((res) => {
       this.setState({
         videoss: res.data.reverse(),
-      })
-     
-    })};
-  openModalA = () => {
+      });
+    });
+  };
+  openModalA = (value) => {
     this.setState({
+      sportType: value,
       modalA: true,
     });
   };
-  getRegions=()=>{
-    axios.get(`${url}/regions/`).then(res=>{
-     this.setState({regions:res.data})
-     setTimeout(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 1000);
-    })
-  }
- 
+  getRegions = () => {
+    axios.get(`${url}/regions/`).then((res) => {
+      this.setState({ regions: res.data });
+      setTimeout(() => {
+        this.setState({
+          loader: false,
+        });
+      }, 1000);
+    });
+  };
+
   closeModalA = () => {
     this.setState({
       modalA: false,
+      sportType: null,
     });
   };
-  openModalB = () => {
+  openModalB = (value) => {
     this.setState({
+      sportsmen: value,
       modalB: true,
     });
   };
   closeModalB = () => {
     this.setState({
       modalB: false,
+      sportsmen: null,
     });
   };
   getNews = () => {
@@ -142,12 +155,60 @@ export default class Dashboard extends Component {
         news: res.data.reverse(),
       });
     });
-  }
+  };
+  getSports = () => {
+    sportsGet()
+      .then((res) => {
+        this.setState({ sportsType: res.data });
+      })
+      .catch((err) => console.log(err));
+  };
+  getSportsmens = () => {
+    axios.get(`${url}/categories/`).then((res) => {
+      axios.get(`${url}/sportsmen/`).then((res1) => {
+        var faxriylar = [];
+        var jahonchemp = [];
+        var olimpiada = [];
+        var zulfiyachilar = [];
+        res1.data.map((item) => {
+          if (item.category.length !== 0) {
+            item.category.map((item1) => {
+              if (res.data[0].name === item1.name) {
+                zulfiyachilar.push(item);
+              }
+              if (res.data[1].name === item1.name) {
+                faxriylar.push(item);
+              }
+              if (res.data[2].name === item1.name) {
+                jahonchemp.push(item);
+              }
+              if (res.data[3].name === item1.name) {
+                olimpiada.push(item);
+              }
+            });
+          }
+        });
+        if (zulfiyachilar.length !== 0) {
+          this.setState({ zulfiyachilar });
+        }
+        if (faxriylar.length !== 0) {
+          this.setState({ faxriylar });
+        }
+        if (olimpiada.length !== 0) {
+          this.setState({ olimpiadachilar: olimpiada });
+        }
+        if (jahonchemp.length !== 0) {
+          this.setState({ jahonchilar: jahonchemp });
+        }
+      });
+    });
+  };
   componentDidMount() {
     this.getNews();
-this.getRegions()
-this.getVideos()
-   
+    this.getRegions();
+    this.getVideos();
+    this.getSportsmens();
+    this.getSports();
   }
   muted2 = () => {
     this.setState({
@@ -258,98 +319,99 @@ this.getVideos()
           ""
         )}
         <Header />
-        <Modal
-          title="Belbog'li kurash sport turi"
-          centered
-          footer={false}
-          visible={this.state.modalA}
-          onOk={() => this.openModalA()}
-          onCancel={() => this.closeModalA()}
-          className={style.kurash}
-          width="60%"
-        >
-          <Row>
-            <Col lg={6} md={12} sm={12}>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlaySpeed={2000}
-                autoPlay={this.props.deviceType !== "mobile" ? true : false}
-              >
-                <div>
-                  <img src={kurash1} alt="..." />
-                </div>
-                <div>
-                  <img src={kurash2} alt="..." />
-                </div>
-                <div>
-                  <img src={kurash3} alt="..." />
-                </div>
-                <div>
-                  <img src={kurash4} alt="..." />
-                </div>
-              </Carousel>
-            </Col>
-            <Col lg={6} md={12} sm={12} style={{ padding: "20px" }}>
-              <p>
-                <b>Belbogʻli kurash</b> — Bu Oʻzbek milliy sport turlaridan biri
-                boʻlib asosan Oʻrta osiyoda ommabop sanaladi. Belbogʻli
-                kurashning koʻp javhalari oʻzbek halq milliy kurashiga oʻxshab
-                ketadi, lekin bu sport turida sportchilar asosan belbogʻ orqali
-                kurashadilar. Asosan bu sport turi ikki kishi oʻrtasida amalga
-                oshiriladi. Belbogʻli kurashning asosiy kiyimlariga kurashish
-                uchun yaktak va belbogʻ kiradi.
-              </p>
-            </Col>
-          </Row>
-        </Modal>
-        <Modal
-          title="Rishod Sobirov"
-          centered
-          footer={false}
-          visible={this.state.modalB}
-          onOk={() => this.openModalB()}
-          onCancel={() => this.closeModalB()}
-          className={style.kurash}
-          width="60%"
-        >
-          <Row>
-            <Col lg={6} md={12} sm={12}>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlaySpeed={2000}
-                autoPlay={this.props.deviceType !== "mobile" ? true : false}
-              >
-                <div>
-                  <img src={shaxram1} alt="..." />
-                </div>
-                <div>
-                  <img src={shaxram2} alt="..." />
-                </div>
-                <div>
-                  <img src={shaxram3} alt="..." />
-                </div>
-                <div>
-                  <img src={shaxram4} alt="..." />
-                </div>
-              </Carousel>
-            </Col>
-            <Col lg={6} md={12} sm={12} style={{ padding: "20px" }}>
-              <p>
-                <b>Rishod Sobirov</b> – Rishod Rashidovich Sobirov 1986 yilning
-                11 sentyabrida Buxoro viloyatining Jondor tumani, Burbog'i
-                qishlog'ida tug'ilgan. O'zbek dzyudochisi, ikki karra jahon
-                chempioni, uch karra Olimpiya o'yinlari bronza medali sohibi.
-                Dzyudo bilan 11 yoshida Rustam To'raev qo'l ostida
-                shug'ullanishni boshlagan. Xalqaro musobaqalarga Furqat Soliev
-                va Boris Grigorev kabi murabbiylar qo'l ostida tayyorgarlik
-                ko'rardi. Rishod ilk xalqaro sovrinini 2006 yilda qo'lga
-                kiritgan.
-              </p>
-            </Col>
-          </Row>
-        </Modal>
+        {this.state.sportType !== null ? (
+          <Modal
+            title={`${this.state.sportType.name} sport turi`}
+            centered
+            footer={false}
+            visible={this.state.modalA}
+            // onOk={() => this.openModalA()}
+            onCancel={() => this.closeModalA()}
+            className={style.kurash}
+            width="60%"
+          >
+            <Row>
+              {this.state.sportType.sport_images.length !== 0 ? (
+                <Col lg={6} md={12} sm={12}>
+                  <Carousel
+                    responsive={responsive}
+                    infinite={true}
+                    autoPlaySpeed={2000}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  >
+                    {this.state.sportType.sport_images.map((item) => {
+                      return (
+                        <div>
+                          <img src={item.image} alt="..." />
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                </Col>
+              ) : (
+                ""
+              )}
+              <Col lg={6} md={12} sm={12} style={{ padding: "20px" }}>
+                <p>
+                  <b>Belbogʻli kurash</b> — Bu Oʻzbek milliy sport turlaridan
+                  biri boʻlib asosan Oʻrta osiyoda ommabop sanaladi. Belbogʻli
+                  kurashning koʻp javhalari oʻzbek halq milliy kurashiga oʻxshab
+                  ketadi, lekin bu sport turida sportchilar asosan belbogʻ
+                  orqali kurashadilar. Asosan bu sport turi ikki kishi oʻrtasida
+                  amalga oshiriladi. Belbogʻli kurashning asosiy kiyimlariga
+                  kurashish uchun yaktak va belbogʻ kiradi.
+                </p>
+              </Col>
+            </Row>
+          </Modal>
+        ) : (
+          ""
+        )}
+        {this.state.sportsmen !== null ? (
+          <Modal
+            title={`${this.state.sportsmen.name}`}
+            centered
+            footer={false}
+            visible={this.state.modalB}
+            // onOk={() => this.openModalB()}
+            onCancel={() => this.closeModalB()}
+            className={style.kurash}
+            width="60%"
+          >
+            <Row>
+              {this.state.sportsmen.sportsman_images.length !== 0 ? (
+                <Col lg={6} md={12} sm={12}>
+                  <Carousel
+                    responsive={responsive}
+                    infinite={true}
+                    autoPlaySpeed={2000}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  >
+                    {this.state.sportsmen.sportsman_images.map((item) => {
+                      return (
+                        <div>
+                          <img src={item.image} alt="..." />
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                </Col>
+              ) : (
+                ""
+              )}
+              <Col lg={6} md={12} sm={12} style={{ padding: "20px" }}>
+                <p>
+                  <b>{this.state.sportsmen.name}</b> –{" "}
+                  {this.state.sportsmen.achievements.length !== 0
+                    ? this.state.sportsmen.achievements[0]
+                    : ""}
+                </p>
+              </Col>
+            </Row>
+          </Modal>
+        ) : (
+          ""
+        )}
         <div className={style.head}>
           <Row>
             <Col lg={6} md={12} className={style.lY}>
@@ -403,16 +465,16 @@ this.getVideos()
           <br />
           <br />
           <br />
-          <Dashreyting regions={this.state.regions}/>
+          <Dashreyting regions={this.state.regions} />
           <h1 className={style.sarlavha}>Statistika</h1>
 
           <div className={style.chiziq}></div>
           <Row style={{ padding: "20px" }}>
             <Col lg={6} md={12} sm={12}>
-              <ChartS regions={this.state.regions}/>
+              <ChartS regions={this.state.regions} />
             </Col>
             <Col lg={6} md={12} sm={12}>
-              <ChartT  regions={this.state.regions}/>
+              <ChartT regions={this.state.regions} />
             </Col>
           </Row>
 
@@ -420,104 +482,38 @@ this.getVideos()
             <h1 className={style.sarlavha}>Sport turlari</h1>
 
             <div className={style.chiziq}></div>
-
-            <Carousel
-              responsive={responsive1}
-              infinite={true}
-              autoPlaySpeed={1500}
-              autoPlay={this.props.deviceType !== "mobile" ? true : false}
-            >
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px" }}>
-                <div className={style.sport} onClick={this.openModalA}>
-                  <img src={kurash} />
-                  <p>Belbog'li kurash</p>
-                </div>
-              </div>
-            </Carousel>
+            {this.state.sportsType !== null ? (
+              <Carousel
+                responsive={responsive1}
+                infinite={true}
+                autoPlaySpeed={1500}
+                autoPlay={this.props.deviceType !== "mobile" ? true : false}
+              >
+                {this.state.sportsType.map((item, index) => {
+                  return (
+                    <div key={`${index}`} style={{ padding: "10px" }}>
+                      <div
+                        className={style.sport}
+                        onClick={() => this.openModalA(item)}
+                      >
+                        <img
+                          src={
+                            item.sport_images !== null
+                              ? item.sport_images[0].image
+                              : ""
+                          }
+                          height="150px"
+                          alt="Rasm"
+                        />
+                        <p>{item.name}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Carousel>
+            ) : (
+              ""
+            )}
             <br />
             <br />
           </div>
@@ -527,112 +523,38 @@ this.getVideos()
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Zulfiyaxonim avlodlari</h1>
                 <div className={style.chiziq}></div>
-
-                <Carousel
-                  responsive={responsive4}
-                  infinite={true}
-                  autoPlaySpeed={1500}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                >
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={zulfiyaxonim2} />
-                      <h5>Zulfiyaxonim</h5>
-                      <p>Zulfiyaxonim shiora ijodkor</p>
-                    </div>
-                  </div>
-                </Carousel>
+                {this.state.zulfiyachilar !== null ? (
+                  <Carousel
+                    responsive={responsive4}
+                    infinite={true}
+                    autoPlaySpeed={1500}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  >
+                    {this.state.zulfiyachilar.map((item) => {
+                      return (
+                        <div style={{ padding: "10px" }}>
+                          <div
+                            className={style.sportchi}
+                            onClick={() => this.openModalB(item)}
+                          >
+                            <img
+                              src={
+                                item.sportsman_images.length !== 0
+                                  ? item.sportsman_images[0].image
+                                  : ""
+                              }
+                              alt="Rasm"
+                            />
+                            <h5>{item.name}</h5>
+                            <p>Zulfiyaxonim shoira ijodkor</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                ) : (
+                  ""
+                )}
                 <br />
                 <br />
               </div>
@@ -641,112 +563,38 @@ this.getVideos()
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Bizning faxrlarimiz</h1>
                 <div className={style.chiziq}></div>
-
-                <Carousel
-                  responsive={responsive4}
-                  infinite={true}
-                  autoPlaySpeed={1500}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                >
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar1} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar2} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar3} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar1} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar2} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar3} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar1} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar2} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar3} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar1} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar2} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar3} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar1} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={faxriylar2} />
-                      <h5>Faxriylarimiz</h5>
-                      <p>Faxriylarimiz-bizning faxrimiz</p>
-                    </div>
-                  </div>
-                </Carousel>
+                {this.state.faxriylar !== null ? (
+                  <Carousel
+                    responsive={responsive4}
+                    infinite={true}
+                    autoPlaySpeed={1500}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  >
+                    {this.state.faxriylar.map((item) => {
+                      return (
+                        <div style={{ padding: "10px" }}>
+                          <div
+                            className={style.sportchi}
+                            onClick={() => this.openModalB(item)}
+                          >
+                            <img
+                              src={
+                                item.sportsman_images.length !== 0
+                                  ? item.sportsman_images[0].image
+                                  : ""
+                              }
+                              alt="Rasm"
+                            />
+                            <h5>Faxriylarimiz</h5>
+                            <p>{item.name}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                ) : (
+                  ""
+                )}
                 <br />
                 <br />
               </div>
@@ -755,112 +603,38 @@ this.getVideos()
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Jahon chempionlari</h1>
                 <div className={style.chiziq}></div>
-
-                <Carousel
-                  responsive={responsive4}
-                  infinite={true}
-                  autoPlaySpeed={1500}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                >
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                </Carousel>
+                {this.state.jahonchilar !== null ? (
+                  <Carousel
+                    responsive={responsive4}
+                    infinite={true}
+                    autoPlaySpeed={1500}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  >
+                    {this.state.jahonchilar.map((item) => {
+                      return (
+                        <div style={{ padding: "10px" }}>
+                          <div
+                            className={style.sportchi}
+                            onClick={() => this.openModalB(item)}
+                          >
+                            <img
+                              src={
+                                item.sportsman_images.length !== 0
+                                  ? item.sportsman_images[0].image
+                                  : ""
+                              }
+                              alt="Rasm"
+                            />
+                            <h5>{item.name}</h5>
+                            <p>{item.sport !== null ? item.sport.name : ""}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                ) : (
+                  ""
+                )}
                 <br />
                 <br />
               </div>
@@ -869,112 +643,38 @@ this.getVideos()
               <div className={style.sports}>
                 <h1 className={style.sarlavhaa}>Olimpiada chempionlari</h1>
                 <div className={style.chiziq}></div>
-
-                <Carousel
-                  responsive={responsive4}
-                  infinite={true}
-                  autoPlaySpeed={1500}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                >
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                  <div style={{ padding: "10px" }}>
-                    <div className={style.sportchi} onClick={this.openModalB}>
-                      <img src={rishod} />
-                      <h5>Rishod Sobirov</h5>
-                      <p>Belbogʻli kurash ustasi</p>
-                    </div>
-                  </div>
-                </Carousel>
+                {this.state.olimpiadachilar !== null ? (
+                  <Carousel
+                    responsive={responsive4}
+                    infinite={true}
+                    autoPlaySpeed={1500}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  >
+                    {this.state.olimpiadachilar.map((item) => {
+                      return (
+                        <div style={{ padding: "10px" }}>
+                          <div
+                            className={style.sportchi}
+                            onClick={() => this.openModalB(item)}
+                          >
+                            <img
+                              src={
+                                item.sportsman_images.length !== 0
+                                  ? item.sportsman_images[0].image
+                                  : ""
+                              }
+                              alt="Rasm"
+                            />
+                            <h5>{item.name}</h5>
+                            <p>{item.sport !== null ? item.sport.name : ""}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                ) : (
+                  ""
+                )}
                 <br />
                 <br />
               </div>
@@ -988,29 +688,37 @@ this.getVideos()
 
             <Container>
               <Row>
-                {this.state.news!==null?this.state.news.map(item=>{
- return( <Col lg={6} md={6} sm={12} className={style.new}>
-  <Link to="/yangiliklar">
-    <Row className={style.n}>
-      <Col lg={4}>
-        <img src={item.news_images!==null??item.news_images[0].image} alt="..." />
-      </Col>
-      <Col lg={8}>
-        <p>
-          <b>
-         {item.name}</b>
-        </p>
-        <p style={{fontSize:'18px'}}><i style={{marginRight:'10px'}} className="fa fa-calendar"></i>
-                                {item.date_added.slice(0, 10)} yil</p>
-      </Col>
-    </Row>
-  </Link>
-</Col>)
-                })
-               
-                :''}
-               
-               </Row>
+                {this.state.news !== null
+                  ? this.state.news.map((item) => {
+                      return (
+                        <Col lg={6} md={6} sm={12} className={style.new}>
+                          <Link to="/yangiliklar">
+                            <Row className={style.n}>
+                              <Col lg={4}>
+                                <img
+                                  src={
+                                    item.news_images !== null ??
+                                    item.news_images[0].image
+                                  }
+                                  alt="..."
+                                />
+                              </Col>
+                              <Col lg={8}>
+                                <p>
+                                  <b>{item.name}</b>
+                                </p>
+                                <p>
+                                  <i className="fa fa-calendar"></i>
+                                  {item.date_added.slice(0, 10)} yil
+                                </p>
+                              </Col>
+                            </Row>
+                          </Link>
+                        </Col>
+                      );
+                    })
+                  : ""}
+              </Row>
               <Link className={style.but} to="/yangiliklar">
                 {" "}
                 Barchasini ko'rish
@@ -1020,7 +728,7 @@ this.getVideos()
           <h1 className={style.sarlavha}>Tadbirlar</h1>
           <div className={style.chiziq}></div>
 
-          <Dashnews id="H"/>
+          <Dashnews id="H" />
           <>
             <div
               style={{
@@ -1034,7 +742,7 @@ this.getVideos()
               <h1 className={style.sarlavha}>Xarita</h1>
               <div className={style.chiziq}></div>
 
-              <MapDash regions={this.state.regions}/>
+              <MapDash regions={this.state.regions} />
               <br />
 
               <h1 className={style.sarlavha}>Videolavhalar</h1>
@@ -1046,38 +754,38 @@ this.getVideos()
                 <br />
 
                 <Carousel
-                 responsive={responsiveY}
-                 autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                 autoPlaySpeed={2000}
-                 infinite={true}
+                  responsive={responsiveY}
+                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  autoPlaySpeed={2000}
+                  infinite={true}
                 >
-                 {this.state.videoss !== null
-              ? this.state.videoss.map((item) => {
-          
-                  return (
-                  
-                    <div className={stylev.videos_item}>
-                      <YouTube
-                        
-                        showCaptions={false}
-                        showRelatedVideos={false}
-                        opts={{
-                          playerVars: {
-                            rel: 0,
-                          },
-                        }}
-                        video={item.url.split('/')[item.url.split('/').length-1]}
-                        className={stylev.you}
-                        // autoplay={true}
-                        muted={true}
-                      />
-                  
-                    </div>
-                  
-                  );
-                })
-              : <div></div>}
-           
+                  {this.state.videoss !== null ? (
+                    this.state.videoss.map((item) => {
+                      return (
+                        <div className={stylev.videos_item}>
+                          <YouTube
+                            showCaptions={false}
+                            showRelatedVideos={false}
+                            opts={{
+                              playerVars: {
+                                rel: 0,
+                              },
+                            }}
+                            video={
+                              item.url.split("/")[
+                                item.url.split("/").length - 1
+                              ]
+                            }
+                            className={stylev.you}
+                            // autoplay={true}
+                            muted={true}
+                          />
+                        </div>
+                      );
+                    })
+                  ) : (
+                    <div></div>
+                  )}
                 </Carousel>
               </div>
 

@@ -9,12 +9,32 @@ import { url } from "../host/Host";
 import Header from "./Header";
 import school from "../img/gerb.png";
 import { Collapse } from "antd";
-
+import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-multi-carousel";
 import Footer from "./Footer";
+import head from "../img/head.jpg";
 import rasm from "../img/head.jpg";
 import etnosport8 from "../img/etnoimg8.jpg";
 const { Panel } = Collapse;
-
+const responsive11 = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 1,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 export default class Yangiliklar extends Component {
   state = {
     loader: true,
@@ -36,6 +56,7 @@ export default class Yangiliklar extends Component {
       this.setState({
         news: res.data.reverse(),
       });
+
       setTimeout(() => {
         this.setState({ loader: false });
       }, 2000);
@@ -108,7 +129,56 @@ export default class Yangiliklar extends Component {
                         <Container>
                           <div className={styles.flex}>
                             <div className={styles.imag}>
-                              <img src={item.news_images[0].image} />
+                              {/* <img src={item.news_images[0].image} /> */}
+                              <div style={{ width: "400px", height: "200px" }}>
+                                <Carousel
+                                  responsive={responsive11}
+                                  infinite={true}
+                                  autoPlaySpeed={1500}
+                                  autoPlay={
+                                    this.props.deviceType !== "mobile"
+                                      ? true
+                                      : false
+                                  }
+                                >
+                                  <div>
+                                    <img
+                                      src={head}
+                                      style={{
+                                        width: "400px",
+                                        height: "200px",
+                                      }}
+                                    ></img>
+                                  </div>
+                                  <div>
+                                    <img
+                                      src={head}
+                                      style={{
+                                        width: "400px",
+                                        height: "200px",
+                                      }}
+                                    ></img>
+                                  </div>
+                                  <div>
+                                    <img
+                                      src={head}
+                                      style={{
+                                        width: "400px",
+                                        height: "200px",
+                                      }}
+                                    ></img>
+                                  </div>
+                                  <div>
+                                    <img
+                                      src={head}
+                                      style={{
+                                        width: "400px",
+                                        height: "200px",
+                                      }}
+                                    ></img>
+                                  </div>
+                                </Carousel>
+                              </div>
                             </div>
                             <div className={styles.yozuv}>
                               <h1>{item.name}</h1>
@@ -127,7 +197,6 @@ export default class Yangiliklar extends Component {
                   );
                 })
               : ""}
-          
           </Collapse>
         </div>
         <Footer />

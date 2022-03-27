@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
 import NavbarA from "./Header";
+import { Modal } from "antd";
+import style from "../css/Dashboard.module.css";
+import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import kurash from "../img/kurash_ccexpress.png";
+import school from "../img/gerb.png";
 import rishod from "../img/rishod.jpg";
-import style from "../css/Dashboard.module.css";
-import { Col, Container, Row } from "react-bootstrap";
 // import kurash1 from "../img/kurash1.jpg";
 // import kurash2 from "../img/kurash2.jpg";
 // import kurash3 from "../img/kurash3.jpg";
@@ -20,8 +22,24 @@ export class Sportchilar extends Component {
     sportType: null,
     regions: null,
     sportsmen: null,
+    sportmen: null,
     type: null,
     vil: null,
+    modalB: false,
+    loader: true,
+  };
+
+  openModal = (value) => {
+    this.setState({
+      modalB: true,
+      sportmen: value,
+    });
+  };
+  closeModal = () => {
+    this.setState({
+      modalB: false,
+      sportmen: null,
+    });
   };
 
   handleOnChange = (position) => {
@@ -51,6 +69,7 @@ export class Sportchilar extends Component {
       }
     }
     if (d === 1) {
+      updatedChecked = new Array(this.state.sportType.length).fill(false);
       updatedChecked[this.state.sportType.length] = true;
     }
     this.setState({ checked: updatedChecked, type });
@@ -83,6 +102,7 @@ export class Sportchilar extends Component {
       }
     }
     if (d === 1) {
+      updatedChecked = new Array(this.state.regions.length).fill(false);
       updatedChecked[this.state.regions.length] = true;
     }
     this.setState({ checked2: updatedChecked, vil });
@@ -116,9 +136,11 @@ export class Sportchilar extends Component {
         res.data.map((item) => {
           type.push(item.name);
         });
+        var checked = new Array(res.data.length).fill(false);
+        checked[res.data.length] = true;
         this.setState({
           sportType: res.data,
-          checked: new Array(res.data.length + 1).fill(true),
+          checked,
           type,
         });
       })
@@ -129,9 +151,11 @@ export class Sportchilar extends Component {
         res.data.map((item) => {
           vil.push(item.name);
         });
+        var checked2 = new Array(res.data.length).fill(false);
+        checked2[res.data.length] = true;
         this.setState({
           regions: res.data,
-          checked2: new Array(res.data.length + 1).fill(true),
+          checked2,
           vil,
         });
       })
@@ -140,6 +164,11 @@ export class Sportchilar extends Component {
 
   componentDidMount() {
     this.sportsMenGet();
+    setTimeout(() => {
+      this.setState({
+        loader: false,
+      });
+    }, 2000);
   }
 
   render() {
@@ -184,6 +213,15 @@ export class Sportchilar extends Component {
     const { sportType, regions, type, vil, sportsmen } = this.state;
     return (
       <div>
+        {this.state.loader ? (
+          <div className="loaderG">
+            <div className="befG">
+              <img src={school} alt="..." />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
         <NavbarA />
         <div style={{ height: 100, backgroundColor: "black" }}></div>
         <div style={{ width: "100%", backgroundColor: "rgb(255,78,0)" }}>
@@ -445,7 +483,7 @@ export class Sportchilar extends Component {
               {sportsmen !== null && vil !== null && type !== null ? (
                 <Carousel
                   responsive={responsive}
-                  infinite
+                  infinite={true}
                   autoPlaySpeed={3000}
                   autoPlay={true}
                 >
@@ -455,11 +493,13 @@ export class Sportchilar extends Component {
                         <div
                           style={{ padding: "10px" }}
                           className={style.sportchi}
+                          onClick={() => this.openModal(item)}
                         >
                           <img
                             src={
-                              item.main_sportman_image &&
-                              item.main_sportman_image.image
+                              item.sportsman_images.length !== 0
+                                ? item.sportsman_images[0].image
+                                : ""
                             }
                             alt={`${item.name}`}
                           />
@@ -527,6 +567,54 @@ export class Sportchilar extends Component {
             </Col>
           </Row>
         </div>
+        {this.state.sportmen !== null ? (
+          <Modal
+            title={`${this.state.sportmen.name}`}
+            centered
+            footer={false}
+            visible={this.state.modalB}
+            onCancel={() => this.closeModal()}
+            className={style.kurash}
+            width="60%"
+          >
+            <Row>
+              {this.state.sportmen.sportsman_images.length !== 0 ? (
+                <Col lg={6} md={12} sm={12}>
+                  <Carousel
+                    responsive={responsive}
+                    infinite={true}
+                    autoPlaySpeed={2000}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                  >
+                    {this.state.sportmen.sportsman_images.map((item) => {
+                      return (
+                        <div>
+                          <img
+                            src={item.image}
+                            alt="..."
+                            style={{ width: "100% !important" }}
+                          />
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                </Col>
+              ) : (
+                ""
+              )}
+              <Col lg={6} md={12} sm={12} style={{ padding: "20px" }}>
+                <p>
+                  <b>{this.state.sportmen.name}</b> –{" "}
+                  {this.state.sportmen.achievements.length !== 0
+                    ? this.state.sportmen.achievements[0]
+                    : ""}
+                </p>
+              </Col>
+            </Row>
+          </Modal>
+        ) : (
+          ""
+        )}
         <Footer />
       </div>
     );
