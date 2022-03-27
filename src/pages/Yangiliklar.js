@@ -39,6 +39,7 @@ export default class Yangiliklar extends Component {
   state = {
     loader: true,
     news: null,
+
     school: null,
     raqam: "0",
   };
@@ -60,9 +61,9 @@ export default class Yangiliklar extends Component {
       setTimeout(() => {
         this.setState({ loader: false });
       }, 2000);
-      // res.data.forEach((item) => console.log(item.news_images[0]));
     });
   };
+
   // componentDidMount() {
   //   this.getNews();
   //   var link = window.location.href;
@@ -141,7 +142,21 @@ export default class Yangiliklar extends Component {
                                       : false
                                   }
                                 >
-                                  <div>
+                                  {item.news_images.map((item11) => {
+                                    return (
+                                      <div>
+                                        <img
+                                          src={item11.image}
+                                          style={{
+                                            width: "400px",
+                                            height: "200px",
+                                          }}
+                                        ></img>
+                                      </div>
+                                    );
+                                  })}
+
+                                  {/* <div>
                                     <img
                                       src={head}
                                       style={{
@@ -167,16 +182,7 @@ export default class Yangiliklar extends Component {
                                         height: "200px",
                                       }}
                                     ></img>
-                                  </div>
-                                  <div>
-                                    <img
-                                      src={head}
-                                      style={{
-                                        width: "400px",
-                                        height: "200px",
-                                      }}
-                                    ></img>
-                                  </div>
+                                  </div> */}
                                 </Carousel>
                               </div>
                             </div>
