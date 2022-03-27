@@ -21,7 +21,6 @@ import her6 from "../img/h6.png";
 import head4 from "../img/head4.jpg";
 import kurash from "../img/kurash.PNG";
 import stylev from "../css/Videolar.module.css";
-import zulfiyaxonim from "../img/zulfiyaxonim.jpg";
 import zulfiyaxonim2 from "../img/zulfiyaxonim2.jpg";
 import faxriylar1 from "../img/faxriylar1.jpg";
 import faxriylar2 from "../img/faxriylar2.jpg";
@@ -106,6 +105,11 @@ export default class Dashboard extends Component {
   getRegions=()=>{
     axios.get(`${url}/regions/`).then(res=>{
      this.setState({regions:res.data})
+     setTimeout(() => {
+      this.setState({
+        loader: false,
+      });
+    }, 1000);
     })
   }
  
@@ -134,11 +138,7 @@ export default class Dashboard extends Component {
   componentDidMount() {
     // this.getNews();
 this.getRegions()
-    setTimeout(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 3000);
+   
   }
   muted2 = () => {
     this.setState({

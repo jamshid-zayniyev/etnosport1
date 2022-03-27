@@ -244,18 +244,7 @@ export default class NavbarA extends Component {
                   Bog'lanish
                 </NavLink>
               </li>
-              <li onClick={this.closeNav}>
-                <NavLink
-                  exact
-                  style={({ isActive }) =>
-                    isActive ? { color: "orangered" } : undefined
-                  }
-                  className={style.lik}
-                  to="/"
-                >
-                  Kirish
-                </NavLink>
-              </li>
+             
             </ul>
           </div>
         </div>

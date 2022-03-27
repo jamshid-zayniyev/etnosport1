@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import "../css/Dashnews.css"
-import head from '../img/head.jpg'
-import head1 from '../img/head1.jpg'
-import head2 from '../img/head2.jpg'
-import head3 from '../img/head3.jpg'
-import head4 from '../img/head5.jpg'
+
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -110,17 +106,19 @@ return( <li className="card" id="card_1">
             itemClass="carousel-item-padding-40-px"
           >
             {item.videos.map(item2=>{
-              
+         
               return(
 <div>
 <YouTube
+ showCaptions={false}
+ showRelatedVideos={false}
                 onEnd={this._onEnd}
                 opts={{
                   playerVars: {
                     rel: 0,
                   },
                 }}
-                video={item2.split('/')[item2.split('/').length-1]}
+                video="XIGlh0i0NNE"
                 className="vid"
 
               />
@@ -139,7 +137,7 @@ return( <li className="card" id="card_1">
       }):''
    :this.state.eventsF!==null?this.state.eventsF.map(item=>{
      if(item.region.id===Number(this.props.id)){
-      console.log("salom")
+     
       return( <li className="card" id="card_1">
         
       <div className="card__content">
@@ -198,8 +196,9 @@ return( <li className="card" id="card_1">
                   dotListClass="custom-dot-list-style"
                   itemClass="carousel-item-padding-40-px"
                 >
+              
                   {item.videos.map(item2=>{
-                    console.log(item2)
+             
                     return(
       <div>
       <YouTube

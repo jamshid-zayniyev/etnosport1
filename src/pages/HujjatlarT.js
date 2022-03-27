@@ -5,8 +5,6 @@ import style from "../css/Hujjatlart.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import uzb from "../img/doc.png";
-import otchop from "../img/Otchoptirish.jfif";
-import eskietno from "../img/kurash7.jpg";
 import etnosport7 from "../img/etnoimg7.jpg";
 import school from "../img/gerb.png";
 import axios from "axios";
@@ -16,11 +14,12 @@ export default class Svmh extends Component {
     loader: true,
     error:false,
   docs:null,
-  urlA:""
+  nameA:'',
+ id:""
   };
   componentDidMount() {
     setInterval(()=>{
-       if(window.location.href!==this.state.urlA){
+       if(window.location.href.split('/')[window.location.href.split('/').length-1]!==this.state.id){
          this.edit()
        }
     }, 500)
@@ -31,25 +30,16 @@ this.setState({loader:true})
     var id = url1[url1.length-1]
     
     axios.get(`${url}/categorydocs/${id}/`).then(res=>{
-      console.log(res.data)
-      this.setState({docs:res.data,urlA:window.location.href, loader: false,})
+      this.setState({docs:res.data,urlA:window.location.href, nameA:window.location.href.split('/')[window.location.href.split('/').length-2].replaceAll("%20", ' '), id:id, loader: false,})
     })
   
   }
   render() {
   
-    const loaderT = () => {
-      setTimeout(() => {
-        this.setState({ loader: false });
-      }, 2000);
-    };
+  
     
     return (
-      <div
-        onLoad={() => {
-          loaderT();
-        }}
-      >
+      <div>
         {this.state.loader ? (
           <div className="loaderG">
             <div className="befG">
@@ -64,7 +54,8 @@ this.setState({loader:true})
         <div className={style.head}>
           <img src={etnosport7}></img>
           <div className={style.headsarlavha}>
-          {window.location.href.split('/')[window.location.href.split('/').length-2].replaceAll('%20', " ")}
+           
+          {this.state.nameA}
           </div>
         </div>
       
@@ -73,7 +64,7 @@ this.setState({loader:true})
             {this.state.docs!==null?this.state.docs.get_docs.map(item=>{
               return(<Col
                 lg={6}
-                md={12}
+                md={6}
                 className={style.colT}
                 style={{ marginTop: "20px" }}
                 sm={12}
