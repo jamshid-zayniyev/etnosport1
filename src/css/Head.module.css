@@ -17,7 +17,7 @@
   display: flex;
   padding-left: 30px;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .nav {
   flex: 100%;

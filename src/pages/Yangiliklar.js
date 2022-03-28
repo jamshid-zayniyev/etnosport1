@@ -131,7 +131,7 @@ export default class Yangiliklar extends Component {
                           <div className={styles.flex}>
                             <div className={styles.imag}>
                               {/* <img src={item.news_images[0].image} /> */}
-                              <div style={{ width: "400px", height: "200px" }}>
+                              <div className={style.caru}>
                                 <Carousel
                                   responsive={responsive11}
                                   infinite={true}
@@ -147,10 +147,7 @@ export default class Yangiliklar extends Component {
                                       <div>
                                         <img
                                           src={item11.image}
-                                          style={{
-                                            width: "400px",
-                                            height: "200px",
-                                          }}
+                                          className={style.caruimg}
                                         ></img>
                                       </div>
                                     );

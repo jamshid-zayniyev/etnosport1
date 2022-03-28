@@ -9,7 +9,7 @@ export default class NavbarA extends Component {
   state = {
     id: 0,
     category: null,
-    regions:null
+    regions: null,
   };
   componentDidMount() {
     axios.get(`${url}/categorydocs/`).then((res) => {
@@ -18,7 +18,6 @@ export default class NavbarA extends Component {
     axios.get(`${url}/regions/`).then((res) => {
       this.setState({ regions: res.data });
     });
-   
   }
   Tool = () => {
     if (this.state.id === 0) {
@@ -71,7 +70,7 @@ export default class NavbarA extends Component {
                   Bosh sahifa
                 </NavLink>
               </li>
-              <li onClick={this.closeNav} className="fr">
+              <li onClick={this.closeNav}>
                 <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
@@ -159,7 +158,7 @@ export default class NavbarA extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
-              <li onClick={this.closeNav} className="fr">
+              <li onClick={this.closeNav}>
                 <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
@@ -209,25 +208,24 @@ export default class NavbarA extends Component {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    {this.state.regions!==null?
-                    this.state.regions.map(item=>{
-                      return(
-<Dropdown.Item>
-                      <NavLink
-                        exact
-                        style={({ isActive }) =>
-                          isActive ? { color: "orangered" } : undefined
-                        }
-                        className={style.lik}
-                        to={`/tadbirlar/${item.id}/${item.name}`}
-                      >
-                        {item.name}
-                      </NavLink>
-                    </Dropdown.Item>
-                      )
-                    }):''}
-                    
-                   
+                    {this.state.regions !== null
+                      ? this.state.regions.map((item) => {
+                          return (
+                            <Dropdown.Item>
+                              <NavLink
+                                exact
+                                style={({ isActive }) =>
+                                  isActive ? { color: "orangered" } : undefined
+                                }
+                                className={style.lik}
+                                to={`/tadbirlar/${item.id}/${item.name}`}
+                              >
+                                {item.name}
+                              </NavLink>
+                            </Dropdown.Item>
+                          );
+                        })
+                      : ""}
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
@@ -244,7 +242,6 @@ export default class NavbarA extends Component {
                   Bog'lanish
                 </NavLink>
               </li>
-             
             </ul>
           </div>
         </div>

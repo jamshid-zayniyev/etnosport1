@@ -78,7 +78,7 @@
   padding: 20px;
   background-color: rgb(20, 194, 185);
   color: white;
-  border-top:2px solid white;
+  border-top: 2px solid white;
   font-size: 25px;
   font-weight: 700;
 }
@@ -101,8 +101,10 @@
   /* display: flex; */
   align-items: center;
 }
-@media (max-width: 1024px){
-  .hujjat{margin-top: 60px;}
+@media (max-width: 1024px) {
+  .hujjat {
+    margin-top: 60px;
+  }
 }
 @media (max-width: 991px) {
   .head {
@@ -114,6 +116,7 @@
     width: 50%;
     transition: 1s;
     margin-left: 100px;
+    margin-top: 150px;
   }
 }
 @media (max-width: 767px) {
@@ -123,9 +126,13 @@
   }
 
   .ss img {
+    margin-top: 80px;
     width: 50%;
     transition: 1s;
     margin-left: 100px;
+  }
+  .ss h1 {
+    margin-top: 20px;
   }
 }
 @media (max-width: 650px) {
@@ -136,6 +143,10 @@
   .head img {
     margin-top: 80px;
   }
+  .ss h1 {
+    margin-top: 20px;
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -143,16 +154,35 @@
     background-size: 200% 100%;
     height: 30vh;
   }
+  .ss img {
+    width: 40%;
+    margin-top: 70px;
+  }
+  .ss h1 {
+    margin-top: 20px;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 430px) {
   .head {
     background-size: 200% 100%;
   }
+  .ss img {
+    width: 40%;
+    margin-top: 50px;
+  }
+  .ss h1 {
+    margin-top: 20px;
+    font-size: 15px;
+  }
 }
 @media (max-width: 360px) {
   .head {
-    height: 600px;
     background-size: 200% 100%;
+    margin-top: 20px;
+  }
+  .headsarlavha {
+    font-size: 20px;
   }
 }
