@@ -59,73 +59,52 @@ return( <li className="card" id="card_1">
   </div>
   <figure>
     <div className="imgs">
-      {item.get_images.length!==0?  <Carousel
-            responsive={responsive2}
-                    infinite={true}
-                    autoPlaySpeed={1500}
-                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
-          >
-            {item.get_images.map(item1=>{
-              return( <div className="imgdiv">
-              <img src={item1.image}/>
-          </div>)
-            })}
-         
-          
-          </Carousel>:''}
+      {item.get_images.length!==0?}
             
               </div>
 <div className="you">
- 
-            {/* {item.videos.length!==0 ? (
-                    item.videos.map((item2) => {
-                  
-                      return (
-                        <div>
-                          <YouTube
-                            showCaptions={false}
-                            showRelatedVideos={false}
-                            opts={{
-                              playerVars: {
-                                rel: 0,
-                              },
-                            }}
-                            video={
-                             item2.split('/')[item2.split('/').length-1].toString()
-                          
-                            }
-                            className="vid"
-                            // autoplay={true}
-                         
-                          />
-                        </div>
-                      );
-                    })
-                  ) : (
-                    <div></div>
-                  )} */}
-                   <div className="videos_item">
-                          <YouTube
-                            showCaptions={false}
-                            showRelatedVideos={false}
-                            opts={{
-                              playerVars: {
-                                rel: 0,
-                              },
-                            }}
-                            video={
-                              item.videos[0].split('/')[item.videos[0].split('/').length-1].toString()
-                           
-                             }
-                            className="vid"
-                            // autoplay={true}
-                         
-                          />
-                        </div>
-                      
+<Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={true}
+            responsive={responsive2}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={this.props.deviceType !== "mobile" ? true : false}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={100}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            deviceType={this.props.deviceType}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {item.videos.map(item2=>{
+         console.log(item2.split('/')[item2.split('/').length-1])
+              return(
+<div>
+<YouTube
+ showCaptions={false}
+ showRelatedVideos={false}
+        
+                opts={{
+                  playerVars: {
+                    rel: 0,
+                  },
+                }}
+                video={item2.split('/')[item2.split('/').length-1]}
+                className="vid"
 
-    
+              />
 
+</div>
+
+              )
+            })}
+
+          </Carousel>
 </div>
   </figure>
 </div>
@@ -175,7 +154,7 @@ return( <li className="card" id="card_1">
                 </Carousel>
                     </div>
       <div className="you">
-      {/* <Carousel
+      <Carousel
                   swipeable={false}
                   draggable={false}
                   showDots={true}
@@ -215,25 +194,7 @@ return( <li className="card" id="card_1">
                     )
                   })}
       
-                </Carousel> */}
-                 <div className="videos_item">
-                          <YouTube
-                            showCaptions={false}
-                            showRelatedVideos={false}
-                            opts={{
-                              playerVars: {
-                                rel: 0,
-                              },
-                            }}
-                            video={
-                              item.videos[0].split('/')[item.videos[0].split('/').length-1].toString()
-                           
-                             }
-                            className="vid"
-                            // autoplay={true}
-                         
-                          />
-                        </div>
+                </Carousel>
       </div>
         </figure>
       </div>

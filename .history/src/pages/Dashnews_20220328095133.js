@@ -117,7 +117,7 @@ return( <li className="card" id="card_1">
                               item.videos[0].split('/')[item.videos[0].split('/').length-1].toString()
                            
                              }
-                            className="vid"
+                            className="you"
                             // autoplay={true}
                          
                           />
@@ -216,24 +216,6 @@ return( <li className="card" id="card_1">
                   })}
       
                 </Carousel> */}
-                 <div className="videos_item">
-                          <YouTube
-                            showCaptions={false}
-                            showRelatedVideos={false}
-                            opts={{
-                              playerVars: {
-                                rel: 0,
-                              },
-                            }}
-                            video={
-                              item.videos[0].split('/')[item.videos[0].split('/').length-1].toString()
-                           
-                             }
-                            className="vid"
-                            // autoplay={true}
-                         
-                          />
-                        </div>
       </div>
         </figure>
       </div>

@@ -229,7 +229,7 @@ return( <li className="card" id="card_1">
                               item.videos[0].split('/')[item.videos[0].split('/').length-1].toString()
                            
                              }
-                            className="vid"
+                            className="you"
                             // autoplay={true}
                          
                           />
