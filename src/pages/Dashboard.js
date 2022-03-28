@@ -683,8 +683,9 @@ export default class Dashboard extends Component {
                               <Col lg={4}>
                                 <img
                                   src={
-                                    item.news_images !== null ??
-                                    item.news_images[0].image
+                                    item.news_images !== null
+                                      ? item.news_images[0].image
+                                      : ""
                                   }
                                   alt="..."
                                 />
