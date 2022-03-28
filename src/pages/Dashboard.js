@@ -260,7 +260,7 @@ export default class Dashboard extends Component {
         items: 2,
       },
     };
- 
+
     const responsive4 = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -334,14 +334,13 @@ export default class Dashboard extends Component {
                 ""
               )}
               <Col lg={6} md={12} sm={12} style={{ padding: "20px" }}>
-                <p style={{color:'rgb(8, 6, 112)'}}>
-                  <b style={{color:'orangered'}}>Belbogʻli kurash</b> — Bu Oʻzbek milliy sport turlaridan
-                  biri boʻlib asosan Oʻrta osiyoda ommabop sanaladi. Belbogʻli
-                  kurashning koʻp javhalari oʻzbek halq milliy kurashiga oʻxshab
-                  ketadi, lekin bu sport turida sportchilar asosan belbogʻ
-                  orqali kurashadilar. Asosan bu sport turi ikki kishi oʻrtasida
-                  amalga oshiriladi. Belbogʻli kurashning asosiy kiyimlariga
-                  kurashish uchun yaktak va belbogʻ kiradi.
+                <p style={{ color: "rgb(8, 6, 112)" }}>
+                  <b style={{ color: "orangered" }}>
+                    {this.state.sportType.name}
+                  </b>{" "}
+                  {this.state.sportType.text !== null
+                    ? ` — ${this.state.sportType.text}`
+                    : ""}
                 </p>
               </Col>
             </Row>
@@ -382,12 +381,15 @@ export default class Dashboard extends Component {
                 ""
               )}
               <Col lg={6} md={12} sm={12} style={{ padding: "20px" }}>
-              <p style={{color:'rgb(8, 6, 112)'}}>
-                  <b style={{color:'orangered'}}>{this.state.sportsmen.name}</b> –{" "}
+                <p style={{ color: "rgb(8, 6, 112)" }}>
+                  <b style={{ color: "orangered" }}>
+                    {this.state.sportsmen.name}
+                  </b>{" "}
+                  –{" "}
                   {this.state.sportsmen.achievements.length !== 0
-                    ? this.state.sportsmen.achievements.map(item=>{
-                      return(item+' ')
-                    })
+                    ? this.state.sportsmen.achievements.map((item) => {
+                        return item + " ";
+                      })
                     : ""}
                 </p>
               </Col>
