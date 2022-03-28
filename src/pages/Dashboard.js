@@ -529,6 +529,7 @@ export default class Dashboard extends Component {
                                   ? item.sportsman_images[0].image
                                   : ""
                               }
+                              height="250px"
                               alt="Rasm"
                             />
                             <h5>{item.name}</h5>
@@ -569,6 +570,7 @@ export default class Dashboard extends Component {
                                   ? item.sportsman_images[0].image
                                   : ""
                               }
+                              height="250px"
                               alt="Rasm"
                             />
                             <h5>Faxriylarimiz</h5>
@@ -609,6 +611,7 @@ export default class Dashboard extends Component {
                                   ? item.sportsman_images[0].image
                                   : ""
                               }
+                              height="250px"
                               alt="Rasm"
                             />
                             <h5>{item.name}</h5>
@@ -649,6 +652,7 @@ export default class Dashboard extends Component {
                                   ? item.sportsman_images[0].image
                                   : ""
                               }
+                              height="250px"
                               alt="Rasm"
                             />
                             <h5>{item.name}</h5>

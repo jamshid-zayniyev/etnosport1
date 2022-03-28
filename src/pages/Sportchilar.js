@@ -174,17 +174,17 @@ export class Sportchilar extends Component {
           checked2,
           vil,
         });
+        setTimeout(() => {
+          this.setState({
+            loader: false,
+          });
+        }, 2000);
       })
       .catch((err) => console.log(err));
   };
 
   componentDidMount() {
     this.sportsMenGet();
-    setTimeout(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 2000);
   }
 
   render() {
@@ -517,6 +517,7 @@ export class Sportchilar extends Component {
                                 ? item.sportsman_images[0].image
                                 : ""
                             }
+                            height="225px"
                             alt={`${item.name}`}
                           />
                           <h5>{item.name}</h5>
