@@ -385,9 +385,7 @@ export default class Dashboard extends Component {
               <p style={{color:'rgb(8, 6, 112)'}}>
                   <b style={{color:'orangered'}}>{this.state.sportsmen.name}</b> –{" "}
                   {this.state.sportsmen.achievements.length !== 0
-                    ? this.state.sportsmen.achievements.map(item=>{
-                      return(item+' ')
-                    })
+                    ? this.state.sportsmen.achievements.map(item=>{})
                     : ""}
                 </p>
               </Col>

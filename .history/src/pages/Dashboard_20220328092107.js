@@ -386,7 +386,7 @@ export default class Dashboard extends Component {
                   <b style={{color:'orangered'}}>{this.state.sportsmen.name}</b> –{" "}
                   {this.state.sportsmen.achievements.length !== 0
                     ? this.state.sportsmen.achievements.map(item=>{
-                      return(item+' ')
+                      return(item)
                     })
                     : ""}
                 </p>
