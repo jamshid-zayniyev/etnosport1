@@ -64,7 +64,7 @@ setComment=()=>{
     var comment=document.getElementById('comment').value
     if(name.length!==0 && comment.length!==0 && this.state.id!==null){
     this.setState({loader:true})
-      axios.post(`${url}/comments/`, {name, comment, competition:this.state.id}, {headers:{'AccessToken': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3Mzc4NDc3LCJpYXQiOjE2NDczNzgxNzcsImp0aSI6ImY2YzNlMWIwYzBjYzQ0M2Y5ZTg5M2ZkY2U0MTAxOWNjIiwidXNlcl9pZCI6MX0.ELCEBveEwiAUmWD6UxGvpNV8t0Bn8YQhRyEU95FumzQ'}}).then(res=>{
+      axios.post(`${url}/comments/`, {name, comment, competition:this.state.id}).then(res=>{
         this.handleCloseT()
       })
     }
@@ -275,9 +275,7 @@ setComment=()=>{
                  
                   <div className="form-group">
                     {" "}
-                    <Button type="button"
-                    //  onClick={this.setComment}
-                      id="post" className="btn">
+                    <Button type="button" onClick={this.setComment} id="post" className="btn">
                       Yuborish
                     </Button>{" "}
                   </div>

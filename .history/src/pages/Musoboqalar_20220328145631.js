@@ -276,8 +276,7 @@ setComment=()=>{
                   <div className="form-group">
                     {" "}
                     <Button type="button"
-                    //  onClick={this.setComment}
-                      id="post" className="btn">
+                     onClick={this.setComment} id="post" className="btn">
                       Yuborish
                     </Button>{" "}
                   </div>

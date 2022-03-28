@@ -56,22 +56,7 @@ export default class Musoboqalar extends Component {
     })
     
   }
-  
-setComment=()=>{
- 
-  if(document.getElementById('name')!==null && document.getElementById('comment')!==null){
-    var name=document.getElementById('name').value
-    var comment=document.getElementById('comment').value
-    if(name.length!==0 && comment.length!==0 && this.state.id!==null){
-    this.setState({loader:true})
-      axios.post(`${url}/comments/`, {name, comment, competition:this.state.id}, {headers:{'AccessToken': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3Mzc4NDc3LCJpYXQiOjE2NDczNzgxNzcsImp0aSI6ImY2YzNlMWIwYzBjYzQ0M2Y5ZTg5M2ZkY2U0MTAxOWNjIiwidXNlcl9pZCI6MX0.ELCEBveEwiAUmWD6UxGvpNV8t0Bn8YQhRyEU95FumzQ'}}).then(res=>{
-        this.handleCloseT()
-      })
-    }
-      
-  }
-  
-}
+
   handleClose = () => {
     this.setState({
       showComment: false,
@@ -82,8 +67,6 @@ setComment=()=>{
   handleCloseT = () => {
     this.setState({
       showCommentT: false,
-      loader:false
-    
     });
   };
   openModalT = (id) => {
@@ -181,7 +164,7 @@ setComment=()=>{
                             <div className={styled.butlar}>
                               <buttun
                                 onClick={() => {
-                                  this.openModalT(item.id);
+                                  this.openModalT();
                                 }}
                                 className={styled.but1}
                               >
@@ -211,7 +194,7 @@ setComment=()=>{
             onHide={this.handleClose}
           >
             <Modal.Header closeButton>
-              <Modal.Title style={{fontSize:'25px'}} className={style.sarlavha}>
+              <Modal.Title className={style.sarlavha}>
                 Foydalanuvchilarning fikrlari
               </Modal.Title>
             </Modal.Header>
@@ -227,7 +210,7 @@ setComment=()=>{
                     height="40"
                   />
                   <h4>{item.name}</h4> <br />
-                  <span>{item.date_created.slice(0, 10)} yil</span> <br />
+                  <span>{item.</span> <br />
                   <p>{item.comment}</p>
                 </div>)
                 }):''}
@@ -242,7 +225,7 @@ setComment=()=>{
             onHide={this.handleCloseT}
           >
             <Modal.Header closeButton>
-              <Modal.Title style={{fontSize:'25px'}} className={style.sarlavha}>
+              <Modal.Title className={style.sarlavha}>
                 Fikringiz biz uchun muhim
               </Modal.Title>
             </Modal.Header>
@@ -275,11 +258,9 @@ setComment=()=>{
                  
                   <div className="form-group">
                     {" "}
-                    <Button type="button"
-                    //  onClick={this.setComment}
-                      id="post" className="btn">
+                    <button type="button" id="post" className="btn">
                       Yuborish
-                    </Button>{" "}
+                    </button>{" "}
                   </div>
                 </form>
               </div>
