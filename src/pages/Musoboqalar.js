@@ -6,13 +6,7 @@ import styled from "../css/Musoboqalar.module.css";
 import styles from "../css/Yangiliklartwo.module.css";
 import { Button, Col, Container, Modal, Row } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
-import etnomuso from "../img/etnoimg1.jpg";
-import word from "../img/kurash4.jpg";
-import excel from "../img/kurash4.jpg";
-import power from "../img/kurash4.jpg";
-import pdf from "../img/kurash4.jpg";
-import file from "../img/kurash4.jpg";
-import kurash6 from "../img/kurash6.jpg";
+
 import school from "../img/gerb.png";
 import Header from "./Header";
 import etnosport7 from "../img/etnoimg7.jpg";
@@ -31,9 +25,23 @@ export default class Musoboqalar extends Component {
     showComment: false,
     showCommentT: false,
     raqam: "0",
-    comments: [],
+    comments: null,
     id: null,
+
   };
+  getComment=(id)=>{
+    this.setState({
+      loader:true
+    })
+    axios.get(`${url}/competitions/${id}`).then(res1=>{
+      this.setState({
+        comments:res1.data,  
+        loader: false,
+        showComment: true,
+        })
+       
+    })
+  }
   componentDidMount() {
     axios.get(`${url}/competitions/`).then(res=>{
       this.setState({
@@ -41,9 +49,10 @@ export default class Musoboqalar extends Component {
         })
         setTimeout(() => {
           this.setState({
-            loader: false,
+           
           });
         }, 1000);
+       
     })
     
   }
@@ -53,11 +62,7 @@ export default class Musoboqalar extends Component {
       showComment: false,
     });
   };
-  openModal = (id) => {
-    this.setState({
-      showComment: true,
-    });
-  };
+ 
 
   handleCloseT = () => {
     this.setState({
@@ -124,7 +129,7 @@ export default class Musoboqalar extends Component {
                             <div
                               className={styled.bag1}
                               onClick={() => {
-                                this.openModal();
+                                this.getComment(item.id);
                               }}
                             >
                               <i className="fa fa-comments"></i> 3
@@ -134,7 +139,7 @@ export default class Musoboqalar extends Component {
                             </div>
                             <Row>
                               <Col lg={3}>
-                                <img src={item.main_competition_image} />
+                                <img src={item.image} />
                               </Col>
                               <Col
                                 lg={9}
@@ -195,7 +200,8 @@ export default class Musoboqalar extends Component {
             </Modal.Header>
             <Modal.Body>
               <div className="comments">
-                <div className="comment mt-4 text-justify float-left">
+                {this.state.comments!==null?this.state.comments.get_comments.map(item=>{
+                  return(<div className="comment mt-4 text-justify float-left">
                   <img
                     src="https://i.imgur.com/yTFUilP.jpg"
                     alt=""
@@ -203,34 +209,13 @@ export default class Musoboqalar extends Component {
                     width="40"
                     height="40"
                   />
-                  <h4>Ismilov Rahmon</h4> <br />
+                  <h4>{item.name}</h4> <br />
                   <span>22.01.2022</span> <br />
-                  <p>Judayam ajoyib turnir bo'ladi xudo xohlasa.</p>
-                </div>
-                <div className="comment mt-4 text-justify float-left">
-                  <img
-                    src="https://i.imgur.com/yTFUilP.jpg"
-                    alt=""
-                    className="rounded-circle"
-                    width="40"
-                    height="40"
-                  />
-                  <h4>G'afurov Azim</h4> <br />
-                  <span>12.01.2022</span> <br />
-                  <p>Trunirga qanaday qilib ishtirok etsak bo'ladi</p>
-                </div>
-                <div className="comment mt-4 text-justify float-left">
-                  <img
-                    src="https://i.imgur.com/yTFUilP.jpg"
-                    alt=""
-                    className="rounded-circle"
-                    width="40"
-                    height="40"
-                  />
-                  <h4>G'afurov Azim</h4> <br />
-                  <span>12.01.2022</span> <br />
-                  <p>Trunirga qanaday qilib ishtirok etsak bo'ladi</p>
-                </div>
+                  <p>{item.comment}</p>
+                </div>)
+                }):''}
+                
+               
               </div>
             </Modal.Body>
           </Modal>
@@ -247,6 +232,17 @@ export default class Musoboqalar extends Component {
             <Modal.Body>
               <div className="comments">
                 <form id="algin-form">
+                <div className="form-group">
+                    {" "}
+                    <label for="name">Ism familiyani yozing</label>{" "}
+                    <input
+                      required
+                      type="text"
+                      name="name"
+                      id="name"
+                      className="form-control"
+                    />{" "}
+                  </div><br/>
                   <div className="form-group">
                     <label for="message">Izohni yozing</label>{" "}
                     <textarea
@@ -258,28 +254,8 @@ export default class Musoboqalar extends Component {
                       className="form-control"
                     ></textarea>
                   </div>
-                  <div className="form-group">
-                    {" "}
-                    <label for="name">Ism familiyani yozing</label>{" "}
-                    <input
-                      required
-                      type="text"
-                      name="name"
-                      id="name"
-                      className="form-control"
-                    />{" "}
-                  </div>
-                  <div className="form-group">
-                    {" "}
-                    <label for="email">Emailni yozing</label>{" "}
-                    <input
-                      required
-                      type="text"
-                      name="email"
-                      id="email"
-                      className="form-control"
-                    />{" "}
-                  </div>
+                  
+                 
                   <div className="form-group">
                     {" "}
                     <button type="button" id="post" className="btn">

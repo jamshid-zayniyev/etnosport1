@@ -183,3 +183,7 @@ body{ background-color: white; width:100%; overflow-x: hidden;}
   height: 300px;
 
 }
+.ant-collapse-header{ display: flex !important; align-items: center !important;}
+.ant-collapse-header p{margin:10px;}
+.ant-collapse-header svg{fill:white !important; position: relative; top:-3px !important}
+
