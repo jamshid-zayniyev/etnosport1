@@ -622,7 +622,9 @@ export class Sportchilar extends Component {
                 <p>
                   <b>{this.state.sportmen.name}</b> –{" "}
                   {this.state.sportmen.achievements.length !== 0
-                    ? this.state.sportmen.achievements[0]
+                    ? this.state.sportmen.achievements.map((item) => {
+                        return item + " ";
+                      })
                     : ""}
                 </p>
               </Col>
