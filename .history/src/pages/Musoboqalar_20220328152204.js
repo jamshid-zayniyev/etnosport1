@@ -152,7 +152,7 @@ setComment=()=>{
                               <i className="fa fa-comments"></i> 3
                             </div>
                             <div className={styled.bag}>
-                              <i className="fa fa-download"></i> {item.download_counter}
+                              <i className="fa fa-download"></i> {}
                             </div>
                             <Row>
                               <Col lg={3}>

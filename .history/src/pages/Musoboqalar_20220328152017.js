@@ -152,7 +152,7 @@ setComment=()=>{
                               <i className="fa fa-comments"></i> 3
                             </div>
                             <div className={styled.bag}>
-                              <i className="fa fa-download"></i> {item.download_counter}
+                              <i className="fa fa-download"></i> 25
                             </div>
                             <Row>
                               <Col lg={3}>
@@ -226,7 +226,7 @@ setComment=()=>{
                     width="40"
                     height="40"
                   />
-                  <h4>{item.name}</h4> <br />
+                  <h4>{item.name}</h4> <br /><br />
                   <span>{item.date_created.slice(0, 10)} yil</span> <br />
                   <p>{item.comment}</p>
                 </div>)
