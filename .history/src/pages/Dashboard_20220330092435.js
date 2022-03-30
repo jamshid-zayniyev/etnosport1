@@ -486,7 +486,7 @@ export default class Dashboard extends Component {
                       >
                         <img
                           src={
-                            item.sport_images !== null && item.sport_images.length>0
+                            item.sport_images !== null
                               ? item.sport_images[0].image
                               : ""
                           }

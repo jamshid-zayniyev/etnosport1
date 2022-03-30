@@ -159,7 +159,6 @@ export default class Dashboard extends Component {
   getSports = () => {
     sportsGet()
       .then((res) => {
-        console.log(res.data)
         this.setState({ sportsType: res.data });
       })
       .catch((err) => console.log(err));
@@ -470,7 +469,7 @@ export default class Dashboard extends Component {
             <h1 className={style.sarlavha}>Sport turlari</h1>
 
             <div className={style.chiziq}></div>
-            {this.state.sportsType !== null ? (
+            {this.state.sportsType !== null && this.state.sportsType.length > 0 ? (
               <Carousel
                 responsive={responsive1}
                 infinite={true}
@@ -486,7 +485,7 @@ export default class Dashboard extends Component {
                       >
                         <img
                           src={
-                            item.sport_images !== null && item.sport_images.length>0
+                            item.sport_images !== null
                               ? item.sport_images[0].image
                               : ""
                           }
