@@ -497,15 +497,23 @@ export class Sportchilar extends Component {
               </h1>
               <div className={style.chiziq}></div>
               {sportsmen !== null && vil !== null && type !== null ? (
-                <Carousel
-                  responsive={responsive}
-                  infinite={true}
-                  autoPlaySpeed={3000}
-                  autoPlay={true}
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
                 >
                   {this.filtrSportsmens(sportsmen, type, vil).map((item) => {
                     return (
-                      <div style={{ marginLeft: 10, marginRight: 10 }}>
+                      <div
+                        style={{
+                          marginLeft: 10,
+                          marginRight: 10,
+                          marginBottom: 20,
+                          flexBasis: "320px",
+                        }}
+                      >
                         <div
                           style={{ padding: "10px" }}
                           className={style.sportchi}
@@ -526,7 +534,7 @@ export class Sportchilar extends Component {
                       </div>
                     );
                   })}
-                </Carousel>
+                </div>
               ) : (
                 ""
               )}
