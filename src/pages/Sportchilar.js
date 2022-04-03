@@ -606,7 +606,7 @@ export class Sportchilar extends Component {
               {this.state.sportmen.sportsman_images.length !== 0 ? (
                 <Col lg={6} md={12} sm={12}>
                   <Carousel
-                    responsive={responsive}
+                    responsive={responsive1}
                     infinite={true}
                     autoPlaySpeed={2000}
                     autoPlay={this.props.deviceType !== "mobile" ? true : false}
