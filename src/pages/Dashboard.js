@@ -535,7 +535,7 @@ export default class Dashboard extends Component {
                               alt="Rasm"
                             />
                             <h5>{item.name}</h5>
-                            <p>Zulfiyaxonim shoira ijodkor</p>
+                            <p>{item.region.name}</p>
                           </div>
                         </div>
                       );
@@ -575,8 +575,8 @@ export default class Dashboard extends Component {
                               height="250px"
                               alt="Rasm"
                             />
-                            <h5>Faxriylarimiz</h5>
-                            <p>{item.name}</p>
+                            <h5>{item.name}</h5>
+                            <p>{item.region.name}</p>
                           </div>
                         </div>
                       );
@@ -689,7 +689,7 @@ export default class Dashboard extends Component {
                               <Col lg={4}>
                                 <img
                                   src={
-                                    item.news_images !== null
+                                    item.news_images.length !== 0
                                       ? item.news_images[0].image
                                       : ""
                                   }
