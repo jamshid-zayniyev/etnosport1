@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import NavbarA from "./Header";
 import { Modal } from "antd";
 import style from "../css/Dashboard.module.css";
+import styles from "../css/Sportchilar.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -244,9 +245,10 @@ export class Sportchilar extends Component {
           <img
             src={kurash}
             alt="rasm"
+            className={styles.headerImg}
             style={{
-              width: "auto",
-              height: "350px",
+              // width: "100vw",
+              // maxHeight: "350px",
               display: "block",
               marginRight: "auto",
               marginLeft: "auto",
@@ -347,8 +349,14 @@ export class Sportchilar extends Component {
             </Row> */}
         </div>
         <div>
-          <Row>
-            <Col md={{ span: 6, offset: 3 }} lg={{ span: 2, offset: 0 }}>
+          <Row
+            style={{ width: "100vw", marginRight: "auto", marginLeft: "auto" }}
+          >
+            <Col
+              sm={{ span: 12 }}
+              md={{ span: 6, offset: 3 }}
+              lg={{ span: 2, offset: 0 }}
+            >
               <h1 className={style.sarlavha} style={{ fontSize: 28 }}>
                 Sport turlari
               </h1>
@@ -491,7 +499,7 @@ export class Sportchilar extends Component {
                 </div>
               </Carousel> */}
             </Col>
-            <Col md={12} lg={7}>
+            <Col sm={{ span: 12 }} md={12} lg={7}>
               <h1 className={style.sarlavha} style={{ fontSize: 28 }}>
                 Sportchilar
               </h1>
@@ -539,7 +547,7 @@ export class Sportchilar extends Component {
                 ""
               )}
             </Col>
-            <Col md={12} lg={3}>
+            <Col sm={{ span: 12 }} md={12} lg={3}>
               <div>
                 <h1 className={style.sarlavha} style={{ fontSize: 28 }}>
                   Viloyatlar

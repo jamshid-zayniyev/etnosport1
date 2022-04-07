@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+.headerImg {
+  width: auto;
+  max-height: 350px;
+}
+@media screen and (max-width: 500px) {
+  .headerImg {
+    height: auto;
+    width: 100% !important;
+  }
+}
