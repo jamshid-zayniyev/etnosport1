@@ -261,101 +261,64 @@ export class Sportchilar extends Component {
           >
             Sportchilar
           </h2>
-          {/* <Row>
-              <Col md={6}>
-                <div>
-                  <h2
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Sportchilar
-                  </h2>
-                </div>
-              </Col>
-              <Col md={6}>
-                <Carousel
-                  responsive={responsive1}
-                  infinite={true}
-                  autoPlaySpeed={5000}
-                  autoPlay={true}
-                >
-                  <div>
-                    <img
-                      width="100%"
-                      height="100%"
-                      style={{
-                        display: "block",
-                        objectFit: "contain",
-                        marginRight: "auto",
-                        marginLeft: "auto",
-                        marginTop: "auto",
-                        marginBottom: "auto",
-                      }}
-                      src={kurash1}
-                      alt="..."
-                    />
-                  </div>
-                  <div>
-                    <img
-                      width="100%"
-                      height="100%"
-                      style={{
-                        display: "block",
-                        objectFit: "contain",
-                        marginRight: "auto",
-                        marginLeft: "auto",
-                        marginTop: "auto",
-                        marginBottom: "auto",
-                      }}
-                      src={kurash2}
-                      alt="..."
-                    />
-                  </div>
-                  <div>
-                    <img
-                      width="100%"
-                      height="100%"
-                      style={{
-                        display: "block",
-                        objectFit: "contain",
-                        marginRight: "auto",
-                        marginLeft: "auto",
-                        marginTop: "auto",
-                        marginBottom: "auto",
-                      }}
-                      src={kurash3}
-                      alt="..."
-                    />
-                  </div>
-                  <div>
-                    <img
-                      width="100%"
-                      height="100%"
-                      style={{
-                        display: "block",
-                        objectFit: "contain",
-                        marginRight: "auto",
-                        marginLeft: "auto",
-                        marginTop: "auto",
-                        marginBottom: "auto",
-                      }}
-                      src={kurash4}
-                      alt="..."
-                    />
-                  </div>
-                </Carousel>
-              </Col>
-            </Row> */}
+         
         </div>
         <div>
           <Row
             style={{ width: "100vw", marginRight: "auto", marginLeft: "auto" }}
           >
+            <Col sm={12} md={8} lg={9}>
+              <h1 className={style.sarlavha} style={{ fontSize: 28 }}>
+                Sportchilar
+              </h1>
+              <div className={style.chiziq}></div>
+              {sportsmen !== null && vil !== null && type !== null ? (
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {this.filtrSportsmens(sportsmen, type, vil).map((item) => {
+                    return (
+                      <div
+                        style={{
+                          marginLeft: 5,
+                          marginRight: 5,
+                          marginBottom: 20,
+                          flexBasis: "320px",
+                        }}
+                      >
+                        <div
+                          style={{ padding: "10px" }}
+                          className={style.sportchi}
+                          onClick={() => this.openModal(item)}
+                        >
+                          <img
+                            src={
+                              item.sportsman_images.length !== 0
+                                ? item.sportsman_images[0].image
+                                : ""
+                            }
+                            height="225px"
+                            alt={`${item.name}`}
+                          />
+                          <h5>{item.name}</h5>
+                          <p>{item.sport && item.sport.name}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
+            </Col>
             <Col
-              sm={{ span: 12 }}
-              md={{ span: 6, offset: 3 }}
-              lg={{ span: 2, offset: 0 }}
+              sm={12}
+              md={4}
+              lg={3}
             >
               <h1 className={style.sarlavha} style={{ fontSize: 28 }}>
                 Sport turlari
@@ -400,155 +363,8 @@ export class Sportchilar extends Component {
               ) : (
                 ""
               )}
-              {/* <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlaySpeed={2000}
-                autoPlay={true}
-                arrows={true}
-              >
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
 
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-
-                <div style={{ padding: "10px" }}>
-                  <div className={style.sport}>
-                    <img src={kurash} alt="" />
-                    <p>Belbog'li kurash</p>
-                  </div>
-                </div>
-              </Carousel> */}
-            </Col>
-            <Col sm={{ span: 12 }} md={12} lg={7}>
-              <h1 className={style.sarlavha} style={{ fontSize: 28 }}>
-                Sportchilar
-              </h1>
-              <div className={style.chiziq}></div>
-              {sportsmen !== null && vil !== null && type !== null ? (
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "center",
-                  }}
-                >
-                  {this.filtrSportsmens(sportsmen, type, vil).map((item) => {
-                    return (
-                      <div
-                        style={{
-                          marginLeft: 10,
-                          marginRight: 10,
-                          marginBottom: 20,
-                          flexBasis: "320px",
-                        }}
-                      >
-                        <div
-                          style={{ padding: "10px" }}
-                          className={style.sportchi}
-                          onClick={() => this.openModal(item)}
-                        >
-                          <img
-                            src={
-                              item.sportsman_images.length !== 0
-                                ? item.sportsman_images[0].image
-                                : ""
-                            }
-                            height="225px"
-                            alt={`${item.name}`}
-                          />
-                          <h5>{item.name}</h5>
-                          <p>{item.sport && item.sport.name}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
-                ""
-              )}
-            </Col>
-            <Col sm={{ span: 12 }} md={12} lg={3}>
-              <div>
+<div>
                 <h1 className={style.sarlavha} style={{ fontSize: 28 }}>
                   Viloyatlar
                 </h1>
@@ -597,8 +413,10 @@ export class Sportchilar extends Component {
                   ""
                 )}
               </div>
+            
             </Col>
-          </Row>
+           
+             </Row>
         </div>
         {this.state.sportmen !== null ? (
           <Modal
