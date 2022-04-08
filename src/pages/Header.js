@@ -70,7 +70,7 @@ export default class NavbarA extends Component {
                   Bosh sahifa
                 </NavLink>
               </li>
-              <li onClick={this.closeNav}>
+              <li>
                 <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
@@ -83,6 +83,7 @@ export default class NavbarA extends Component {
                   <Dropdown.Menu>
                     <Dropdown.Item>
                       <NavLink
+                        onClick={this.closeNav}
                         exact
                         style={({ isActive }) =>
                           isActive ? { color: "orangered" } : undefined
@@ -95,6 +96,7 @@ export default class NavbarA extends Component {
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink
+                        onClick={this.closeNav}
                         exact
                         style={({ isActive }) =>
                           isActive ? { color: "orangered" } : undefined
@@ -107,6 +109,7 @@ export default class NavbarA extends Component {
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink
+                        onClick={this.closeNav}
                         exact
                         style={({ isActive }) =>
                           isActive ? { color: "orangered" } : undefined
@@ -119,6 +122,7 @@ export default class NavbarA extends Component {
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink
+                        onClick={this.closeNav}
                         exact
                         style={({ isActive }) =>
                           isActive ? { color: "orangered" } : undefined
@@ -132,6 +136,7 @@ export default class NavbarA extends Component {
 
                     <Dropdown.Item>
                       <NavLink
+                        onClick={this.closeNav}
                         exact
                         style={({ isActive }) =>
                           isActive ? { color: "orangered" } : undefined
@@ -145,6 +150,7 @@ export default class NavbarA extends Component {
 
                     <Dropdown.Item>
                       <NavLink
+                        onClick={this.closeNav}
                         exact
                         style={({ isActive }) =>
                           isActive ? { color: "orangered" } : undefined
@@ -158,7 +164,7 @@ export default class NavbarA extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
-              <li onClick={this.closeNav}>
+              <li>
                 <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
@@ -174,6 +180,7 @@ export default class NavbarA extends Component {
                           return (
                             <Dropdown.Item>
                               <NavLink
+                                onClick={this.closeNav}
                                 exact
                                 style={({ isActive }) =>
                                   isActive ? { color: "orangered" } : undefined
@@ -197,7 +204,7 @@ export default class NavbarA extends Component {
                   O'quv qo'llanmalar
                 </NavLink>
               </li> */}
-              <li onClick={this.closeNav}>
+              <li>
                 <Dropdown>
                   <Dropdown.Toggle
                     className="dropD"
@@ -213,6 +220,7 @@ export default class NavbarA extends Component {
                           return (
                             <Dropdown.Item>
                               <NavLink
+                                onClick={this.closeNav}
                                 exact
                                 style={({ isActive }) =>
                                   isActive ? { color: "orangered" } : undefined
@@ -230,8 +238,9 @@ export default class NavbarA extends Component {
                 </Dropdown>
               </li>
 
-              <li onClick={this.closeNav}>
+              <li>
                 <NavLink
+                  onClick={this.closeNav}
                   exact
                   style={({ isActive }) =>
                     isActive ? { color: "orangered" } : undefined
