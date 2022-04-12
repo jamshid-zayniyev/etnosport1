@@ -36,12 +36,12 @@ export const options = {
 export function ChartT(props) {
   const labels = [];
   const dataT=[]
-  console.log(props)
+  
   if(props.regions!==null){
     props.regions.map(item=>{
       labels.push(item.name)
 
-      dataT.push(item.get_events_count)
+      dataT.push(item.get_sportsmen_count)
     })
   }
     

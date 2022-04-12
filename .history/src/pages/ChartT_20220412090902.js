@@ -41,7 +41,7 @@ export function ChartT(props) {
     props.regions.map(item=>{
       labels.push(item.name)
 
-      dataT.push(item.get_events_count)
+      dataT.push(item.get_sportsmen_count)
     })
   }
     
